@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "../chatgpt-tailwind/cosmere_encounter_tracker_stormlight_tailwind.jsx"  ]
 }
