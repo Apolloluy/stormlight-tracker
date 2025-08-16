@@ -17,30 +17,7 @@ export default function EntityCard({ entity, onUpdate, onRemove }:{ entity:Entit
   function onDragStart(e:React.DragEvent){ e.dataTransfer.setData('text/plain', entity.id); }
 
   // Lightning effect styles (border/glow only)
-  const empoweredEffect = isEmpowered
-    ? 'empowered-glow'
-    : '';
-
-  // Add keyframes and effect CSS (no SVG)
-  if (typeof document !== 'undefined' && !document.getElementById('empowered-effect-style')) {
-    const style = document.createElement('style');
-    style.id = 'empowered-effect-style';
-    style.innerHTML = `
-      @keyframes empowered-lightning {
-        0% { box-shadow: 0 0 16px 4px #38bdf8, 0 0 0 0 #fff0; }
-        25% { box-shadow: 0 0 32px 8px #38bdf8, 0 0 8px 2px #fef08a; }
-        50% { box-shadow: 0 0 24px 6px #a5f3fc, 0 0 16px 4px #fef08a; }
-        75% { box-shadow: 0 0 32px 8px #38bdf8, 0 0 8px 2px #fef08a; }
-        100% { box-shadow: 0 0 16px 4px #38bdf8, 0 0 0 0 #fff0; }
-      }
-      .empowered-glow {
-        animation: empowered-lightning 1.2s infinite;
-        box-shadow: 0 0 24px 6px #38bdf8, 0 0 8px 2px #fef08a;
-        border: 2px solid #38bdf8;
-      }
-    `;
-    document.head.appendChild(style);
-  }
+  const empoweredEffect = isEmpowered ? 'empowered-glow' : '';
 
   return (
     <div

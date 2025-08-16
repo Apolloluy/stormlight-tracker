@@ -191,6 +191,14 @@ export default function App(){
               <TabsTrigger value="roster">Roster & Setup</TabsTrigger>
             </TabsList>
             <TabsContent value="encounter" className="mt-3">
+              <div className="mt-6 flex flex-wrap items-center gap-2 mb-4">
+                <Button className="bg-cyan-800/70 hover:bg-cyan-700/70 flex flex-row items-center" onClick={()=>addEntity({type:'player'})}>
+                  <Plus className="mr-1 size-4"/> <span>Player</span>
+                </Button>
+                <Button className="bg-purple-800/60 hover:bg-purple-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'enemy', speed:'slow'})}>
+                  <Plus className="mr-1 size-4"/> <span>Enemy</span>
+                </Button>
+              </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div>
                   <h3 className="text-sm font-semibold text-cyan-200/90 mb-2 flex items-center gap-2"><Zap className="size-4"/> Fast</h3>
@@ -251,14 +259,7 @@ export default function App(){
                   </div>
                 </div>
               </div>
-              <div className="mt-6 flex flex-wrap items-center gap-2">
-                <Button className="bg-cyan-800/70 hover:bg-cyan-700/70 flex flex-row items-center" onClick={()=>addEntity({type:'player'})}>
-                  <Plus className="mr-1 size-4"/> <span>Player</span>
-                </Button>
-                <Button className="bg-purple-800/60 hover:bg-purple-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'enemy', speed:'slow'})}>
-                  <Plus className="mr-1 size-4"/> <span>Enemy</span>
-                </Button>
-              </div>
+              
             </TabsContent>
 
             <TabsContent value="roster" className="mt-3">
@@ -269,8 +270,12 @@ export default function App(){
                   </div>
                   {entities.length===0 && (<div className="text-sm text-slate-400 p-4">No entities yet. Use buttons below to add some.</div>)}
                   <div className="mt-3 flex gap-2">
-                    <Button className="bg-cyan-800/70 hover:bg-cyan-700/70" onClick={()=>addEntity({type:'player'})}><Plus className="mr-1 size-4"/>Player</Button>
-                    <Button className="bg-purple-800/60 hover:bg-purple-700/60" onClick={()=>addEntity({type:'enemy', speed:'slow'})}><Plus className="mr-1 size-4"/>Enemy</Button>
+                    <Button className="bg-cyan-800/70 hover:bg-cyan-700/70 flex flex-row items-center" onClick={()=>addEntity({type:'player'})}>
+                  <Plus className="mr-1 size-4"/> <span>Player</span>
+                </Button>
+                <Button className="bg-purple-800/60 hover:bg-purple-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'enemy', speed:'slow'})}>
+                  <Plus className="mr-1 size-4"/> <span>Enemy</span>
+                </Button>
                   </div>
                 </CardContent>
               </Card>
