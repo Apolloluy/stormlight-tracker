@@ -6,30 +6,35 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router";
 import { Encounter } from './pages/encounter/Encounter';
 import { NavAppBar } from './components/header/NavBar';
-import { EntitySettings, EntityType } from './models/EntityModels';
+import { StormlightTheme } from './Theme';
+
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
 
+
+
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <CssBaseline enableColorScheme/>
-      <NavAppBar/>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/encounters" element={<Encounter />} 
-          />
-      </Routes>
-      
+    <ThemeProvider theme={StormlightTheme}>
+        <CssBaseline enableColorScheme/>
+        <NavAppBar/>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/encounters" element={<Encounter />} 
+            />
+        </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

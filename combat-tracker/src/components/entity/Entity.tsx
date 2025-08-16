@@ -6,6 +6,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { Status } from '../status/Status';
 
 export interface EntityProps {
     character : EntitySettings,
@@ -31,6 +32,7 @@ export const Entity : React.FC<EntityProps> = ({character, changeTurn}) => {
                         <Grid alignItems="right">
                             <Button variant="outlined" onClick={() => changeTurn(character)}>{character.turn == TurnType.Slow ? 'Slow' : 'Fast'}</Button>
                         </Grid>
+                        <Status status="Burned" onClick={() => {}} icon="" />
                     </Grid>
                     
                 </CardContent>
