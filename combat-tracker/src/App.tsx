@@ -226,19 +226,9 @@ export default function App(){
           </div>
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="grid grid-cols-2 w-full max-w-md bg-slate-900/60">
-              <TabsTrigger value="encounter">Encounter</TabsTrigger>
-              <TabsTrigger value="roster">Roster & Setup</TabsTrigger>
-            </TabsList>
+            
             <TabsContent value="encounter" className="mt-3">
-              <div className="mt-6 flex flex-wrap items-center gap-2 mb-4">
-                <Button className="bg-cyan-800/70 hover:bg-cyan-700/70 flex flex-row items-center" onClick={()=>addEntity({type:'player'})}>
-                  <Plus className="mr-1 size-4"/> <span>Player</span>
-                </Button>
-                <Button className="bg-purple-800/60 hover:bg-purple-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'enemy', speed:'slow'})}>
-                  <Plus className="mr-1 size-4"/> <span>Enemy</span>
-                </Button>
-              </div>
+              
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div>
                   <h3 className="text-sm font-semibold text-cyan-200/90 mb-2 flex items-center gap-2"><Zap className="size-4"/> Fast</h3>
@@ -247,7 +237,7 @@ export default function App(){
                       {...laneProps('FAST_PLAYERS')}
                       className={
                         laneBoxStyle +
-                        (phase === 'FAST_PLAYERS' ? ' ring-2 ring-cyan-400/80 bg-cyan-900/30' : '')
+                        (phase === 'FAST_PLAYERS' ? ' border-2 border-cyan-400/80 bg-cyan-900/30' : '')
                       }
                     >
                       <div className={laneHeaderStyle}><User className="inline size-3 mr-1"/>Players</div>
@@ -279,7 +269,7 @@ export default function App(){
                       {...laneProps('FAST_ENEMIES')}
                       className={
                         laneBoxStyle +
-                        (phase === 'FAST_ENEMIES' ? ' ring-2 ring-purple-400/80 bg-purple-900/30' : '')
+                        (phase === 'FAST_ENEMIES' ? ' border-2 border-purple-400/80 bg-purple-900/30' : '')
                       }
                     >
                       <div className={laneHeaderStyle}><Shield className="inline size-3 mr-1"/>Enemies</div>
@@ -316,7 +306,7 @@ export default function App(){
                       {...laneProps('SLOW_PLAYERS')}
                       className={
                         laneBoxStyle +
-                        (phase === 'SLOW_PLAYERS' ? ' ring-2 ring-emerald-400/80 bg-emerald-900/30' : '')
+                        (phase === 'SLOW_PLAYERS' ? ' border-2 border-emerald-400/80 bg-emerald-900/30' : '')
                       }
                     >
                       <div className={laneHeaderStyle}><User className="inline size-3 mr-1"/>Players</div>
@@ -348,7 +338,7 @@ export default function App(){
                       {...laneProps('SLOW_ENEMIES')}
                       className={
                         laneBoxStyle +
-                        (phase === 'SLOW_ENEMIES' ? ' ring-2 ring-fuchsia-400/80 bg-fuchsia-900/30' : '')
+                        (phase === 'SLOW_ENEMIES' ? ' border-2 border-fuchsia-400/80 bg-fuchsia-900/30' : '')
                       }
                     >
                       <div className={laneHeaderStyle}><Shield className="inline size-3 mr-1"/>Enemies</div>
@@ -400,6 +390,18 @@ export default function App(){
                 </CardContent>
               </Card>
             </TabsContent>
+            <TabsList className="grid grid-cols-2 w-full max-w-md bg-slate-900/60 mt-6">
+              <TabsTrigger value="encounter">Encounter</TabsTrigger>
+              <TabsTrigger value="roster">Roster & Setup</TabsTrigger>
+            </TabsList>
+            <div className="mt-6 flex flex-wrap items-center gap-2 mb-4">
+                <Button className="bg-cyan-800/70 hover:bg-cyan-700/70 flex flex-row items-center" onClick={()=>addEntity({type:'player'})}>
+                  <Plus className="mr-1 size-4"/> <span>Player</span>
+                </Button>
+                <Button className="bg-purple-800/60 hover:bg-purple-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'enemy', speed:'slow'})}>
+                  <Plus className="mr-1 size-4"/> <span>Enemy</span>
+                </Button>
+              </div>
           </Tabs>
         </div>
       </div>
