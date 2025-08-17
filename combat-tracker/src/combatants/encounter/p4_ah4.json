@@ -1,0 +1,110 @@
+[
+    {
+        "id": "axehound_a",
+        "name": "Axehound A",
+        "icon": "axehound1.png",
+        "combatant_type": "axehound_tier1_minion",
+        "speed": "fast",
+        "active": true,
+        "stats": {
+            "physical": {
+                "strength": 2,
+                "speed": 2
+            },
+            "cognitive": {
+                "intelligence": 0,
+                "willpower": 0
+            },
+            "spiritual": {
+                "awareness": 3,
+                "presence": 0
+            }
+        },
+        "counters": {
+            "health": 12,
+            "focus": 2,
+            "investiture": 0
+        }
+    },
+    {
+         "id": "axehound_b",
+        "name": "Axehound B",
+        "icon": "axehound1.png",
+        "combatant_type": "axehound_tier1_minion",
+        "speed": "fast",
+        "active": true,
+        "stats": {
+            "physical": {
+                "strength": 2,
+                "speed": 2
+            },
+            "cognitive": {
+                "intelligence": 0,
+                "willpower": 0
+            },
+            "spiritual": {
+                "awareness": 3,
+                "presence": 0
+            }
+        },
+        "counters": {
+            "health": 12,
+            "focus": 2,
+            "investiture": 0
+        }
+    },
+    {
+         "id": "axehound_c",
+        "name": "Axehound C",
+        "icon": "axehound1.png",
+        "combatant_type": "axehound_tier1_minion",
+        "speed": "fast",
+        "active": true,
+        "stats": {
+            "physical": {
+                "strength": 2,
+                "speed": 2
+            },
+            "cognitive": {
+                "intelligence": 0,
+                "willpower": 0
+            },
+            "spiritual": {
+                "awareness": 3,
+                "presence": 0
+            }
+        },
+        "counters": {
+            "health": 12,
+            "focus": 2,
+            "investiture": 0
+        }
+    },
+    {
+         "id": "axehound_d",
+        "name": "Axehound D",
+        "icon": "axehound1.png",
+        "combatant_type": "axehound_tier1_minion",
+        "speed": "fast",
+        "active": true,
+        "stats": {
+            "physical": {
+                "strength": 2,
+                "speed": 2
+            },
+            "cognitive": {
+                "intelligence": 0,
+                "willpower": 0
+            },
+            "spiritual": {
+                "awareness": 3,
+                "presence": 0
+            }
+        },
+        "counters": {
+            "health": 12,
+            "focus": 2,
+            "investiture": 0
+        }
+    }
+]
