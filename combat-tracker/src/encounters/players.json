@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Player 1",
+        "icon": "../icons/player_1.png",
+        "type": "player",
+        "speed": "fast"
+    }
+]

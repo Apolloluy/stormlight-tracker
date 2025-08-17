@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Axehound 1",
+        "icon": "../icons/axehound1.png",
+        "type": "enemy",
+        "speed": "slow"
+    }
+]

@@ -19,6 +19,20 @@ export default function EntityCard({ entity, onUpdate, onRemove }:{ entity:Entit
   // Lightning effect styles (border/glow only)
   const empoweredEffect = isEmpowered ? 'empowered-glow' : '';
 
+  // Handler for dash animation (to be implemented in App)
+  const handleDash = () => {
+    if (typeof window !== 'undefined' && window.dispatchEvent) {
+      const event = new CustomEvent('entityDash', {
+        detail: {
+          id: entity.id,
+          from: entity.speed,
+          to: entity.speed === 'fast' ? 'slow' : 'fast',
+        },
+      });
+      window.dispatchEvent(event);
+    }
+  };
+
   return (
     <div
       draggable
@@ -29,6 +43,14 @@ export default function EntityCard({ entity, onUpdate, onRemove }:{ entity:Entit
     >
       {/* Line 1: Icon, Name, Speed */}
       <div className="flex items-center gap-2 mb-1">
+        {/* Placeholder hexagon character icon */}
+        <span className="inline-block w-8 h-8 mr-1">
+          <svg viewBox="0 0 40 40" width="32" height="32" style={{ display: 'block' }}>
+            <polygon points="20,3 36,12 36,28 20,37 4,28 4,12" fill="#232323" stroke="#ffd9009f" strokeWidth="3" />
+            {/* Placeholder: could use entity.icon when available */}
+            <text x="50%" y="55%" textAnchor="middle" fill="#ffd9009f" fontSize="16" fontWeight="bold" dy=".3em">?</text>
+          </svg>
+        </span>
         <div className="font-semibold text-slate-100">{entity.name}</div>
       </div>
 
@@ -37,7 +59,7 @@ export default function EntityCard({ entity, onUpdate, onRemove }:{ entity:Entit
         <div className="flex items-center gap-1 flex-grow">
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="secondary" size="icon" onClick={()=>onUpdate(entity.id,{ speed: entity.speed==='fast'?'slow':'fast' })} aria-label="Toggle speed">
+              <Button variant="secondary" size="icon" onClick={handleDash} aria-label="Toggle speed">
                 {entity.speed==='fast' ? <Moon className="size-4"/> : <Zap className="size-4"/>}
               </Button>
             </TooltipTrigger>

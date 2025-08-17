@@ -1,5 +1,11 @@
 
 import React, { useEffect, useMemo, useRef, useState } from 'react'
+
+declare global {
+  interface Window {
+    onLoadEntities?: (newEntities: Entity[]) => void;
+  }
+}
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -40,13 +46,40 @@ const dyslexiaClass = '[font-family:Inter,Atkinson_Hyperlegible,system-ui,sans-s
 
 export default function App(){
   const [entities, setEntities] = useState<Entity[]>([])
+  // Callback for AdminPanel to load entities from encounter files
+  function handleLoadEntities(newEntities: Entity[]) {
+    setEntities(newEntities.map(e => ({
+      ...e,
+      id: crypto.randomUUID(),
+      statuses: e.statuses ?? [],
+      statusInput: '',
+      reactionUsed: false,
+      unconscious: false,
+      notes: e.notes ?? ''
+    })));
+  }
   const [round, setRound] = useState(1)
   const [phaseIndex, setPhaseIndex] = useState(0)
   const [storageKind, setStorageKind] = useState<'local'|'session'>('local')
   const [highContrast, setHighContrast] = useState(false)
   const [dyslexiaMode, setDyslexiaMode] = useState(true)
   const [activeTab, setActiveTab] = useState('encounter')
+  // Dash animation state
+  const [dashingEntity, setDashingEntity] = useState<{id: string, to: 'fast'|'slow'}|null>(null);
 
+  // Listen for dash event
+  useEffect(() => {
+    function handleDashEvent(e: any) {
+      const { id, to } = e.detail;
+      setDashingEntity({ id, to });
+      setTimeout(() => {
+        setDashingEntity(null);
+        updateEntity(id, { speed: to });
+      }, 300); // Animation duration
+    }
+    window.addEventListener('entityDash', handleDashEvent);
+    return () => window.removeEventListener('entityDash', handleDashEvent);
+  }, [entities]);
   useEffect(()=>{
     try{
       const rawSettings = localStorage.getItem(STORAGE_KEYS.SETTINGS)
@@ -181,7 +214,15 @@ export default function App(){
                 <Button variant="secondary" onClick={prevPhase} className={accentBlue}><ArrowLeftToLine className="ml-1 size-4"/></Button>
                 <Button onClick={nextPhase} className="bg-cyan-700/80 hover:bg-cyan-600/80"><ArrowRightToLine className="ml-1 size-4"/></Button>
               </div>
-              <AdminPanel storageKind={storageKind} setStorageKind={setStorageKind} highContrast={highContrast} setHighContrast={setHighContrast} dyslexiaMode={dyslexiaMode} setDyslexiaMode={setDyslexiaMode} />
+              <AdminPanel
+                storageKind={storageKind}
+                setStorageKind={setStorageKind}
+                highContrast={highContrast}
+                setHighContrast={setHighContrast}
+                dyslexiaMode={dyslexiaMode}
+                setDyslexiaMode={setDyslexiaMode}
+                onLoadEntities={handleLoadEntities}
+              />
             </div>
           </div>
 
@@ -212,7 +253,27 @@ export default function App(){
                     >
                       <div className={laneHeaderStyle}><User className="inline size-3 mr-1"/>Players</div>
                       <div className="mt-2 grid gap-2">
-                        {fastPlayers.map(e => (<EntityCard key={e.id} entity={e} onUpdate={updateEntity} onRemove={removeEntity}/>))}
+                        {fastPlayers.map(e => (
+                          <div key={e.id} style={{ position: 'relative' }}>
+                            <EntityCard entity={e} onUpdate={updateEntity} onRemove={removeEntity}/>
+                            {dashingEntity && dashingEntity.id === e.id && dashingEntity.to === 'slow' && (
+                              <div className="absolute inset-0 pointer-events-none z-50 animate-dash-lightning">
+                                <svg width="100%" height="100%" viewBox="0 0 120 60" fill="none">
+                                  <polyline points="10,30 40,10 80,50 110,30" stroke="#38bdf8" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)" />
+                                  <defs>
+                                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                                      <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                      </feMerge>
+                                    </filter>
+                                  </defs>
+                                </svg>
+                              </div>
+                            )}
+                          </div>
+                        ))}
                       </div>
                     </section>
                     <section
@@ -224,7 +285,27 @@ export default function App(){
                     >
                       <div className={laneHeaderStyle}><Shield className="inline size-3 mr-1"/>Enemies</div>
                       <div className="mt-2 grid gap-2">
-                        {fastEnemies.map(e => (<EntityCard key={e.id} entity={e} onUpdate={updateEntity} onRemove={removeEntity}/>))}
+                        {fastEnemies.map(e => (
+                          <div key={e.id} style={{ position: 'relative' }}>
+                            <EntityCard entity={e} onUpdate={updateEntity} onRemove={removeEntity}/>
+                            {dashingEntity && dashingEntity.id === e.id && dashingEntity.to === 'slow' && (
+                              <div className="absolute inset-0 pointer-events-none z-50 animate-dash-lightning">
+                                <svg width="100%" height="100%" viewBox="0 0 120 60" fill="none">
+                                  <polyline points="10,30 40,10 80,50 110,30" stroke="#38bdf8" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)" />
+                                  <defs>
+                                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                                      <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                      </feMerge>
+                                    </filter>
+                                  </defs>
+                                </svg>
+                              </div>
+                            )}
+                          </div>
+                        ))}
                       </div>
                     </section>
                   </div>
@@ -241,7 +322,27 @@ export default function App(){
                     >
                       <div className={laneHeaderStyle}><User className="inline size-3 mr-1"/>Players</div>
                       <div className="mt-2 grid gap-2">
-                        {slowPlayers.map(e => (<EntityCard key={e.id} entity={e} onUpdate={updateEntity} onRemove={removeEntity}/>))}
+                        {slowPlayers.map(e => (
+                          <div key={e.id} style={{ position: 'relative' }}>
+                            <EntityCard entity={e} onUpdate={updateEntity} onRemove={removeEntity}/>
+                            {dashingEntity && dashingEntity.id === e.id && dashingEntity.to === 'fast' && (
+                              <div className="absolute inset-0 pointer-events-none z-50 animate-dash-lightning">
+                                <svg width="100%" height="100%" viewBox="0 0 120 60" fill="none">
+                                  <polyline points="110,30 80,10 40,50 10,30" stroke="#38bdf8" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)" />
+                                  <defs>
+                                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                                      <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                      </feMerge>
+                                    </filter>
+                                  </defs>
+                                </svg>
+                              </div>
+                            )}
+                          </div>
+                        ))}
                       </div>
                     </section>
                     <section
@@ -253,7 +354,27 @@ export default function App(){
                     >
                       <div className={laneHeaderStyle}><Shield className="inline size-3 mr-1"/>Enemies</div>
                       <div className="mt-2 grid gap-2">
-                        {slowEnemies.map(e => (<EntityCard key={e.id} entity={e} onUpdate={updateEntity} onRemove={removeEntity}/>))}
+                        {slowEnemies.map(e => (
+                          <div key={e.id} style={{ position: 'relative' }}>
+                            <EntityCard entity={e} onUpdate={updateEntity} onRemove={removeEntity}/>
+                            {dashingEntity && dashingEntity.id === e.id && dashingEntity.to === 'fast' && (
+                              <div className="absolute inset-0 pointer-events-none z-50 animate-dash-lightning">
+                                <svg width="100%" height="100%" viewBox="0 0 120 60" fill="none">
+                                  <polyline points="110,30 80,10 40,50 10,30" stroke="#38bdf8" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)" />
+                                  <defs>
+                                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                                      <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                      </feMerge>
+                                    </filter>
+                                  </defs>
+                                </svg>
+                              </div>
+                            )}
+                          </div>
+                        ))}
                       </div>
                     </section>
                   </div>
