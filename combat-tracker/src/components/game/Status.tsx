@@ -15,6 +15,9 @@ export const DEFAULT_STATUSES = [
     //'Unconscious'
 ];
 
+// Define which statuses are positive or negative
+export const POSITIVE_STATUSES = ['Determined', 'Empowered', 'Focused',  'Invested'];
+export const NEGATIVE_STATUSES = ['Disoriented', 'Exhausted', 'Immobilized', 'Prone', 'Stunned', 'Surprised', ];
 
 export const DEFAULT_STATUS_ICONS: Record<string, ReactNode> = {
     'Determined':  <ShieldPlus className="mr-1 size-4 text-slate-400"/>,

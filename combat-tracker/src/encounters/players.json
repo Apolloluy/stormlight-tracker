@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Jake",
+        "icon": "src/icons/jake_character.png",
+        "type": "player",
+        "speed": "fast"
+    },
+    {
+        "name": "Hayley",
+        "icon": "src/icons/female_singer_character.png",
+        "type": "player",
+        "speed": "fast"
+    },
+    {
+        "name": "Justin",
+        "icon": "src/icons/female_singer_character2.png",
+        "type": "player",
+        "speed": "fast"
+    },
+    {
+        "name": "Lindsey",
+        "icon": "src/icons/iriali_character.png",
+        "type": "player",
+        "speed": "fast"
+    }
+]

@@ -19,8 +19,19 @@ body {
   75% { box-shadow: 0 0 32px 8px #38bdf8, 0 0 8px 2px #fef08a; }
   100% { box-shadow: 0 0 16px 4px #38bdf8, 0 0 0 0 #fff0; }
 }
+
 .empowered-glow {
   animation: empowered-lightning 1.2s infinite;
   box-shadow: 0 0 24px 6px #38bdf8, 0 0 8px 2px #fef08a;
   border: 2px solid #38bdf8;
+}
+
+@keyframes invested-glow {
+  0% { box-shadow: 0 0 8px 2px #fef08a, 0 0 0 0 #a5f3fc; }
+  100% { box-shadow: 0 0 32px 12px #fef08a, 0 0 16px 4px #a5f3fc; }
+}
+.invested-glow {
+  animation: invested-glow 4s infinite alternate;
+  box-shadow: 0 0 16px 4px #fef08a, 0 0 8px 2px #a5f3fc;
+  border: 2px solid #fef08a;
 }
