@@ -1,0 +1,6 @@
+export const appBg = 'bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900'
+export const stormBorders = 'border border-slate-700/60'
+export const glow = 'shadow-[0_0_30px_rgba(56,189,248,0.2)]'
+export const stormText = 'text-slate-100'
+export const accentBlue = 'focus:ring-2 focus:ring-cyan-400/80'
+export const dyslexiaClass = '[font-family:Inter,Atkinson_Hyperlegible,system-ui,sans-serif]'

@@ -15,6 +15,8 @@ import { Separator } from '@/components/ui/separator'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { Plus, Trash2, RefreshCcw, Edit3, ChevronRight, ArrowRightToLine, ArrowLeftToLine, Settings, Zap, Moon, Brain, User, Shield, EyeOff } from 'lucide-react'
 
+import { appBg, stormBorders, stormText, glow, accentBlue, dyslexiaClass } from './styles/AppStyles'
+
 import EntityCard from './components/game/EntityCard'
 import AdminPanel from './components/game/AdminPanel'
 import RosterEditor from './components/game/RosterEditor'
@@ -33,12 +35,7 @@ const STORAGE_KEYS = {
 
 function getStorage(kind:'local'|'session'){ return kind==='session' ? window.sessionStorage : window.localStorage }
 
-const appBg = 'bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900'
-const stormBorders = 'border border-slate-700/60'
-const glow = 'shadow-[0_0_30px_rgba(56,189,248,0.2)]'
-const stormText = 'text-slate-100'
-const accentBlue = 'focus:ring-2 focus:ring-cyan-400/80'
-const dyslexiaClass = '[font-family:Inter,Atkinson_Hyperlegible,system-ui,sans-serif]'
+
 
 export default function App(){
   const [entities, setEntities] = useState<Entity[]>([])

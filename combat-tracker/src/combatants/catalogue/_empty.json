@@ -2,6 +2,7 @@
     "name": "enemy 1",
     "icon": "src/icons/axehound1.png",
     "speed": "fast",
+    "active": true,
     "stats": {
         "physical": {
             "strength": 2,

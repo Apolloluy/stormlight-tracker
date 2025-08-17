@@ -1,3 +1,6 @@
+import { appBg, stormBorders, stormText, glow, accentBlue, dyslexiaClass } from '../../styles/AppStyles'
+
+
 // Reusable CombatantCard component
 const CombatantCard = ({ combatant, counters, onCounterChange, onToggleActive, inactive }) => {
   let iconSrc = combatant.icon || '';
@@ -5,7 +8,7 @@ const CombatantCard = ({ combatant, counters, onCounterChange, onToggleActive, i
     iconSrc = `/src/icons/${iconSrc}`;
   }
   return (
-    <div key={combatant.id} style={{ border: '2px solid #1976d2', borderRadius: 12, background: 'linear-gradient(135deg, #181f3a 80%, #222a4d 100%)', boxShadow: '0 2px 16px #1976d2, 0 0 8px #222', padding: 20, color: '#fff', maxWidth: 420, minWidth: 0, overflow: 'hidden', marginBottom: 0, display: 'flex', flexDirection: 'column', position: 'relative', flex: '0 1 auto' }}>
+    <div className={`${stormBorders} ${glow} ml-6`} key={combatant.id} style={{ padding: 20, color: '#fff', maxWidth: 420, minWidth: 0, overflow: 'hidden', marginBottom: 0, display: 'flex', flexDirection: 'column', position: 'relative', flex: '0 1 auto' }}>
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: 4 }}>
         {iconSrc && (

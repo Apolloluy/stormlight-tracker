@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Combatant } from './Combatant';
+import { appBg, stormBorders, stormText, glow, accentBlue, dyslexiaClass } from '../../styles/AppStyles'
+
 
 const sectionStyle = {
   borderBottom: '4px solid #FFD600',
@@ -38,7 +40,7 @@ function computeDefense(stats) {
 const CombatantAttributes = ({ type, data  }) => {
   const defense : Defenses = data.stats ? computeDefense(data.stats) : { physical: 0, cognitive: 0, spiritual: 0 };
   return (
-    <div style={{ border: '2px solid #FFD600', borderRadius: 12, background: 'linear-gradient(135deg, #222a4d 80%, #181f3a 100%)', boxShadow: '0 2px 16px #FFD600, 0 0 8px #222', padding: 20, color: '#FFD600', maxWidth: 420, minWidth: 0, overflow: 'hidden', marginBottom: 0, display: 'flex', flexDirection: 'column', position: 'relative', flex: '0 1 auto' }}>
+    <div style={{ border: '2px solid #FFD600', borderRadius: 12, padding: 20, color: '#FFD600', maxWidth: 420, minWidth: 0, overflow: 'hidden', marginBottom: 0, display: 'flex', flexDirection: 'column', position: 'relative', flex: '0 1 auto' }}>
       <div style={{ fontWeight: 700, fontSize: 20, marginBottom: 8 }}>{data.name}</div>
       <Section title="Stats">
         {data.stats && (
@@ -107,6 +109,9 @@ const CombatantAttributes = ({ type, data  }) => {
             : <div style={{ color: '#FFD600' }}>{JSON.stringify(data.features)}</div>
         }
       </Section>
+      
+
+      
       <Section title="Actions">
         {data.actions && Object.entries(data.actions).map(([actionType, actions]) => {
           if (!Array.isArray(actions) || actions.length === 0) return null;
@@ -120,16 +125,19 @@ const CombatantAttributes = ({ type, data  }) => {
             default: emoji = '⚡';
           }
           return (
-            <Section key={actionType} title={`${emoji} ${actionType.charAt(0).toUpperCase() + actionType.slice(1)}`}>
-              {actions.map((a, idx) => (
-                <div key={actionType + idx} style={{ marginBottom: 4, color: '#FFD600' }}>
-                  <span style={{ fontWeight: 700 }}>{a.name}</span>. <span style={{ fontWeight: 400 }}>{a.description}</span>
-                </div>
-              ))}
-            </Section>
+            <div className={`${stormBorders} ${glow}`}>
+              <Section key={actionType} title={`${emoji} ${actionType.charAt(0).toUpperCase() + actionType.slice(1)}`}>
+                {actions.map((a, idx) => (
+                  <div key={actionType + idx}>
+                    <span style={{ fontWeight: 700 }}>{a.name}</span>. <span style={{ fontWeight: 400 }}>{a.description}</span>
+                  </div>
+                ))}
+              </Section>
+             </div>
           );
         })}
       </Section>
+     
     </div>
   );
 };
