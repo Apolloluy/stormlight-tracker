@@ -59,49 +59,55 @@ const GMScreen = () => {
   const inactiveCombatants = combatants.filter(c => c.active === false);
 
   return (
-    <div style={{ minHeight: '100vh', padding: 24, background: 'radial-gradient(circle at 50% 30%, #10152b 60%, #0d133d 100%)', boxShadow: '0 0 80px 10px #1976d2 inset', position: 'relative' }}>
-      <h1 style={{ fontSize: 28, fontWeight: 700, color: '#fff', marginBottom: 24, textShadow: '0 0 12px #1976d2, 0 0 2px #fff' }}>GM Screen: {fileName}</h1>
+    <div style={{ minHeight: '100vh', padding: 24, background: 'linear-gradient(135deg, #0d133d 0%, #10152b 100%)', position: 'relative' }}>
+      <h1 style={{ fontSize: 28, fontWeight: 700, color: '#43ea7a', marginBottom: 24, textShadow: '0 0 12px #6c3ad2, 0 0 2px #fff' }}>GM Screen: {fileName}</h1>
       {/* Active Combatants */}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, justifyContent: 'flex-start', alignItems: 'flex-start' }}>
         {activeCombatants.map(c => (
-          <CombatantCard
-            key={c.id}
-            combatant={c}
-            counters={counters[c.id]}
-            onCounterChange={(counter, value) => handleCounterChange(c.id, counter, value)}
-            onToggleActive={() => handleToggleActive(c.name)}
-            inactive={false}
-          />
+          <div style={{ background: 'linear-gradient(135deg, #222a4d 80%, #6c3ad2 100%)', borderRadius: 16, boxShadow: '0 2px 16px #6c3ad2, 0 0 8px #222', padding: 8 }}>
+            <CombatantCard
+              key={c.id}
+              combatant={c}
+              counters={counters[c.id]}
+              onCounterChange={(counter, value) => handleCounterChange(c.id, counter, value)}
+              onToggleActive={() => handleToggleActive(c.name)}
+              inactive={false}
+            />
+          </div>
         ))}
       </div>
       {/* Inactive Combatants */}
       {inactiveCombatants.length > 0 && (
         <div style={{ marginTop: 48 }}>
-          <h2 style={{ color: '#FFD600', fontSize: 22, fontWeight: 700, marginBottom: 16 }}>Inactive</h2>
+          <h2 style={{ color: '#6c3ad2', fontSize: 22, fontWeight: 700, marginBottom: 16 }}>Inactive</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, justifyContent: 'flex-start', alignItems: 'flex-start' }}>
             {inactiveCombatants.map(c => (
-              <CombatantCard
-                key={c.id}
-                combatant={c}
-                counters={counters[c.id]}
-                onCounterChange={(counter, value) => handleCounterChange(c.id, counter, value)}
-                onToggleActive={() => handleToggleActive(c.name)}
-                inactive={true}
-              />
+              <div style={{ background: 'linear-gradient(135deg, #222a4d 80%, #6c3ad2 100%)', borderRadius: 16, boxShadow: '0 2px 16px #6c3ad2, 0 0 8px #222', padding: 8 }}>
+                <CombatantCard
+                  key={c.id}
+                  combatant={c}
+                  counters={counters[c.id]}
+                  onCounterChange={(counter, value) => handleCounterChange(c.id, counter, value)}
+                  onToggleActive={() => handleToggleActive(c.name)}
+                  inactive={true}
+                />
+              </div>
             ))}
           </div>
         </div>
       )}
       {/* Unique Combatant Types Section */}
       <div style={{ marginTop: 48 }}>
-        <h2 style={{ color: '#FFD600', fontSize: 22, fontWeight: 700, marginBottom: 16 }}>Combatant Types</h2>
+        <h2 style={{ color: '#43ea7a', fontSize: 22, fontWeight: 700, marginBottom: 16 }}>Combatant Types</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, justifyContent: 'flex-start', alignItems: 'flex-start' }}>
           {Object.entries(catalogue).map(([type, data]) => (
-            <CombatantAttributes key={type} type={type} data={data} />
+            <div style={{ background: 'linear-gradient(135deg, #222a4d 80%, #6c3ad2 100%)', borderRadius: 16, boxShadow: '0 2px 16px #6c3ad2, 0 0 8px #222', padding: 8 }}>
+              <CombatantAttributes key={type} type={type} data={data} />
+            </div>
           ))}
         </div>
       </div>
-      </div>
+    </div>
   );
 }
 
