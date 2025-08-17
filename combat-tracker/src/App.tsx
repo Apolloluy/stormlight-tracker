@@ -237,7 +237,7 @@ const laneBoxStyle = `border rounded-2xl p-2 min-h-[120px] bg-slate-900/60 ${glo
                       {...laneProps('FAST_PLAYERS')}
                       className={
                         laneBoxStyle +
-                        (phase === 'FAST_PLAYERS' ? ' ring-2 ring-cyan-400 bg-cyan-900/30' : '')
+                        (phase === 'FAST_PLAYERS' ? ' border-2 border-cyan-400 bg-cyan-900/30' : '')
                       }
                     >
                       <div className={laneHeaderStyle}><User className="inline size-3 mr-1"/>Players</div>
@@ -269,7 +269,7 @@ const laneBoxStyle = `border rounded-2xl p-2 min-h-[120px] bg-slate-900/60 ${glo
                       {...laneProps('FAST_ENEMIES')}
                       className={
                         laneBoxStyle +
-                        (phase === 'FAST_ENEMIES' ? ' ring-2 ring-purple-400 bg-purple-900/30' : '')
+                        (phase === 'FAST_ENEMIES' ? ' border-2 border-purple-400 bg-purple-900/30' : '')
                       }
                     >
                       <div className={laneHeaderStyle}><Shield className="inline size-3 mr-1"/>Enemies</div>
@@ -306,7 +306,7 @@ const laneBoxStyle = `border rounded-2xl p-2 min-h-[120px] bg-slate-900/60 ${glo
                       {...laneProps('SLOW_PLAYERS')}
                       className={
                         laneBoxStyle +
-                         (phase === 'SLOW_PLAYERS' ? ' ring-2 ring-emerald-400 bg-emerald-900/30' : '')
+                         (phase === 'SLOW_PLAYERS' ? ' border-2 border-emerald-400 bg-emerald-900/30' : '')
                       }
                     >
                       <div className={laneHeaderStyle}><User className="inline size-3 mr-1"/>Players</div>
@@ -338,7 +338,7 @@ const laneBoxStyle = `border rounded-2xl p-2 min-h-[120px] bg-slate-900/60 ${glo
                       {...laneProps('SLOW_ENEMIES')}
                       className={
                         laneBoxStyle +
-                        (phase === 'SLOW_ENEMIES' ? ' ring-2 ring-fuchsia-400 bg-fuchsia-900/30' : '')
+                        (phase === 'SLOW_ENEMIES' ? ' border-2 border-fuchsia-400 bg-fuchsia-900/30' : '')
                       }
                     >
                       <div className={laneHeaderStyle}><Shield className="inline size-3 mr-1"/>Enemies</div>
