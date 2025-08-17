@@ -42,6 +42,13 @@ export default function AdminPanel({ storageKind, setStorageKind, highContrast, 
   async function handleLoadEncounter() {
     if (!selectedFile) return;
     try {
+      // Extract file name from selectedFile path
+      const fileNameMatch = selectedFile.match(/([^/]+)\.json$/);
+      const fileName = fileNameMatch ? fileNameMatch[1] : '';
+      if (fileName) {
+        window.open(`/gm-screen/${fileName}`, '_blank', 'noopener');
+      }
+      // ...existing code for loading entities...
       // Use import.meta.glob to get all JSON file URLs
       // @ts-ignore
       const files = (import.meta as any).glob('/src/encounters/**/*.json', { eager: true, as: 'url' });
@@ -54,12 +61,10 @@ export default function AdminPanel({ storageKind, setStorageKind, highContrast, 
       });
       // Fetch encounter file
       const encounterRes = await fetch(selectedFile);
-      console.log('Encounter data:', encounterRes);
       const encounterEntities = await encounterRes.json();
       // Fetch players.json from the same source
       if (!playersUrl) throw new Error('players.json not found');
       const playersRes = await fetch(playersUrl);
-      console.log('Players data:', playersRes);
       const playerEntities = await playersRes.json();
       // Combine and send to App
       onLoadEntities([...playerEntities, ...encounterEntities]);
