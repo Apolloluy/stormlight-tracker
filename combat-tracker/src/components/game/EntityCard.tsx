@@ -13,7 +13,12 @@ import { DEFAULT_STATUSES, DEFAULT_STATUS_ICONS, NEGATIVE_STATUSES, POSITIVE_STA
 
 export default function EntityCard({ entity, onUpdate, onRemove }:{ entity:Entity, onUpdate:(id:string, patch:Partial<Entity>)=>void, onRemove:(id:string)=>void }){
   const isPlayer = entity.type==='player';
-  const investitureColor = isPlayer ? 'bg-cyan-700/40' : 'bg-purple-700/40';
+  const isBoss = entity.type==='boss';
+  const investitureColor = isBoss
+    ? 'bg-gradient-to-br from-fuchsia-700 via-violet-800 to-indigo-900 border-violet-400/80'
+    : isPlayer
+      ? 'bg-cyan-700/40'
+      : 'bg-purple-700/40';
   const unconscious = entity.unconscious;
   const isEmpowered = entity.statuses.includes('Empowered');
   const isInvested = entity.statuses.includes('Invested');
