@@ -42,12 +42,23 @@ export default function AdminPanel({ storageKind, setStorageKind, highContrast, 
   async function handleLoadEncounter() {
     if (!selectedFile) return;
     try {
+      // Use import.meta.glob to get all JSON file URLs
+      // @ts-ignore
+      const files = (import.meta as any).glob('/src/encounters/**/*.json', { eager: true, as: 'url' });
+      // Find the players.json URL
+      let playersUrl = '';
+      Object.entries(files).forEach(([fullPath, url]) => {
+        if (fullPath.endsWith('players.json')) {
+          playersUrl = url as string;
+        }
+      });
       // Fetch encounter file
       const encounterRes = await fetch(selectedFile);
       console.log('Encounter data:', encounterRes);
       const encounterEntities = await encounterRes.json();
-      // Fetch players.json
-      const playersRes = await fetch('/encounters/players.json');
+      // Fetch players.json from the same source
+      if (!playersUrl) throw new Error('players.json not found');
+      const playersRes = await fetch(playersUrl);
       console.log('Players data:', playersRes);
       const playerEntities = await playersRes.json();
       // Combine and send to App

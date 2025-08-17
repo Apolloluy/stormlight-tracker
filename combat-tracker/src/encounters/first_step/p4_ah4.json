@@ -1,8 +1,32 @@
 [
     {
-        "name": "Axehound 1",
-        "icon": "../icons/axehound1.png",
+        "name": "Axehound A",
+        "icon": "src/icons/axehound1.png",
+        "type": "enemy",
+        "speed": "fast"
+    },
+    {
+        "name": "Axehound B",
+        "icon": "src/icons/axehound2.png",
+        "type": "enemy",
+        "speed": "fast"
+    },
+    {
+        "name": "Axehound C",
+        "icon": "src/icons/axehound3.png",
         "type": "enemy",
         "speed": "slow"
+    },
+    {
+        "name": "Axehound D",
+        "icon": "src/icons/axehound4.png",
+        "type": "enemy",
+        "speed": "slow"
+    },
+    {
+        "name": "Mysterious Shin",
+        "icon": "src/icons/taszo_son_clutio.png",
+        "type": "player",
+        "speed": "fast"
     }
 ]

@@ -1,11 +1,7 @@
 
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 
-declare global {
-  interface Window {
-    onLoadEntities?: (newEntities: Entity[]) => void;
-  }
-}
+
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
