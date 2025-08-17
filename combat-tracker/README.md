@@ -40,6 +40,11 @@ Should be able to have an admin page to modify the storage mechanism (local stor
 - Auto slow or fast on load
 - encounter UI vs load UI
 
+#### Bonus
+- When a character becomes empowered during combat (aka said the words) their box should get glowy lightning effects.
+
+
+
 # copilot output
 Here’s a plan for building your app, along with style library recommendations:
 
