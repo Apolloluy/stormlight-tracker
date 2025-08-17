@@ -164,7 +164,7 @@ export default function App(){
         <div className="max-w-7xl mx-auto px-3 sm:px-6 py-4">
           <div className={`flex items-center justify-between gap-2 mb-4 ${stormBorders} rounded-2xl p-3 bg-slate-950/60 ${glow}`}>
             <div className="flex items-center gap-2">
-              <Zap className="size-5 text-cyan-300" />
+              <img src="/favicon.ico" width="30" />
               <h1 className="text-lg font-semibold">Cosmere Encounter Tracker</h1>
             </div>
             <div className="flex items-center gap-2">
