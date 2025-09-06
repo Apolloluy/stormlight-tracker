@@ -1,0 +1,78 @@
+{
+    "name": "Veth",
+    "icon": "src/icons/enemies/sw_boss_veth.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 2,
+            "speed": 2
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 1
+        },
+        "spiritual": {
+            "awareness": 3,
+            "presence": 2
+        }
+    },
+    "defense": {
+        "physical": 14,
+        "cognitive": 12,
+        "spiritual": 15
+    },
+    "counters": {
+        "health": 40,
+        "focus": 3,
+        "investiture": 0
+    },
+    "deflect": 0,
+    "movement": 25,
+    "senses": {
+        "sight": 20
+    },
+    "skills": {
+        "physical": {
+            "Athletics": 3,
+            "Light Weaponry": 3,
+            "Stealth": 4
+        },
+        "cognitive": {
+            "Discipline": 3
+        },
+        "spiritual": {
+            "Insight": 5,
+            "Perception": 5
+        }
+    },
+    "features": {
+        "Boss": "Veth can take both a fast turn and a slow turn each round. After an enemy finishes a turn, Veth can spend 1 focus to immediately use an extra ▶ or ▷. Additionally, he can spend 1 focus on his turn to remove a condition from himself.",
+        "Targeted Strikes": "While Veth has an advantage on an attack, he ignores deflect when dealing damage."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Sidesword",
+                "description": "Attack +3, reach 5 ft., one target. Graze: 3 (1d6) keen damage. Hit: 6 (1d6 + 3) keen damage."
+            },
+            {
+                "name": "Exploit Advantage",
+                "description": "Veth moves up to his movement rate. If he moves at least 10 feet and ends this movement within 5 feet of an enemy he hasn’t attacked this round, this movement doesn’t trigger Reactive Strikes, and he makes a Perception test against the target’s Spiritual defense. On a success, Veth gains an advantage on his next attack against the target."
+            }
+        ],
+        "free": [
+            {
+                "name": "Insightful Defense",
+                "description": "Veth makes an Insight test against the Spiritual defense of a target he can sense within 60 feet of him. On a success, the target can’t gain an advantage on attacks against Veth for 1 minute or until Veth uses this free action on another target."
+            }
+        ],
+        "reaction": [
+            {
+                "name": "Intuitive Redirect (Costs 1 Focus)",
+                "description": "Before an attack misses Veth, he can cause the attack to instead hit a target within 5 feet of him. This target can’t be the character who attacked him."
+            }
+        ]
+    },
+    "tactics": "Veth uses Insightful Defense against the most obvious martial threat, then engages them in close combat. He spends focus quickly to gain extra turns, and he switches to secondary targets using Exploit Advantage. To benefit from his Targeted Strikes, he favors targets he has an advantage against, such as Prone targets. If harried with ranged attacks, he uses Intuitive Redirect to make any missed attacks hit a nearby ally."
+}

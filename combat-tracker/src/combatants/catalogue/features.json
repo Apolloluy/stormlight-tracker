@@ -1,0 +1,8 @@
+{
+    "Enhanced Senses": "This creature gains an advantage on non-attack tests that rely on smell.",
+    "Minion": "This creature's attacks can't critically hit, and they're immediately defeated when they suffer an injury.",
+    "Targeted Strikes": "While this creature has an advantage on an attack, it ignores deflect when dealing damage.",
+    "Momentum": "If this creature moves at least 10 feet in a straight line toward a target then makes a <> attack against them on that turn, the creature gains an advantage on that attack.",
+    "Resolved": "After this creature spends focus to reset a chracter's influence, they lose 1 focus.",
+    "Broken Arm": "This creature can only use one hand."
+}

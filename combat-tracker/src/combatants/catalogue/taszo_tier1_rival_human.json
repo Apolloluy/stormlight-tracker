@@ -1,0 +1,64 @@
+{
+    "name": "Taszo-son-Clutio",
+    "icon": "src/icons/taszo_son_clutio.png",
+    "speed": "slow",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 0,
+            "speed": 3
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 2
+        },
+        "spiritual": {
+            "awareness": 2,
+            "presence": 1
+        }
+    },
+    "counters": {
+        "health": 17,
+        "focus": 4,
+        "investiture": 0
+    },
+    "movement": 40,
+    "senses": {
+        "sight": 10
+    },
+    "skills": {
+        "physical": {
+            "Agility": 3,
+            "Light Weaponry": 3
+        },
+        "cognitive": {
+            "Lore": 2,
+            "Deduction": 2,
+            "Discipline": 4
+        },
+        "spiritual": {
+            "Perception": 4,
+            "Insight": 4,
+            "Persuasion": 3
+        }
+    },
+    "features": {
+        "Resolved": "After this creature spends focus to reset a chracter's influence, they lose 1 focus.",
+        "Broken Arm": "This creature can only use one hand."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Sidesword",
+                "description": "Attack +3, reach 5 ft., one target. Graze: 3 (1d6) keen damage. Hit: 8 (1d6 + 3) keen damage."
+            }
+        ],
+        "reaction": [
+            {
+                "name": "A Friend in Need (Costs 1 Focus)",
+                "description": "When an ally within 5 feet of this creature fails a test, this creature adds an Opportunity to the test result."
+            }
+        ]
+    },
+    "tactics": ""
+}

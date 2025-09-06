@@ -59,5 +59,6 @@
                 "description": "After an enemy within 30 feet of the axehound falls Prone, the axehound moves up to 15 feet toward them."
             }
         ]
-    }
+    },
+    "tactics": " An axehound is rarely encountered alone, as they hunt best with a pack. Their immediate goal is to knock an enemy prone with their Bite (with an advantage from Pack Instincts, if possible), allowing other axehounds to move in for the kill with their On the Hunt reaction. Axehounds typically swarm a single foe rather than disperse themselves amongst a party, and they often drag an unwitting enemy away from allies to more easily defeat them."
 }

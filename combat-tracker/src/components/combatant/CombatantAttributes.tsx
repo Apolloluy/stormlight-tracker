@@ -110,8 +110,14 @@ const CombatantAttributes = ({ type, data  }) => {
         }
       </Section>
       
+      {/* Tactics Section */}
+      <Section title="Tactics">
+        {data.tactics
+          ? <div style={{ color: '#FFD600' }}>{data.tactics}</div>
+          : <div style={{ color: '#FFD600' }}>—</div>
+        }
+      </Section>
 
-      
       <Section title="Actions">
         {data.actions && Object.entries(data.actions).map(([actionType, actions]) => {
           if (!Array.isArray(actions) || actions.length === 0) return null;

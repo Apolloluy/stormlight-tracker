@@ -44,6 +44,7 @@ export type Combatant = {
     reaction: CombantantAction[] | undefined
     free: CombantantAction[] | undefined
   }
+  tactics?: string
 }
 
 export type CombantantAction = {

@@ -1,0 +1,15 @@
+[
+    {
+         "id": "Veth",
+        "name": "Veth",
+        "icon": "enemies/sw_boss_veth.png",
+        "combatant_type": "veth_tier1_boss_human",
+        "speed": "fast",
+        "active": true,
+        "counters": {
+            "health": 40,
+            "focus": 3,
+            "investiture": 0
+        }
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Bandit A",
+        "icon": "src/icons/enemies/bandit_human.png",
+        "type": "enemy",
+        "speed": "fast"
+    },
+    {
+        "name": "Bandit B",
+        "icon": "src/icons/enemies/bandit_human.png",
+        "type": "enemy",
+        "speed": "fast"
+    },
+    {
+        "name": "Bandit C",
+        "icon": "src/icons/enemies/bandit_human.png",
+        "type": "enemy",
+        "speed": "slow"
+    },
+    {
+        "name": "Bandit D",
+        "icon": "src/icons/enemies/bandit_human.png",
+        "type": "enemy",
+        "speed": "slow"
+    },
+    {
+        "name": "Taszo-son-Clutio",
+        "icon": "src/icons/taszo_son_clutio.png",
+        "type": "player",
+        "speed": "fast"
+    }
+]

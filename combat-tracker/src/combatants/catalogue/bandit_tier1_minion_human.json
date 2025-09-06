@@ -1,0 +1,71 @@
+{
+    "name": "Bandit",
+    "icon": "src/icons/enemies/bandit_human.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 1,
+            "speed": 1
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 0
+        },
+        "spiritual": {
+            "awareness": 2,
+            "presence": 1
+        }
+    },
+    "defense": {
+        "physical": 12,
+        "cognitive": 11,
+        "spiritual": 13
+    },
+    "counters": {
+        "health": 11,
+        "focus": 2,
+        "investiture": 0
+    },
+    "deflect": 1,
+    "movement": 25,
+    "senses": {
+        "sight": 10
+    },
+    "skills": {
+        "physical": {
+            "Agility": 3,
+            "Athletics": 3,
+            "Light Weaponry": 2
+        },
+        "cognitive": {
+            "Discipline": 1,
+            "Intimidation": 3
+        },
+        "spiritual": {
+            "Perception": 3,
+            "Survival": 3
+        }
+    },
+    "features": {
+        "Minion": "This creature's attacks can't critically hit, and they're immediately defeated when they suffer an injury.",
+        "Momentum": "If the bandit moves at least 10 feet in a straight line toward a target then makes a Mace attack against them on that turn, the bandit gains an advantage on that attack."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Mace",
+                "description": "Attack +2, reach 5 ft., one target. Graze: 3 (1d6) impact damage. Hit: 5 (1d6 + 2) impact damage."
+            },
+            {
+                "name": "Strike: Shortbow",
+                "description": "Attack +2, range 80/320 ft., one target. Graze: 3 (1d6) keen damage. Hit: 5 (1d6 + 2) keen damage."
+            },
+            {
+                "name": "Trip (Costs 1 Focus)",
+                "description": "The bandit makes an Athletics test against a target within 5 feet of them, opposed by the target's choice of Athletics or Agility. If the bandit succeeds on this test, the target is knocked Prone."
+            }
+        ]
+    },
+    "tactics": "A bandit is a simple but efficient attacker. They attack with their Shortbow from a distance, chipping away at an unsuspecting caravanner’s health as they move in. Once within range, the bandit charges their target to gain Momentum, then ruthlessly debilitates them with their Mace. After overcoming the civilians (and usually ending their lives), the bandit makes off with their ill-gotten gains."
+}
