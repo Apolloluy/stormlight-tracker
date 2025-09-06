@@ -16,7 +16,6 @@ Player Screen
 
 #### Some special effects when Invested
 ![conditions special](docs/condition_effects.png)  
-<video src='docs/empowered_glow.mp4' width=400 />
 
 
 ## GM Screen
