@@ -77,5 +77,6 @@
                 "description": "After an enemy within 30 feet of the axehound falls Prone, the axehound moves up to 15 feet toward them."
             }
         ]
-    }
+    },
+    "tactics": ""
 }

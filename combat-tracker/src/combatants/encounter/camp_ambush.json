@@ -1,0 +1,93 @@
+[
+    {
+        "id": "bandit_a",
+        "name": "Bandit A",
+        "icon": "enemies/bandit_human.png",
+        "combatant_type": "bandit_tier1_minion_human",
+        "speed": "slow",
+        "active": true,
+        "counters": {
+            "health": 12,
+            "focus": 2,
+            "investiture": 0
+        }
+    },
+    {
+        "id": "bandit_b",
+        "name": "Bandit B",
+        "icon": "enemies/bandit_human.png",
+        "combatant_type": "bandit_tier1_minion_human",
+        "speed": "slow",
+        "active": true,
+        "counters": {
+            "health": 11,
+            "focus": 2,
+            "investiture": 0
+        }
+    },
+    {
+         "id": "bandit_c",
+        "name": "Bandit C",
+        "icon": "enemies/bandit_human.png",
+        "combatant_type": "bandit_tier1_minion_human",
+        "speed": "slow",
+        "active": true,
+        "counters": {
+            "health": 13,
+            "focus": 2,
+            "investiture": 0
+        }
+    },
+    {
+         "id": "bandit_d",
+        "name": "Bandit D",
+        "icon": "enemies/bandit_human.png",
+        "combatant_type": "bandit_tier1_minion_human",
+        "speed": "slow",
+        "active": true,
+        "counters": {
+            "health": 13,
+            "focus": 2,
+            "investiture": 0
+        }
+    },
+    {
+         "id": "bandit_e",
+        "name": "Bandit E",
+        "icon": "enemies/bandit_human.png",
+        "combatant_type": "bandit_tier1_minion_human",
+        "speed": "slow",
+        "active": true,
+        "counters": {
+            "health": 11,
+            "focus": 2,
+            "investiture": 0
+        }
+    },
+    {
+         "id": "bandit_f",
+        "name": "Bandit F",
+        "icon": "enemies/bandit_human.png",
+        "combatant_type": "bandit_tier1_minion_human",
+        "speed": "slow",
+        "active": true,
+        "counters": {
+            "health": 8,
+            "focus": 2,
+            "investiture": 0
+        }
+    },
+    {
+         "id": "Taszo-son-Clutio",
+        "name": "Taszo-son-Clutio",
+        "icon": "taszo_son_clutio.png",
+        "combatant_type": "taszo_tier1_rival_human",
+        "speed": "slow",
+        "active": true,
+        "counters": {
+            "health": 17,
+            "focus": 4,
+            "investiture": 0
+        }
+    }
+]

@@ -6,20 +6,6 @@
         "combatant_type": "axehound_tier1_minion",
         "speed": "fast",
         "active": true,
-        "stats": {
-            "physical": {
-                "strength": 2,
-                "speed": 2
-            },
-            "cognitive": {
-                "intelligence": 0,
-                "willpower": 0
-            },
-            "spiritual": {
-                "awareness": 3,
-                "presence": 0
-            }
-        },
         "counters": {
             "health": 12,
             "focus": 2,
@@ -33,20 +19,6 @@
         "combatant_type": "axehound_tier1_minion",
         "speed": "fast",
         "active": true,
-        "stats": {
-            "physical": {
-                "strength": 2,
-                "speed": 2
-            },
-            "cognitive": {
-                "intelligence": 0,
-                "willpower": 0
-            },
-            "spiritual": {
-                "awareness": 3,
-                "presence": 0
-            }
-        },
         "counters": {
             "health": 12,
             "focus": 2,
@@ -60,20 +32,6 @@
         "combatant_type": "axehound_tier1_minion",
         "speed": "fast",
         "active": true,
-        "stats": {
-            "physical": {
-                "strength": 2,
-                "speed": 2
-            },
-            "cognitive": {
-                "intelligence": 0,
-                "willpower": 0
-            },
-            "spiritual": {
-                "awareness": 3,
-                "presence": 0
-            }
-        },
         "counters": {
             "health": 12,
             "focus": 2,
@@ -87,20 +45,6 @@
         "combatant_type": "axehound_tier1_minion",
         "speed": "fast",
         "active": true,
-        "stats": {
-            "physical": {
-                "strength": 2,
-                "speed": 2
-            },
-            "cognitive": {
-                "intelligence": 0,
-                "willpower": 0
-            },
-            "spiritual": {
-                "awareness": 3,
-                "presence": 0
-            }
-        },
         "counters": {
             "health": 12,
             "focus": 2,
