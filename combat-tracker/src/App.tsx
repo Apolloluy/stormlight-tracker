@@ -1,4 +1,3 @@
-
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 
 
@@ -115,12 +114,12 @@ export default function App(){
 
   const fastPlayers = useMemo(()=>entities.filter(e=>e.type==='player' && e.speed==='fast'),[entities])
   const fastEnemies = useMemo(() => [
-    ...entities.filter(e => e.type === 'enemy' && e.speed === 'fast'),
+    ...entities.filter(e => (e.type === 'enemy' || e.type === 'ally') && e.speed === 'fast'),
     ...entities.filter(e => e.type === 'boss')
   ], [entities]);
   const slowPlayers = useMemo(()=>entities.filter(e=>e.type==='player' && e.speed==='slow'),[entities])
   const slowEnemies = useMemo(() => [
-    ...entities.filter(e => e.type === 'enemy' && e.speed === 'slow'),
+    ...entities.filter(e => (e.type === 'enemy' || e.type === 'ally') && e.speed === 'slow'),
     ...entities.filter(e => e.type === 'boss')
   ], [entities]);
 
@@ -187,7 +186,7 @@ export default function App(){
     return { onDragOver:(e:React.DragEvent)=>e.preventDefault(), onDrop:(e:React.DragEvent)=>onDrop(e,lane) }
   }
 
-  const laneHeaderStyle = 'text-xs uppercase tracking-wider text-cyan-300/90'
+const laneHeaderStyle = 'text-xs uppercase tracking-wider text-cyan-300/90'
 const laneBoxStyle = `border rounded-2xl p-2 min-h-[120px] bg-slate-900/60 ${glow}`;
 
   return (
@@ -272,7 +271,7 @@ const laneBoxStyle = `border rounded-2xl p-2 min-h-[120px] bg-slate-900/60 ${glo
                         (phase === 'FAST_ENEMIES' ? ' border-2 border-purple-400 bg-purple-900/30' : '')
                       }
                     >
-                      <div className={laneHeaderStyle}><Shield className="inline size-3 mr-1"/>Enemies</div>
+                      <div className={laneHeaderStyle}><Shield className="inline size-3 mr-1"/>Enemies & NPCs</div>
                       <div className="mt-2 grid gap-2">
                         {fastEnemies.map(e => (
                           <div key={e.id} style={{ position: 'relative' }}>
@@ -341,7 +340,7 @@ const laneBoxStyle = `border rounded-2xl p-2 min-h-[120px] bg-slate-900/60 ${glo
                         (phase === 'SLOW_ENEMIES' ? ' border-2 border-fuchsia-400 bg-fuchsia-900/30' : '')
                       }
                     >
-                      <div className={laneHeaderStyle}><Shield className="inline size-3 mr-1"/>Enemies</div>
+                      <div className={laneHeaderStyle}><Shield className="inline size-3 mr-1"/>Enemies & NPCs</div>
                       <div className="mt-2 grid gap-2">
                         {slowEnemies.map(e => (
                           <div key={e.id} style={{ position: 'relative' }}>
@@ -381,11 +380,14 @@ const laneBoxStyle = `border rounded-2xl p-2 min-h-[120px] bg-slate-900/60 ${glo
                   {entities.length===0 && (<div className="text-sm text-slate-400 p-4">No entities yet. Use buttons below to add some.</div>)}
                   <div className="mt-3 flex gap-2">
                     <Button className="bg-cyan-800/70 hover:bg-cyan-700/70 flex flex-row items-center" onClick={()=>addEntity({type:'player'})}>
-                  <Plus className="mr-1 size-4"/> <span>Player</span>
-                </Button>
-                <Button className="bg-purple-800/60 hover:bg-purple-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'enemy', speed:'slow'})}>
-                  <Plus className="mr-1 size-4"/> <span>Enemy</span>
-                </Button>
+                      <Plus className="mr-1 size-4"/> <span>Player</span>
+                    </Button>
+                    <Button className="bg-purple-800/60 hover:bg-purple-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'enemy', speed:'slow'})}>
+                      <Plus className="mr-1 size-4"/> <span>Enemy</span>
+                    </Button>
+                    <Button className="bg-green-800/60 hover:bg-green-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'ally', speed:'slow'})}>
+                      <Plus className="mr-1 size-4"/> <span>Ally</span>
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -395,13 +397,16 @@ const laneBoxStyle = `border rounded-2xl p-2 min-h-[120px] bg-slate-900/60 ${glo
               <TabsTrigger value="roster">Roster & Setup</TabsTrigger>
             </TabsList>
             <div className="mt-6 flex flex-wrap items-center gap-2 mb-4">
-                <Button className="bg-cyan-800/70 hover:bg-cyan-700/70 flex flex-row items-center" onClick={()=>addEntity({type:'player'})}>
-                  <Plus className="mr-1 size-4"/> <span>Player</span>
-                </Button>
-                <Button className="bg-purple-800/60 hover:bg-purple-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'enemy', speed:'slow'})}>
-                  <Plus className="mr-1 size-4"/> <span>Enemy</span>
-                </Button>
-              </div>
+              <Button className="bg-cyan-800/70 hover:bg-cyan-700/70 flex flex-row items-center" onClick={()=>addEntity({type:'player'})}>
+                <Plus className="mr-1 size-4"/> <span>Player</span>
+              </Button>
+              <Button className="bg-purple-800/60 hover:bg-purple-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'enemy', speed:'slow'})}>
+                <Plus className="mr-1 size-4"/> <span>Enemy</span>
+              </Button>
+              <Button className="bg-green-800/60 hover:bg-green-700/60 flex flex-row items-center" onClick={()=>addEntity({type:'ally', speed:'slow'})}>
+                <Plus className="mr-1 size-4"/> <span>Ally</span>
+              </Button>
+            </div>
           </Tabs>
         </div>
       </div>

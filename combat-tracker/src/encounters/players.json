@@ -12,13 +12,13 @@
         "speed": "fast"
     },
     {
-        "name": "Justin",
+        "name": "Lindsey",
         "icon": "src/icons/female_singer_character2.png",
         "type": "player",
         "speed": "fast"
     },
     {
-        "name": "Lindsey",
+        "name": "Justin",
         "icon": "src/icons/iriali_character.png",
         "type": "player",
         "speed": "fast"

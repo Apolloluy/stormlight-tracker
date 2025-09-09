@@ -26,7 +26,7 @@
     {
         "name": "Mysterious Shin",
         "icon": "src/icons/taszo_son_clutio.png",
-        "type": "player",
+        "type": "ally",
         "speed": "fast"
     }
 ]

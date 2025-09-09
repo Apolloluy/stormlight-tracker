@@ -12,7 +12,7 @@ import { DEFAULT_STATUSES, DEFAULT_STATUS_ICONS, NEGATIVE_STATUSES, POSITIVE_STA
 
 
 export default function EntityCard({ entity, onUpdate, onRemove }:{ entity:Entity, onUpdate:(id:string, patch:Partial<Entity>)=>void, onRemove:(id:string)=>void }){
-  const isPlayer = entity.type==='player';
+  const isPlayer = entity.type==='player' || entity.type==='ally';
   const isBoss = entity.type==='boss';
   const investitureColor = isBoss
     ? 'bg-gradient-to-br from-fuchsia-700 via-violet-800 to-indigo-900 border-violet-400/80'

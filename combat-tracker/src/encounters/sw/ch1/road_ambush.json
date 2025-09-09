@@ -26,7 +26,13 @@
     {
         "name": "Taszo-son-Clutio",
         "icon": "src/icons/taszo_son_clutio.png",
-        "type": "player",
+        "type": "ally",
+        "speed": "fast"
+    },
+    {
+        "name": "Rebin and/or Hana",
+        "icon": "src/icons/jake_character.png",
+        "type": "ally",
         "speed": "fast"
     }
 ]
