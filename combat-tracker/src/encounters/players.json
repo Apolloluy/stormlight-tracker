@@ -1,25 +1,25 @@
 [
     {
-        "name": "Jake",
-        "icon": "src/icons/jake_character.png",
+        "name": "Mnathi",
+        "icon": "src/icons/mnathi.jpg",
         "type": "player",
         "speed": "fast"
     },
     {
-        "name": "Hayley",
-        "icon": "src/icons/female_singer_character.png",
+        "name": "Axn",
+        "icon": "src/icons/axn.png",
         "type": "player",
         "speed": "fast"
     },
     {
-        "name": "Lindsey",
-        "icon": "src/icons/female_singer_character2.png",
+        "name": "Ahnokai",
+        "icon": "src/icons/ahnokai.jpg",
         "type": "player",
         "speed": "fast"
     },
     {
-        "name": "Justin",
-        "icon": "src/icons/iriali_character.png",
+        "name": "Talyn",
+        "icon": "src/icons/talyn.png",
         "type": "player",
         "speed": "fast"
     }
