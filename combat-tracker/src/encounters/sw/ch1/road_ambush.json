@@ -31,7 +31,7 @@
     },
     {
         "name": "Rebin and/or Hana",
-        "icon": "src/icons/jake_character.png",
+        "icon": "src/icons/npcs/screaming_thaylen_woman.png",
         "type": "ally",
         "speed": "fast"
     }
