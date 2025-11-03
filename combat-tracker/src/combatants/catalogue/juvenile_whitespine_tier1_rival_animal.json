@@ -1,0 +1,68 @@
+{
+    "name": "Whitespine (Deflect 1)",
+    "icon": "src/icons/enemies/whitespine_1.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 2,
+            "speed": 3
+        },
+        "cognitive": {
+            "intelligence": 0,
+            "willpower": 2
+        },
+        "spiritual": {
+            "awareness": 3,
+            "presence": 0
+        }
+    },
+    "counters": {
+        "health": 23,
+        "focus": 4,
+        "investiture": 0
+    },
+    "movement": 40,
+    "senses": {
+        "smell": 20,
+        "hearing": 0,
+        "sight": 0
+    },
+    "skills": {
+        "physical": {
+            "Agility": 6,
+            "Athletics": 5,
+            "Stealth": 6
+        },
+        "cognitive": {
+            "Intimidation": 4
+        },
+        "spiritual": {
+            "Perception": 5,
+            "Survival": 5
+        }
+    },
+    "features": {
+        "Enhanced Senses": "The whitespine gains an advantage on non-attack tests that rely on smell.",
+        "Spined Carapace": "After an enemy within 5ft of the whitespane grazes them with a weapon attack, the enemy takes 3 (1d6) keen damage."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Claws",
+                "description": "Attack +5, reach 5 ft., one target. Graze: 3 (1d6) keen damage. Hit: 8 (1d6 + 5) keen damage, and the whitespane can spend 1 focus to make the target Afflicted [1d4 vital] until the target regains at least 1 health."
+            },
+            {
+                "name": "Goring Claws",
+                "description": "Attack +5, reach 5 ft., one target. Graze: 4 (1d8) impact damage. Hit: 9 (1d8 + 5) impact damage. If the whitespine hits with this attack after moving 15ft, the target takes an extra 4 (1d8) impact damage and must succeed on a DC12 Athletics or be knocked Prone."
+            }
+        ],
+        "bi_action": [
+            {
+                "name": "Pheromone Release",
+                "description": "The whitespine releases foul pheromones. Each non-whitespine character within 10 ft of them must succeed on a DC13 Discipline or become stunned until the end of the Whitespine's next turned."
+            }
+        ]
+    },
+    "tactics": "Prefer to charge at distant, weak opponents to Goring Claws them. Will charge rather than stay attacking. When fighting goes poorly will use Pheromones to retreat or overwhelm."
+}

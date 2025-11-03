@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Warform A",
+        "icon": "src/icons/enemies/warform_singer.png",
+        "type": "enemy",
+        "speed": "fast"
+    },
+    {
+        "name": "Warform B",
+        "icon": "src/icons/enemies/warform_singer.png",
+        "type": "enemy",
+        "speed": "fast"
+    },
+    {
+        "name": "Warform C",
+        "icon": "src/icons/enemies/warform_singer.png",
+        "type": "enemy",
+        "speed": "slow"
+    },
+    {
+        "name": "Nimbleform",
+        "icon": "src/icons/enemies/nimbleform_singer.png",
+        "type": "enemy",
+        "speed": "slow"
+    }
+]

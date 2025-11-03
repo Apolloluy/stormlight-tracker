@@ -1,0 +1,68 @@
+{
+    "name": "Nimbleform Singer",
+    "icon": "src/icons/enemies/nimbleform_singer.png",
+    "speed": "slow",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 1,
+            "speed": 3
+        },
+        "cognitive": {
+            "intelligence": 3,
+            "willpower": 2
+        },
+        "spiritual": {
+            "awareness": 3,
+            "presence": 2
+        }
+    },
+    "counters": {
+        "health": 20,
+        "focus": 4,
+        "investiture": 0
+    },
+    "movement": 30,
+    "senses": {
+        "sight": 20
+    },
+    "skills": {
+        "physical": {
+            "Agility": 5,
+            "Light Weaponry": 5,
+            "Stealth": 4
+        },
+        "cognitive": {
+            "Crafting": 4,
+            "Deduction": 5,
+            "Lore": 4
+        },
+        "spiritual": {
+            "Perception": 5,
+            "Survival": 5
+        }
+    },
+    "features": {
+        "Deadly Speed": "At the start of each scene, if the nimbleform isn't surprised, they can take a fast turn before any other character (this doesn't cout as their turn this round).",
+        "Keen Senses": "The nimbleform can spend 1 focus to gain an advantage on a Perception test (no action required)."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Mace",
+                "description": "Attack +5, reach 5 ft., one target. Graze: 3 (1d6) impact damage. Hit: 8 (1d6 + 5) impact damage."
+            },
+            {
+                "name": "Strike: Shorbow",
+                "description": "Attack +5, range 80/320 ft., one target. Graze: 3 (1d6) impact damage. Hit: 8 (1d6 + 5) impact damage."
+            }
+        ],
+        "bi_action": [
+            {
+                "name": "Chosen Target (Costs 2 Focus)",
+                "description": "The nimbleform chooses an enemy then can sense within 120ft. For 1 hour, when the nimbleform hits their chosen enemy with a weapon attack, they deal an extra 3 (1d6) damage. In addition, the nimbleform gains an advantage on Survival tests to track that enemy."
+            }
+        ]
+    },
+    "tactics": "Experts at tracking and surveying an area with Chosen Target."
+}

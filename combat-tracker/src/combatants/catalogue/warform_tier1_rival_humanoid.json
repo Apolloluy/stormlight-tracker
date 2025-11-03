@@ -1,0 +1,67 @@
+{
+    "name": "Warform Singer (Deflect 2)",
+    "icon": "src/icons/enemies/warform_singer.png",
+    "speed": "slow",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 3,
+            "speed": 1
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 2
+        },
+        "spiritual": {
+            "awareness": 2,
+            "presence": 2
+        }
+    },
+    "counters": {
+        "health": 24,
+        "focus": 4,
+        "investiture": 0
+    },
+    "movement": 25,
+    "senses": {
+        "sight": 10
+    },
+    "skills": {
+        "physical": {
+            "Agility": 5,
+            "Heavy Weaponry": 4,
+            "Light Weaponry": 3
+        },
+        "cognitive": {
+            "Discipline": 5,
+            "Intimidation": 4
+        },
+        "spiritual": {
+            "Leadership": 4,
+            "Perception": 4
+        }
+    },
+    "features": {
+        "External Carapace": "The warform can use their carapace like a shield, allowing them to use the Brace action.",
+        "Martial Expertise": "The warform can use their Strike action twice on their turn."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Axe",
+                "description": "Attack +4, reach 5 ft., one target. The warform can jump up to 10ft before or after making this attack. Graze: 3 (1d6) impact damage. Hit: 7 (1d6 + 4) keen damage."
+            },
+            {
+                "name": "Strike: Shorbow",
+                "description": "Attack +3, range 80/320 ft., one target. Graze: 3 (1d6) impact damage. Hit: 6 (1d6 + 3) impact damage."
+            }
+        ],
+        "reaction": [
+            {
+                "name": "Warpair Coordination (Costs 1 Focus)",
+                "description": "After another warform within 5ft of this warform takes the Move action, this warform moves up to their movement rate, ending their movement within 5ft of the other warform."
+            }
+        ]
+    },
+    "tactics": ""
+}
