@@ -1,0 +1,62 @@
+{
+    "name": "Spear Infantry (Deflect 2)",
+    "icon": "src/icons/enemies/spear_infantry.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 2,
+            "speed": 2
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 1
+        },
+        "spiritual": {
+            "awareness": 2,
+            "presence": 1
+        }
+    },
+    "counters": {
+        "health": 14,
+        "focus": 3,
+        "investiture": 0
+    },
+    "movement": 25,
+    "senses": {
+        "sight": 10
+    },
+    "skills": {
+        "physical": {
+            "Deflect": 2,
+            "Athletics": 4,
+            "Heavy Weaponry": 4,
+            "Light Weaponry": 3
+        },
+        "cognitive": {
+            "Discipline": 2,
+            "Intimidation": 3
+        },
+        "spiritual": {
+            "Perception": 4
+        }
+    },
+    "features": {
+        "Minion": "The infantry's attacks can't critically hit, and they're immediately defeated when they suffer an injury.",
+        "Martial Drill": "At the start of each scene, if the spear infantry has their shield and isn't Surprised, they gain the benefits of the Brace action until the start of their first run.",
+        "Military Tactics": "Once per round, the spear infantry can spend 1 additional focus to use the Aid or Reactive Strike reaction without usnig their Reaction."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Shortspear",
+                "description": "Attack +3, reach 5 ft., one target. Graze: 4 (1d8) keen damage. Hit: 7 (1d8 + 3) keen damage, and if the target is Prione, they take an extra 4 (1d8) keen damage."
+            },
+            {
+                "name": "Strike: Shortbow",
+                "description": "Attack +3, reach 80/320 ft., one target. Graze: 3 (1d6) keen damage. Hit: 6 (1d6 + 3) keen damage."
+            }
+        ]
+    },
+    "tactics": "A spear infantry topples enemies with their Shield Bash and then strikes with their Shortspear. Their Military Tactics can be used to pin down fleeing targets or bolster their fellow soldiers, depending on how the battle is going."
+}
