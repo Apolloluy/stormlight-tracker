@@ -1,0 +1,73 @@
+{
+    "name": "Archer (Deflect 1)",
+    "icon": "src/icons/enemies/archer_human.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 2,
+            "speed": 1
+        },
+        "cognitive": {
+            "intelligence": 2,
+            "willpower": 1
+        },
+        "spiritual": {
+            "awareness": 2,
+            "presence": 1
+        }
+    },
+    "counters": {
+        "health": 12,
+        "focus": 3,
+        "investiture": 0
+    },
+    "movement": 25,
+    "senses": {
+        "sight": 10
+    },
+    "skills": {
+        "physical": {
+            "Deflect": 1,
+            "Agility": 3,
+            "Heavy Weaponry": 4,
+            "Light Weaponry": 3
+        },
+        "cognitive": {
+            "Discipline": 3
+        },
+        "spiritual": {
+            "Perception": 4,
+            "Survival": 3
+        }
+    },
+    "features": {
+        "Enhanced Senses": "The axehound gains an advantage on non-attack tests that rely on smell.",
+        "Minion": "The axehound's attacks can't critically hit, and they're immediately defeated when they suffer an injury."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Knife",
+                "description": "Attack +3, reach 5 ft., one target. Graze: 2 (1d4) keen damage. Hit: 5 (1d4 + 3) keen damage."
+            },
+            {
+                "name": "Strike: Longbow",
+                "description": "Attack +4, reach 150/600 ft., one target. Graze: 3 (1d6) keen damage. Hit: 7 (1d6 + 4) keen damage."
+            }
+        ],
+        "free": [
+            {
+                "name": "Take Aim",
+                "description": "On the archer's first turn of each scene, if they aren't Surprised, they can use the Gain Advantage action as ▷."
+            }
+        ],
+        "reaction": [
+            {
+                "name": "Immobilizing Shot (1 Focus)",
+                "description": "When an enemy the archer can sense moves while the archer is within 150 ft of them, the archer makes a Longbow attack against them. On a hit, the target is also Immobilized until the end of the Archer's next turn."
+            }
+        ]
+    },
+    "tactics": "Soldiers are trained to be effective on a battlefield in their specialized roles. An archer fights at a distance. They use Immobilizing Shot to immediately take the upper hand, then follow up with Longbow."
+}

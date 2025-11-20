@@ -1,0 +1,68 @@
+{
+    "name": "Guard (Deflect 2)",
+    "icon": "src/icons/enemies/guard_human.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 3,
+            "speed": 1
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 2
+        },
+        "spiritual": {
+            "awareness": 3,
+            "presence": 1
+        }
+    },
+    "counters": {
+        "health": 24,
+        "focus": 4,
+        "investiture": 0
+    },
+    "movement": 25,
+    "senses": {
+        "sight": 20
+    },
+    "skills": {
+        "physical": {
+            "Deflect": 2,
+            "Athletics": 5,
+            "Heavy Weaponary": 5
+        },
+        "cognitive": {
+            "Discipline": 4,
+            "Intimidation": 4
+        },
+        "spiritual": {
+            "Insight": 4,
+            "Perception": 5
+        }
+    },
+    "features": {
+        "Raise the Alert!": " After an enemy the guard can sense within 60 feet of them fails a Stealth test, or after the guard succeeds on a test to notice that enemy, this guard and each allied guard who can sense that enemy gains the Focused condition until the end of the scene."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Longspear",
+                "description": "Attack +5, reach 5 ft., one target. Graze: 4 (1d8) keen damage. Hit: 9 (1d8 + 5) keen damage, and the guard can spend 1 focus to know the target prone."
+            }
+        ],
+        "bi_action": [
+            {
+                "name": "Debilitate (2 Focus)",
+                "description": "Attack +5, reach 5 ft., one prone target. Graze: 9 (2d8) keen damage. Hit: 14 (2d8 + 5) impact damage."
+            }
+        ],
+        "reaction": [
+            {
+                "name": "Work as One (1 Focus)",
+                "description": " After the guard hits with an attack, they choose an ally who they can influence, urging them to advance. That ally can immediately Disengage (no action required)."
+            }
+        ]
+    },
+    "tactics": "A guard quickly incapacitates their targets, especially those discovered committing a crime. They aim to knock an opponent prone with their Longspear, then use Debilitate to inflict significant damage. While accompanied by other guards or allies, a guard uses Work as One, quickly and efficiently coordinating to subdue opponents."
+}

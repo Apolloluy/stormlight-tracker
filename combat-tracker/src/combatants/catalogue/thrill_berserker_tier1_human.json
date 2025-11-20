@@ -1,0 +1,76 @@
+{
+    "name": "Thrill Berserker (Deflect 2)",
+    "icon": "src/icons/enemies/thrill_berserker.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 2,
+            "speed": 2
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 3
+        },
+        "spiritual": {
+            "awareness": 2,
+            "presence": 2
+        }
+    },
+    "counters": {
+        "health": 22,
+        "focus": 5,
+        "investiture": 0
+    },
+    "movement": 25,
+    "senses": {
+        "sight": 10
+    },
+    "skills": {
+        "physical": {
+            "Deflect": 2,
+            "Athletics": 4,
+            "Heavy Weaponry": 4,
+            "Light Weaponry": 3
+        },
+        "cognitive": {
+            "Intimidation": 5
+        },
+        "spiritual": {
+            "Leadership": 3,
+            "Perception": 4
+        }
+    },
+    "features": {
+        "Infectious Thrill": "When an enemy rolls a Complication on an attack test against the berserker, the enemy gains a +3 bonus to that d20. Regardless of whether the attack hits or misses, if any other characters are within 5ft of the Berserker, the enemy must choose one. The enemy's attack also grazes the chosen character (without spending focus)."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Longsword",
+                "description": "Attack +4, reach 5 ft., one target. Graze: 4 (1d8) keen damage. Hit: 8 (1d8 + 4) keen damage, and if the target is Prone, they take an extra 4 (1d8) keen damage."
+            },
+            {
+                "name": "Strike: Dagger",
+                "description": "Attack +3, reach 20/60 ft., one target. Graze: 2 (1d4) keen damage. Hit: 5 (1d4 + 3) keen damage."
+            },
+            {
+                "name": "Shield Bash (1 Focus)",
+                "description": "The berserker makes an Athletics test against defense of a Large or smaller character within 5ft, knocking Prone on a success."
+            }
+        ],
+        "free": [
+            {
+                "name": "Berserker Rage (2 Focus)",
+                "description": "The Thrill surges within the berserker. Their next Strike targets each character within 5ft of them and deals an extra 3 (1d6) damage on a hit."
+            }
+        ],
+        "reaction": [
+            {
+                "name": "Lash Out (1 Focus)",
+                "description": "After the berserker is attacked by an enemy within 5ft of them, the berserker deals 4 (1d8) keen damage to the attacker."
+            }
+        ]
+    },
+    "tactics": "A Thrill berserker rushes into battle, undeterred by formidable enemies and careful fortifications. They fight with alarming ferocity, using Berserker Rage and Shield Bash to cleave their path, regardless of whether friend or foe stands in the way."
+}
