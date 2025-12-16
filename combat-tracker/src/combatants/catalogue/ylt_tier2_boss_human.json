@@ -1,0 +1,92 @@
+{
+    "name": "Ylt",
+    "icon": "src/icons/enemies/ylt.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 2,
+            "speed": 3
+        },
+        "cognitive": {
+            "intelligence": 3,
+            "willpower": 3
+        },
+        "spiritual": {
+            "awareness": 3,
+            "presence": 4
+        }
+    },
+    "counters": {
+        "health": 80,
+        "focus": 5,
+        "investiture": 6
+    },
+    "movement": 30,
+    "senses": {
+        "sight": 20
+    },
+    "skills": {
+        "physical": {
+            "Light Weaponry": 5
+        },
+        "cognitive": {
+            "Deduction": 6,
+            "Discipline": 6,
+            "Cohesion": 6,
+            "Illumination": 6
+        },
+        "spiritual": {
+            "Insight": 5,
+            "Leadership": 6,
+            "Perception": 5,
+            "Progression": 5,
+            "Tension": 5
+        }
+    },
+    "features": {
+        "Boss": "Ylt can take both a fast turn and a slow turn each round. After an enemy finishes a turn, Ylt can spend 1 focus to immediately use an extra ▶ or ▷. He can spend 1 focus on his turn to remove a condition from himself.",
+        "Flowing Earth": "After Ylt uses the Cohesion surge, he can immediately use Vaulting Stone on himself (no action or Investiture required), though it doesn't grant advantage on his next attack.",
+        "Taln's Honorblade": "Ylt is bonded to the Honorblade of the Herald Taln. If he loses the weapon, he can summon it as ▶ and it reappears at the start of his next fast turn. While not wielding it, he can't use Cohesion and Tension surges."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Honorblade",
+                "description": "Attack +5, reach 5 ft., one target. Graze: 11 (2d10) spirit damage. Hit: 16 (2d10 + 5) spirit damage."
+            },
+            {
+                "name": "Vaulting Stone (Costs 1 Investiture)",
+                "description": "Uses Cohesion to create a pillar of stone that propels him or a willing character within 15 feet of him into the air; that character lands in a space up to 15 feet away without triggering Reactive Strikes, and if their next action is a melee attack that attack gains advantage."
+            },
+            {
+                "name": "Illusory Flourish (Costs 1 Investiture)",
+                "description": "Targets an enemy he has hit with a melee attack since the end of his last turn, making an Illumination test against their Spiritual defense. On success the target is Disoriented until the end of their next turn."
+            }
+        ],
+        "bi_action": [
+            {
+                "name": "Stone Spear (Costs 1 Investiture)",
+                "description": "Cohesion Attack +6, range 60 ft., one target. Graze: 9 (2d8) impact damage. Hit: 15 (2d8 + 6) impact damage. Ylt can spend an Opportunity to knock the target Prone."
+            },
+            {
+                "name": "Regrowth (Costs 1 Investiture)",
+                "description": "Ylt restores 1d6 + 5 health to himself or another he can touch."
+            }
+        ],
+        "free": [
+            {
+                "name": "Regenerate (Costs 1 Investiture)",
+                "description": "Ylt recovers 4 (1d6+1) health; he can use this free action even while Unconscious or otherwise prevented from using actions."
+            }
+        ],
+        "reaction": [
+            {
+                "name": "Tension Parry (Costs 1 Investiture)",
+                "description": "Before Ylt is hit or grazed by an attack against Physical defense, he can infuse Tension into his clothing to increase his Physical defense by 2 until the start of his next turn, including against the triggering attack. If the attack hits, this increase can change it into a miss; if it grazes, he ignores its effects."
+            }
+        ]
+    },
+    "tactics": "Ylt prefers to use Cohesion and Tension surges to manipulate the battlefield and punish attackers; he uses Vaulting Stone to reposition allies defensively and Offhand Strike to apply pressure.",
+    "languages": "Alethi, Iriali"
+}

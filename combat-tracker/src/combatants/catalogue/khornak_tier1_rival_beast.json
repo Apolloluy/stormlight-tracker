@@ -1,0 +1,62 @@
+{
+    "name": "Khornak (Deflect 2)",
+    "icon": "src/icons/enemies/khornak.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 3,
+            "speed": 2
+        },
+        "cognitive": {
+            "intelligence": 0,
+            "willpower": 2
+        },
+        "spiritual": {
+            "awareness": 2,
+            "presence": 0
+        }
+    },
+    "counters": {
+        "health": 26,
+        "focus": 4,
+        "investiture": 0
+    },
+    "movement": 30,
+    "senses": {
+        "sight": 10
+    },
+    "skills": {
+        "physical": {
+            "Deflect": 2,
+            "Athletics": 5,
+            "Stealth": 4
+        },
+        "cognitive": {},
+        "spiritual": {
+            "Perception": 3,
+            "Survival": 4
+        }
+    },
+    "features": {
+        "Terrifying Ambush": "At the start of each scene, each enemy who can sense the khornak must make a DC 14 Discipline test. On a failure, that enemy can't take a fast action unless they spend 2 focus.",
+        "Ruthless Predator": "When the khornak attacks and hits an enemy who hasn't taken a turn yet this round, the attack deals an extra 1d8 damage."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Curshing Jaw",
+                "description": "Attack +5, reach 5 ft., one target. Graze: 4 (1d8) impact damage. Hit: 9 (1d8 + 5) impact damage, and the target becomes Restrained by the khornak's jaw while the khornak remains within 5ft of them. The khornak can spend 1 focus to make the target Afflicted [1d4 vital] until the target regains at least 1 health. As (double action) the target or a character who can reach them can make a DC 16 Agility/Athletics test, ending the Restrained condition on a sucess. While the khornak is restraining a target, it can't use this attack."
+            },
+            {
+                "name": "Tail Sweep",
+                "description": "Attack +5, reach 5 ft., one target. The khornak can spend up to 2 focus to hit that many additional targets. Graze: 3 (1d6) impact damage. Hit: 8 (1d6 + 5) impact damage, and the target must succeed on a DC 15 Athletics test or be Knocked Prone."
+            },
+            {
+                "name": "Drag",
+                "description": "The khronak moves up to 15 ft in any direction while dragging a Restrained target behind them."
+            }
+        ]
+    },
+    "tactics": "A dangerous and deadly foe, a khornak first ensnares and tears into their prey with their Crushing Jaw, strengthened by their Terrifying Ambush. While the khornak restrains this enemy in their jaws, they repel other opponents with their Tail Sweep, and they Drag their prey away to feast. If their meal manages to escape, the khornak hunts foes down with Ruthless Predator."
+}

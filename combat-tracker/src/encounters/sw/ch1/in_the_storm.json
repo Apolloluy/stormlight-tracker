@@ -1,8 +1,0 @@
-[
-    {
-        "name": "Alethi Bandit",
-        "icon": "src/icons/enemies/sw_boss_veth.png",
-        "type": "boss",
-        "speed": "fast"
-    }
-]
