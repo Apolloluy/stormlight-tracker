@@ -1,0 +1,122 @@
+{
+    "kind": "encounter",
+    "slug": "caught_after_monestary",
+    "scene": [
+        {
+            "name": "Spear Infantry 1",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Spear Infantry 2",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Spear Infantry 3",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Spear Infantry 4",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Spear Infantry 5",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Spear Infantry 6",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "slow"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "bandit_a",
+            "name": "Spear Infantry 1",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 14,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "bandit_b",
+            "name": "Spear Infantry 2",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "bandit_c",
+            "name": "Spear Infantry 3",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 13,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "bandit_d",
+            "name": "Spear Infantry 4",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "bandit_e",
+            "name": "Spear Infantry 5",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 17,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "bandit_f",
+            "name": "Spear Infantry 6",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 14,
+                "focus": 3,
+                "investiture": 0
+            }
+        }
+    ]
+}

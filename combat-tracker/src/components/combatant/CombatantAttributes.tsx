@@ -131,8 +131,8 @@ const CombatantAttributes = ({ type, data  }) => {
             default: emoji = '⚡';
           }
           return (
-            <div className={`${stormBorders} ${glow}`}>
-              <Section key={actionType} title={`${emoji} ${actionType.charAt(0).toUpperCase() + actionType.slice(1)}`}>
+            <div key={actionType} className={`${stormBorders} ${glow}`}>
+              <Section title={`${emoji} ${actionType.charAt(0).toUpperCase() + actionType.slice(1)}`}>
                 {actions.map((a, idx) => (
                   <div key={actionType + idx}>
                     <span style={{ fontWeight: 700 }}>{a.name}</span>. <span style={{ fontWeight: 400 }}>{a.description}</span>

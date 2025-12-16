@@ -40,7 +40,7 @@ export default function App(){
   const [entities, setEntities] = useState<Entity[]>([])
   // Callback for AdminPanel to load entities from encounter files
   function handleLoadEntities(newEntities: Entity[]) {
-    setEntities(newEntities.map(e => ({
+    const normalized = newEntities.map(e => ({
       ...e,
       id: crypto.randomUUID(),
       statuses: e.statuses ?? [],
@@ -48,7 +48,9 @@ export default function App(){
       reactionUsed: false,
       unconscious: false,
       notes: e.notes ?? ''
-    })));
+    }));
+    console.log('[debug] handleLoadEntities normalized count', normalized.length, 'sample:', normalized.map(x=>({name:x.name,type:x.type,speed:x.speed})).slice(0,10));
+    setEntities(normalized);
   }
   const [round, setRound] = useState(1)
   const [phaseIndex, setPhaseIndex] = useState(0)
