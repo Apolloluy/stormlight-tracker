@@ -115,15 +115,17 @@ export default function App(){
   const phase = PHASES[phaseIndex]
 
   const fastPlayers = useMemo(()=>entities.filter(e=>e.type==='player' && e.speed==='fast'),[entities])
+  const bosses = useMemo(() => entities.filter(e => e.type === 'boss'), [entities]);
+
   const fastEnemies = useMemo(() => [
-    ...entities.filter(e => (e.type === 'enemy' || e.type === 'ally') && e.speed === 'fast'),
-    ...entities.filter(e => e.type === 'boss')
-  ], [entities]);
+    ...bosses,
+    ...entities.filter(e => (e.type === 'enemy' || e.type === 'ally') && e.speed === 'fast')
+  ], [entities, bosses]);
   const slowPlayers = useMemo(()=>entities.filter(e=>e.type==='player' && e.speed==='slow'),[entities])
   const slowEnemies = useMemo(() => [
-    ...entities.filter(e => (e.type === 'enemy' || e.type === 'ally') && e.speed === 'slow'),
-    ...entities.filter(e => e.type === 'boss')
-  ], [entities]);
+    ...bosses,
+    ...entities.filter(e => (e.type === 'enemy' || e.type === 'ally') && e.speed === 'slow')
+  ], [entities, bosses]);
 
   function addEntity(partial: Partial<Entity> = {}){
     const id = crypto.randomUUID()

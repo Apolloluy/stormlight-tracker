@@ -1,0 +1,122 @@
+{
+    "kind": "encounter",
+    "slug": "axehounds_following",
+    "scene": [
+        {
+            "name": "Axehound 1",
+            "icon": "src/icons/enemies/axehound1.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Axehound 2",
+            "icon": "src/icons/enemies/axehound2.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Axehound 3",
+            "icon": "src/icons/enemies/axehound3.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Axehound 4",
+            "icon": "src/icons/enemies/axehound4.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Axehound 5",
+            "icon": "src/icons/enemies/axehound3.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Axehound 6",
+            "icon": "src/icons/enemies/axehound4.png",
+            "type": "enemy",
+            "speed": "slow"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "axehound_a",
+            "name": "Axehound 1",
+            "icon": "enemies/axehound1.png",
+            "combatant_type": "axehound_tier1_minion",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "axehound_b",
+            "name": "Axehound 2",
+            "icon": "enemies/axehound1.png",
+            "combatant_type": "axehound_tier1_minion",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "axehound_c",
+            "name": "Axehound 3",
+            "icon": "enemies/axehound1.png",
+            "combatant_type": "axehound_tier1_minion",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "axehound_d",
+            "name": "Axehound 4",
+            "icon": "enemies/axehound1.png",
+            "combatant_type": "axehound_tier1_minion",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "axehound_5",
+            "name": "Axehound 5",
+            "icon": "enemies/axehound1.png",
+            "combatant_type": "axehound_tier1_minion",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "axehound_6",
+            "name": "Axehound 6",
+            "icon": "enemies/axehound1.png",
+            "combatant_type": "axehound_tier1_minion",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        }
+    ]
+}

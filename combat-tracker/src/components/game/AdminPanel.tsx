@@ -114,25 +114,65 @@ export default function AdminPanel({ storageKind, setStorageKind, highContrast, 
               };
             });
           } else {
-            // Fallback: match by name when lengths differ, but still prefer scene name
+            // Fallback: when lengths differ, include all `scene` entries (even if
+            // they don't have a corresponding combatant) and merge in combatant
+            // details when a name match is found. Also include unmatched combatant
+            // entries so nothing is lost.
             const sceneByName: Record<string, any> = {};
             scene.forEach((s: any) => { if (s && s.name) sceneByName[s.name] = s; });
-            normalizedEncounterEntities = encounterEntities.map(e => {
-              const s = sceneByName[e.name] || {};
+
+            const usedCombatants = new Set();
+            const merged: any[] = [];
+
+            // First, add all scene entries (primary source of display fields)
+            scene.forEach((s: any) => {
+              const match = encounterEntities.find((e: any) => e && e.name === s.name);
+              if (match) usedCombatants.add(match.id ?? match.name ?? JSON.stringify(match));
+              const e = match || {};
               const rawIcon = s.icon || e.icon || '';
               let iconPath = rawIcon;
               if (rawIcon && !rawIcon.startsWith('/') && !rawIcon.startsWith('http') && !rawIcon.startsWith('data:')) {
                 if (!rawIcon.includes('/icons/')) iconPath = `/src/icons/${rawIcon}`;
                 else iconPath = rawIcon.startsWith('src/') ? `/${rawIcon}` : `/${rawIcon}`;
               }
-              return {
-                ...e,
-                name: s.name || e.name,
+              merged.push({
+                name: s.name,
                 type: s.type || e.type || (e.combatant_type ? 'enemy' : 'player'),
                 speed: s.speed || e.speed || 'slow',
                 icon: iconPath || undefined,
-              };
+                id: e.id || (s.id ? s.id : undefined),
+                combatant_type: e.combatant_type,
+                counters: e.counters || {},
+                active: e.active ?? true,
+                statuses: e.statuses ?? [],
+                notes: e.notes ?? ''
+              });
             });
+
+            // Then add any combatants that didn't match a scene entry
+            encounterEntities.forEach((e: any) => {
+              const key = e.id ?? e.name ?? JSON.stringify(e);
+              if (usedCombatants.has(key)) return;
+              const rawIcon = e.icon || '';
+              let iconPath = rawIcon;
+              if (rawIcon && !rawIcon.startsWith('/') && !rawIcon.startsWith('http') && !rawIcon.startsWith('data:')) {
+                if (!rawIcon.includes('/icons/')) iconPath = `/src/icons/${rawIcon}`;
+                else iconPath = rawIcon.startsWith('src/') ? `/${rawIcon}` : `/${rawIcon}`;
+              }
+              merged.push({
+                ...e,
+                name: e.name,
+                icon: iconPath || undefined,
+                type: e.type || (e.combatant_type ? 'enemy' : 'player'),
+                speed: e.speed || 'slow'
+              });
+            });
+
+            // Prioritize bosses at the front of the list while preserving relative order
+            const bosses = merged.filter(i => i.type === 'boss');
+            const others = merged.filter(i => i.type !== 'boss');
+            normalizedEncounterEntities = [...bosses, ...others];
+            console.log('[debug] AdminPanel merged scene/combatant counts', { sceneCount: scene.length, combatantCount: encounterEntities.length, normalizedCount: normalizedEncounterEntities.length, bosses: bosses.length });
           }
         }
       } catch (err) {
