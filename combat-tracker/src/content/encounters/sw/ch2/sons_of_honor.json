@@ -1,0 +1,103 @@
+{
+    "kind": "encounter",
+    "slug": "sons_of_honor",
+    "scene": [
+        {
+            "name": "Captain",
+            "icon": "src/icons/enemies/thrill_berserker.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Guard",
+            "icon": "src/icons/enemies/guard_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Archer 1",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Archer 2",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Archer 3",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "captain",
+            "name": "Captain",
+            "icon": "enemies/thrill_berserker.png",
+            "combatant_type": "thrill_berserker_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 23,
+                "focus": 5,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "guard",
+            "name": "Guard",
+            "icon": "enemies/guard_human.png",
+            "combatant_type": "guard_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 24,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_1",
+            "name": "Archer 1",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_2",
+            "name": "Archer 2",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_3",
+            "name": "Archer 3",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 3,
+                "investiture": 0
+            }
+        }
+    ]
+}

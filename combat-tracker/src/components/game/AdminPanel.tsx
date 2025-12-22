@@ -1,7 +1,8 @@
 import React from 'react'
+import { loadAllContent } from '@/lib/contentLoader'
 import { Button } from '@/components/ui/button'
 import { Switch } from '@/components/ui/switch'
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from '@/components/ui/dialog'
 import { Settings } from 'lucide-react'
 
 
@@ -20,23 +21,27 @@ export default function AdminPanel({ storageKind, setStorageKind, highContrast, 
   const [encounterFiles, setEncounterFiles] = React.useState<{folder: string, files: {name: string, path: string}[]}[]>([]);
   const [selectedFile, setSelectedFile] = React.useState<string>('');
 
+  const [playersUrl, setPlayersUrl] = React.useState<string>('');
   React.useEffect(() => {
-    // This uses Vite's import.meta.glob to get all encounter files at build time
-    // Only works in Vite/webpack environments
-    // Filter out players.json and group by folder
-    // @ts-ignore
-    const files = (import.meta as any).glob('/src/encounters/**/*.json', { eager: true, as: 'url' });
-    const grouped: Record<string, {name: string, path: string}[]> = {};
-    Object.entries(files).forEach(([fullPath, url]) => {
-      if (fullPath.endsWith('players.json')) return;
-      // Extract folder and file name
-      const parts = fullPath.split('/');
-      const folder = parts[parts.length - 2];
-      const name = parts[parts.length - 1];
-      if (!grouped[folder]) grouped[folder] = [];
-      grouped[folder].push({ name, path: url as string });
-    });
-    setEncounterFiles(Object.entries(grouped).map(([folder, files]) => ({ folder, files })));
+    // Load all content (from new unified `src/content` or legacy folders)
+    loadAllContent().then(items => {
+      const encounterItems = items.filter(i => i.kind === 'encounter');
+      const grouped: Record<string, {name: string, path: string}[]> = {};
+      encounterItems.forEach(it => {
+        if (it.fullPath.endsWith('players.json')) {
+          setPlayersUrl(it.url);
+          return;
+        }
+        const parts = it.fullPath.split('/');
+        const folder = parts[parts.length - 2] || 'root';
+        const name = parts[parts.length - 1] || it.slug + '.json';
+        if (!grouped[folder]) grouped[folder] = [];
+        grouped[folder].push({ name, path: it.url });
+      });
+      setEncounterFiles(Object.entries(grouped).map(([folder, files]) => ({ folder, files })));
+    
+      console.log('[debug] AdminPanel encounter groups', Object.entries(grouped).map(([folder, files]) => ({ folder, filesCount: files.length })));
+    }).catch(err => console.warn('loadAllContent error', err));
   }, []);
 
   async function handleLoadEncounter() {
@@ -49,25 +54,133 @@ export default function AdminPanel({ storageKind, setStorageKind, highContrast, 
         window.open(`/gm-screen/${fileName}`, '_blank', 'noopener');
       }
       // ...existing code for loading entities...
-      // Use import.meta.glob to get all JSON file URLs
-      // @ts-ignore
-      const files = (import.meta as any).glob('/src/encounters/**/*.json', { eager: true, as: 'url' });
-      // Find the players.json URL
-      let playersUrl = '';
-      Object.entries(files).forEach(([fullPath, url]) => {
-        if (fullPath.endsWith('players.json')) {
-          playersUrl = url as string;
+      // Fetch encounter file and players via the content loader's results
+      let encounterEntities: any[] = [];
+      let playerEntities: any[] = [];
+      try {
+        const res = await fetch(selectedFile);
+        const json = await res.json();
+        // json may be either an array of combatants (legacy) or an object with a `combatants` array (merged format)
+        if (Array.isArray(json)) encounterEntities = json;
+        else if (json && Array.isArray(json.combatants)) encounterEntities = json.combatants;
+        else encounterEntities = [];
+        console.log('[debug] AdminPanel fetched encounterEntities count', encounterEntities.length, 'from', selectedFile);
+      } catch (err) {
+        console.warn('Failed to fetch encounter file directly, trying content loader', err);
+      }
+      if (playersUrl) {
+        try {
+          const pres = await fetch(playersUrl);
+          const pj = await pres.json();
+          playerEntities = Array.isArray(pj) ? pj : (pj?.players ?? []);
+        } catch (err) {
+          console.warn('Failed to fetch players.json', err);
         }
-      });
-      // Fetch encounter file
-      const encounterRes = await fetch(selectedFile);
-      const encounterEntities = await encounterRes.json();
-      // Fetch players.json from the same source
-      if (!playersUrl) throw new Error('players.json not found');
-      const playersRes = await fetch(playersUrl);
-      const playerEntities = await playersRes.json();
+      }
+      // If the fetched encounter JSON was the merged format, it may have a `scene` array
+      // that provides lightweight `type` and `speed` hints. Merge those into the
+      // detailed `combatants` entries so the App can classify them correctly.
+      let normalizedEncounterEntities = encounterEntities;
+      try {
+        const res2 = await fetch(selectedFile);
+        const full = await res2.json();
+        const scene = full?.scene;
+        if (Array.isArray(scene) && Array.isArray(encounterEntities)) {
+          // Prefer using the `scene` section as the source of truth for UI fields
+          // such as `name`, `type`, `speed`, and `icon`. We will merge detailed
+          // combatant data (counters, combatant_type, id) into the scene entries.
+          if (scene.length === encounterEntities.length) {
+            normalizedEncounterEntities = scene.map((s: any, i: number) => {
+              const e = encounterEntities[i] || {};
+              const rawIcon = s.icon || e.icon || '';
+              let iconPath = rawIcon;
+              if (rawIcon && !rawIcon.startsWith('/') && !rawIcon.startsWith('http') && !rawIcon.startsWith('data:')) {
+                if (!rawIcon.includes('/icons/')) iconPath = `/src/icons/${rawIcon}`;
+                else iconPath = rawIcon.startsWith('src/') ? `/${rawIcon}` : `/${rawIcon}`;
+              }
+              return {
+                // Scene provides display fields
+                name: s.name,
+                type: s.type || e.type || (e.combatant_type ? 'enemy' : 'player'),
+                speed: s.speed || e.speed || 'slow',
+                icon: iconPath || undefined,
+                // Include combatant-specific details
+                id: e.id || (s.id ? s.id : undefined),
+                combatant_type: e.combatant_type,
+                counters: e.counters || {},
+                active: e.active ?? true,
+                statuses: e.statuses ?? [],
+                notes: e.notes ?? ''
+              };
+            });
+          } else {
+            // Fallback: when lengths differ, include all `scene` entries (even if
+            // they don't have a corresponding combatant) and merge in combatant
+            // details when a name match is found. Also include unmatched combatant
+            // entries so nothing is lost.
+            const sceneByName: Record<string, any> = {};
+            scene.forEach((s: any) => { if (s && s.name) sceneByName[s.name] = s; });
+
+            const usedCombatants = new Set();
+            const merged: any[] = [];
+
+            // First, add all scene entries (primary source of display fields)
+            scene.forEach((s: any) => {
+              const match = encounterEntities.find((e: any) => e && e.name === s.name);
+              if (match) usedCombatants.add(match.id ?? match.name ?? JSON.stringify(match));
+              const e = match || {};
+              const rawIcon = s.icon || e.icon || '';
+              let iconPath = rawIcon;
+              if (rawIcon && !rawIcon.startsWith('/') && !rawIcon.startsWith('http') && !rawIcon.startsWith('data:')) {
+                if (!rawIcon.includes('/icons/')) iconPath = `/src/icons/${rawIcon}`;
+                else iconPath = rawIcon.startsWith('src/') ? `/${rawIcon}` : `/${rawIcon}`;
+              }
+              merged.push({
+                name: s.name,
+                type: s.type || e.type || (e.combatant_type ? 'enemy' : 'player'),
+                speed: s.speed || e.speed || 'slow',
+                icon: iconPath || undefined,
+                id: e.id || (s.id ? s.id : undefined),
+                combatant_type: e.combatant_type,
+                counters: e.counters || {},
+                active: e.active ?? true,
+                statuses: e.statuses ?? [],
+                notes: e.notes ?? ''
+              });
+            });
+
+            // Then add any combatants that didn't match a scene entry
+            encounterEntities.forEach((e: any) => {
+              const key = e.id ?? e.name ?? JSON.stringify(e);
+              if (usedCombatants.has(key)) return;
+              const rawIcon = e.icon || '';
+              let iconPath = rawIcon;
+              if (rawIcon && !rawIcon.startsWith('/') && !rawIcon.startsWith('http') && !rawIcon.startsWith('data:')) {
+                if (!rawIcon.includes('/icons/')) iconPath = `/src/icons/${rawIcon}`;
+                else iconPath = rawIcon.startsWith('src/') ? `/${rawIcon}` : `/${rawIcon}`;
+              }
+              merged.push({
+                ...e,
+                name: e.name,
+                icon: iconPath || undefined,
+                type: e.type || (e.combatant_type ? 'enemy' : 'player'),
+                speed: e.speed || 'slow'
+              });
+            });
+
+            // Prioritize bosses at the front of the list while preserving relative order
+            const bosses = merged.filter(i => i.type === 'boss');
+            const others = merged.filter(i => i.type !== 'boss');
+            normalizedEncounterEntities = [...bosses, ...others];
+            console.log('[debug] AdminPanel merged scene/combatant counts', { sceneCount: scene.length, combatantCount: encounterEntities.length, normalizedCount: normalizedEncounterEntities.length, bosses: bosses.length });
+          }
+        }
+      } catch (err) {
+        // ignore; we already logged earlier if fetch failed
+      }
+
       // Combine and send to App
-      onLoadEntities([...playerEntities, ...encounterEntities]);
+      onLoadEntities([...playerEntities, ...normalizedEncounterEntities]);
     } catch (err) {
       alert('Failed to load encounter: ' + err);
     }
@@ -81,6 +194,7 @@ export default function AdminPanel({ storageKind, setStorageKind, highContrast, 
       <DialogContent className="bg-slate-950/95 border-slate-700/70">
         <DialogHeader>
           <DialogTitle>Admin & Accessibility</DialogTitle>
+          <DialogDescription>Controls for loading encounters and accessibility settings.</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4">
           <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-700/60">

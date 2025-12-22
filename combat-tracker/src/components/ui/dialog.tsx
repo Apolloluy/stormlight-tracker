@@ -22,6 +22,9 @@ export function DialogContent({ className, children, ...props } : React.Componen
 export const DialogHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={cn('mb-2', className)} {...props} />
 )
-export const DialogTitle = ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-  <h3 className={cn('text-lg font-semibold', className)} {...props} />
+export const DialogTitle = ({ className, ...props }: React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>) => (
+  <DialogPrimitive.Title className={cn('text-lg font-semibold', className)} {...props} />
+)
+export const DialogDescription = ({ className, ...props }: React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>) => (
+  <DialogPrimitive.Description className={cn('text-sm text-slate-400', className)} {...props} />
 )

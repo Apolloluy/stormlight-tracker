@@ -1,0 +1,65 @@
+{
+    "kind": "encounter",
+    "slug": "khornaks",
+    "scene": [
+        {
+            "name": "Khornak 1",
+            "icon": "src/icons/enemies/khornak.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Khornak 2",
+            "icon": "src/icons/enemies/khornak.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Khornak 2",
+            "icon": "src/icons/enemies/khornak.png",
+            "type": "enemy",
+            "speed": "fast"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "khornak_1",
+            "name": "Khornak 1",
+            "icon": "enemies/khornak.png",
+            "combatant_type": "khornak_tier1_rival_beast",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 26,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "khornak_2",
+            "name": "Khornak 2",
+            "icon": "enemies/khornak.png",
+            "combatant_type": "khornak_tier1_rival_beast",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 30,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "khornak_3",
+            "name": "Khornak 3",
+            "icon": "enemies/khornak.png",
+            "combatant_type": "khornak_tier1_rival_beast",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 20,
+                "focus": 4,
+                "investiture": 0
+            }
+        }
+    ]
+}

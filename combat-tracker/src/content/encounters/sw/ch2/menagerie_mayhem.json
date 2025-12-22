@@ -1,0 +1,46 @@
+{
+    "kind": "encounter",
+    "slug": "menagerie_mayhem",
+    "scene": [
+        {
+            "name": "Whitespine 1",
+            "icon": "src/icons/enemies/whitespine_1.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Whitespine 2",
+            "icon": "src/icons/enemies/whitespine_2.png",
+            "type": "enemy",
+            "speed": "slow"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "whitespine_1",
+            "name": "Whitespine 1",
+            "icon": "enemies/whitespine_1.png",
+            "combatant_type": "juvenile_whitespine_tier1_rival_animal",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 23,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "whitespine_2",
+            "name": "Whitespine 2",
+            "icon": "enemies/whitespine_2.png",
+            "combatant_type": "juvenile_whitespine_tier1_rival_animal",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 26,
+                "focus": 4,
+                "investiture": 0
+            }
+        }
+    ]
+}

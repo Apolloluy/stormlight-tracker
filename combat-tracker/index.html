@@ -9,6 +9,10 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Inline debug to confirm index.html executed before the module loads
+      console.log('[debug] index.html inline script executed')
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

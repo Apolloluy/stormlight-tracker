@@ -1,0 +1,90 @@
+{
+    "kind": "encounter",
+    "slug": "p4_ah4",
+    "scene": [
+        {
+            "name": "Axehound A",
+            "icon": "src/icons/axehound1.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Axehound B",
+            "icon": "src/icons/axehound2.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Axehound C",
+            "icon": "src/icons/axehound3.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Axehound D",
+            "icon": "src/icons/axehound4.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Mysterious Shin",
+            "icon": "src/icons/taszo_son_clutio.png",
+            "type": "ally",
+            "speed": "fast"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "axehound_a",
+            "name": "Axehound A",
+            "icon": "axehound1.png",
+            "combatant_type": "axehound_tier1_minion",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "axehound_b",
+            "name": "Axehound B",
+            "icon": "axehound1.png",
+            "combatant_type": "axehound_tier1_minion",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "axehound_c",
+            "name": "Axehound C",
+            "icon": "axehound1.png",
+            "combatant_type": "axehound_tier1_minion",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "axehound_d",
+            "name": "Axehound D",
+            "icon": "axehound1.png",
+            "combatant_type": "axehound_tier1_minion",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        }
+    ]
+}

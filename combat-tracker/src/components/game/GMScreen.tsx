@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { loadAllContent, findBySlug } from '@/lib/contentLoader'
 import EntityCard from '../game/EntityCard';
 import { Combatant } from '../combatant/Combatant';
 import CombatantCard from '../combatant/CombatantCard';
@@ -20,28 +21,63 @@ const GMScreen = () => {
   const [catalogue, setCatalogue] = useState<Record<string, any>>({});
 
   useEffect(() => {
-    fetch(`/src/combatants/encounter/${fileName}.json`)
-      .then(res => res.json())
-      .then(data => {
-        setCombatants(data);
+    if (!fileName) return;
+    // Try to load via unified content loader (supports migrated content and legacy folders)
+    (async () => {
+      try {
+        const item = await findBySlug('encounter', fileName as string);
+        let data: any = null;
+        let allItems: any[] = [];
+        if (item) {
+          data = item.data;
+          // Also load all other content for catalogue lookups
+          allItems = await loadAllContent();
+          console.log('[debug] GMScreen loadAllContent items count', allItems.length, 'sampleCombatantSlugs', allItems.filter(i=>i.kind==='combatant').slice(0,10).map(i=>i.slug));
+        } else {
+          // Fallback to legacy path
+          const res = await fetch(`/src/combatants/encounter/${fileName}.json`);
+          data = await res.json();
+          allItems = await loadAllContent();
+          console.log('[debug] GMScreen loadAllContent items count', allItems.length, 'sampleCombatantSlugs', allItems.filter(i=>i.kind==='combatant').slice(0,10).map(i=>i.slug));
+        }
+        if (!data) return;
+        // `data` may be an array of combatants (legacy) or an object with `combatants` (merged format)
+        const resolvedCombatants = Array.isArray(data) ? data : (data?.combatants ?? []);
+        setCombatants(resolvedCombatants);
         // Initialize counters state
         const initial = {};
-        data.forEach(c => {
+        resolvedCombatants.forEach((c: any) => {
           initial[c.id] = { ...c.counters };
         });
         setCounters(initial);
-        console.log('Loaded combatants:', data);
-        console.log('Loaded combatants:', initial);
-        // Load unique combatant types
-        const types = Array.from(new Set(data.map(c => c.combatant_type)));
-        Promise.all(
-          types.map(type => fetch(`/src/combatants/catalogue/${type}.json`).then(r => r.json().then(j => [type, j])))
-        ).then(results => {
-          const catObj = {};
-          results.forEach(([type, obj]) => { catObj[type] = obj; });
-          setCatalogue(catObj);
-        });
-      });
+        console.log('Loaded resolvedCombatants:', resolvedCombatants);
+        console.log('Initial counters:', initial);
+        // Load unique combatant types (try to find catalogue entries via content loader first)
+        const types = Array.from(new Set(resolvedCombatants.map((c: any) => c.combatant_type)));
+        const catalogueResults = await Promise.all(types.map(async type => {
+          // Try to find a catalogue item from loaded items
+          const catItem = allItems.find(i => i.kind === 'combatant' && (i.slug === type || i.fullPath.endsWith(`${type}.json`)));
+          if (catItem) {
+            console.log('[debug] GMScreen found catalogue item for', type, 'from', catItem.fullPath);
+            return [type, catItem.data];
+          }
+          // Fallback to legacy fetch
+          try {
+            const r = await fetch(`/src/combatants/catalogue/${type}.json`);
+            const j = await r.json();
+            return [type, j];
+          } catch (err) {
+            console.warn('Failed to load catalogue for', type, err);
+            return [type, {}];
+          }
+        }));
+        const catObj: Record<string, any> = {};
+        catalogueResults.forEach(([type, obj]) => { catObj[type as string] = obj; });
+        setCatalogue(catObj as Record<string, any>);
+      } catch (err) {
+        console.warn('GMScreen load error', err);
+      }
+    })();
   }, [fileName]);
 
   const handleCounterChange = (id, counter, value) => {
@@ -92,8 +128,8 @@ const GMScreen = () => {
           <h2 className={`ml-4`} style={{ color: '#43ea7a', fontSize: 22, fontWeight: 700, marginBottom: 16 }}>Combatant Types</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, justifyContent: 'flex-start', alignItems: 'flex-start' }}>
             {Object.entries(catalogue).map(([type, data]) => (
-              <div className={`${stormBorders} ${glow} ml-4`} style={{ borderRadius: 16, padding: 8 }}>
-                <CombatantAttributes key={type} type={type} data={data} />
+              <div key={type} className={`${stormBorders} ${glow} ml-4`} style={{ borderRadius: 16, padding: 8 }}>
+                <CombatantAttributes type={type} data={data} />
               </div>
             ))}
           </div>

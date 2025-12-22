@@ -1,0 +1,27 @@
+{
+    "kind": "encounter",
+    "slug": "in_the_storm",
+    "scene": [
+        {
+            "name": "Alethi Bandit",
+            "icon": "src/icons/enemies/sw_boss_veth.png",
+            "type": "boss",
+            "speed": "fast"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "Veth",
+            "name": "Veth",
+            "icon": "enemies/sw_boss_veth.png",
+            "combatant_type": "veth_tier1_boss_human",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 40,
+                "focus": 3,
+                "investiture": 0
+            }
+        }
+    ]
+}

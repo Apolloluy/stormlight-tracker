@@ -1,0 +1,239 @@
+{
+    "kind": "encounter",
+    "slug": "speech_palace_round",
+    "scene": [
+        {
+            "name": "Archer 1",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Archer 2",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Spearmaster",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Ylt",
+            "icon": "src/icons/enemies/ylt.png",
+            "type": "boss",
+            "speed": "fast"
+        },
+        {
+            "name": "Kaiana",
+            "icon": "src/icons/npcs/kaiana.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Teryn",
+            "icon": "src/icons/enemies/bandit_human.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Bandit 1",
+            "icon": "src/icons/enemies/bandit_human.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Bandit 2",
+            "icon": "src/icons/enemies/bandit_human.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Bandit 3",
+            "icon": "src/icons/enemies/bandit_human.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Bandit 4",
+            "icon": "src/icons/enemies/bandit_human.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Bandit 5",
+            "icon": "src/icons/enemies/bandit_human.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Bandit 6",
+            "icon": "src/icons/enemies/bandit_human.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Tuxli",
+            "icon": "src/icons/female_singer_character.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Zealot 1",
+            "icon": "src/icons/enemies/zealot_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Zealot 2",
+            "icon": "src/icons/enemies/zealot_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Zealot 3",
+            "icon": "src/icons/enemies/zealot_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Zealot 4",
+            "icon": "src/icons/enemies/zealot_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Zealot 5",
+            "icon": "src/icons/enemies/zealot_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Zealot 6",
+            "icon": "src/icons/enemies/zealot_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "archer_1",
+            "name": "Archer 1",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_2",
+            "name": "Archer 2",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "spearmaster",
+            "name": "Spearmaster",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spearmaster_tier2_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 20,
+                "focus": 5,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "zealot_1",
+            "name": "Zealot 1",
+            "icon": "enemies/zealot_human.png",
+            "combatant_type": "zealot_tier1_minion_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "zealot_2",
+            "name": "Zealot 2",
+            "icon": "enemies/zealot_human.png",
+            "combatant_type": "zealot_tier1_minion_human",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 9,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "zealot_3",
+            "name": "Zealot 3",
+            "icon": "enemies/zealot_human.png",
+            "combatant_type": "zealot_tier1_minion_human",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 14,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "zealot_4",
+            "name": "Zealot 4",
+            "icon": "enemies/zealot_human.png",
+            "combatant_type": "zealot_tier1_minion_human",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "zealot_5",
+            "name": "Zealot 5",
+            "icon": "enemies/zealot_human.png",
+            "combatant_type": "zealot_tier1_minion_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 13,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "zealot_6",
+            "name": "Zealot 6",
+            "icon": "enemies/zealot_human.png",
+            "combatant_type": "zealot_tier1_minion_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 11,
+                "focus": 4,
+                "investiture": 0
+            }
+        }
+    ]
+}

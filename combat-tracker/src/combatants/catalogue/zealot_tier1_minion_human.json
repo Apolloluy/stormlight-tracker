@@ -1,0 +1,64 @@
+{
+    "name": "Zealot",
+    "icon": "src/icons/enemies/zealot_human.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 3,
+            "speed": 1
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 2
+        },
+        "spiritual": {
+            "awareness": 1,
+            "presence": 2
+        }
+    },
+    "counters": {
+        "health": 12,
+        "focus": 4,
+        "investiture": 0
+    },
+    "movement": 25,
+    "senses": {
+        "sight": 10
+    },
+    "skills": {
+        "physical": {
+            "Agility": 3,
+            "Heavy Weaponary": 4
+        },
+        "cognitive": {
+            "Intimidation": 3
+        },
+        "spiritual": {
+            "Perception": 3,
+            "Survival": 3
+        }
+    },
+    "features": {
+        "Fanatical": "Intimidation and Persuasion tests against the zealot gain a disadvantage.",
+        "Minion": "The zealot's attacks can't critically hit, and they're immediately defeated when they suffer an injury.",
+        "Frenzied": "While the zealot is at half health or less, they can't use Brace action, but their movement rate increases by 10 ft and their damage rolls gain an advantage."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Longsword",
+                "description": "Attack +4, reach 5 ft., one target. Graze: 4 (1d8) keen damage. Hit: 8 (1d8 + 4) keen damage."
+            },
+            {
+                "name": "Brace",
+                "description": "The zealot raises their shield, and attacks against them gain a disadvantage until the start of the zealot's next turn."
+            },
+            {
+                "name": "Inspire Zeal (1 Focus)",
+                "description": "The zealot inspires an ally they can influence within 20ft. That ally can immediately use Strike as a reaction."
+            }
+        ]
+    },
+    "tactics": "A zealot fights with fanaticism. They and their fellow zealots crowd around enemies and attack recklessly with their Longsword. As a battle grows more violent and their companions become Frenzied, a zealot uses Inspire Zeal to encourage courage and brutality in the face of death."
+}

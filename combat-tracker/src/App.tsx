@@ -40,7 +40,7 @@ export default function App(){
   const [entities, setEntities] = useState<Entity[]>([])
   // Callback for AdminPanel to load entities from encounter files
   function handleLoadEntities(newEntities: Entity[]) {
-    setEntities(newEntities.map(e => ({
+    const normalized = newEntities.map(e => ({
       ...e,
       id: crypto.randomUUID(),
       statuses: e.statuses ?? [],
@@ -48,7 +48,9 @@ export default function App(){
       reactionUsed: false,
       unconscious: false,
       notes: e.notes ?? ''
-    })));
+    }));
+    console.log('[debug] handleLoadEntities normalized count', normalized.length, 'sample:', normalized.map(x=>({name:x.name,type:x.type,speed:x.speed})).slice(0,10));
+    setEntities(normalized);
   }
   const [round, setRound] = useState(1)
   const [phaseIndex, setPhaseIndex] = useState(0)
@@ -113,15 +115,17 @@ export default function App(){
   const phase = PHASES[phaseIndex]
 
   const fastPlayers = useMemo(()=>entities.filter(e=>e.type==='player' && e.speed==='fast'),[entities])
+  const bosses = useMemo(() => entities.filter(e => e.type === 'boss'), [entities]);
+
   const fastEnemies = useMemo(() => [
-    ...entities.filter(e => (e.type === 'enemy' || e.type === 'ally') && e.speed === 'fast'),
-    ...entities.filter(e => e.type === 'boss')
-  ], [entities]);
+    ...bosses,
+    ...entities.filter(e => (e.type === 'enemy' || e.type === 'ally') && e.speed === 'fast')
+  ], [entities, bosses]);
   const slowPlayers = useMemo(()=>entities.filter(e=>e.type==='player' && e.speed==='slow'),[entities])
   const slowEnemies = useMemo(() => [
-    ...entities.filter(e => (e.type === 'enemy' || e.type === 'ally') && e.speed === 'slow'),
-    ...entities.filter(e => e.type === 'boss')
-  ], [entities]);
+    ...bosses,
+    ...entities.filter(e => (e.type === 'enemy' || e.type === 'ally') && e.speed === 'slow')
+  ], [entities, bosses]);
 
   function addEntity(partial: Partial<Entity> = {}){
     const id = crypto.randomUUID()

@@ -1,0 +1,69 @@
+{
+    "name": "Spearmaster (Deflect 1)",
+    "icon": "src/icons/enemies/spear_infantry.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 3,
+            "speed": 2
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 3
+        },
+        "spiritual": {
+            "awareness": 2,
+            "presence": 1
+        }
+    },
+    "counters": {
+        "health": 40,
+        "focus": 5,
+        "investiture": 0
+    },
+    "movement": 25,
+    "senses": {
+        "sight": 10
+    },
+    "skills": {
+        "physical": {
+            "Agility": 5,
+            "Athletics": 4,
+            "Deflect": 1,
+            "Heavy Weaponary": 6,
+            "Light Weaponry": 4
+        },
+        "cognitive": {
+            "Discipline": 4,
+            "Intimidation": 4
+        },
+        "spiritual": {
+            "Perception": 5,
+            "Survival": 3
+        }
+    },
+    "features": {
+        "Defensive Flourish": "The spearmaster can wield their longspear defensively, allowing them to use the Brace action as if they had a shield.",
+        "Merciless": "The spearmaster gains an additional advantage on attacks against Prone targets."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Longspear",
+                "description": "Attack +6, reach 10 ft., one target. Graze: 4 (1d8) keen damage. Hit: 10 (1d8 + 6) keen damage, and the spearmaster can spend 1 focus to knock the target Prone."
+            },
+            {
+                "name": "Kick",
+                "description": "Attack +4, reach 5 ft., one target. Graze: 2 (1d4) impact damage. Hit: 6 (1d4 + 4) impact damage, and the spearmaster can spend 1 focus to push them 5 feet."
+            }
+        ],
+        "bi_action": [
+            {
+                "name": "Run Through (1 Focus)",
+                "description": "Attack +6, reach 10ft., up to two targets within 5 feet of each other. Graze: 4 (1d8) keen damage. Hit: 10 (1d8 + 6) keen damage."
+            }
+        ]
+    },
+    "tactics": "A spearmaster is a skilled and careful combatant, taking slow turns so they can make multiple attacks. They spend focus to knock targets Prone with their Longspear, then prioritize attacking Prone targets to take advantage of Merciless. If an enemy gets too close, the spearmaster tries to Kick them away and line up a Run Through attack. When they have an extra action, they spend it on Gain Advantage or Brace, depending on whether they find themself on the offensive or the defensive."
+}
