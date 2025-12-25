@@ -1,0 +1,90 @@
+{
+    "name": "Kaiana",
+    "icon": "src/icons/npcs/kaiana.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 1,
+            "speed": 3
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 2
+        },
+        "spiritual": {
+            "awareness": 3,
+            "presence": 3
+        }
+    },
+    "counters": {
+        "health": 34,
+        "focus": 4,
+        "investiture": 5
+    },
+    "movement": 30,
+    "senses": {
+        "sight": 20
+    },
+    "skills": {
+        "physical": {
+            "Agility": 5,
+            "Light Weaponry": 5
+        },
+        "cognitive": {
+            "Discipline": 4,
+            "Medicine": 3
+        },
+        "spiritual": {
+            "Insight": 5,
+            "Leadership": 4,
+            "Perception": 5,
+            "Progression(2)": 5,
+            "Illumination(1)": 4
+        }
+    },
+    "features": {
+        "Passionate Ally (1 Focus)": "When Kaiana successfully uses the Gain Advantage action, she can choose one ally she can influence within 60ft. That ally also gains an advantage on the next test they make against the target.",
+        "Quick Escape": "Once per scene, Kaiana can user her Disorienting Flash as Free. After she does, she immediatly gains >> that she can only use on the Interact, Disengage, and Move actions."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Knife",
+                "description": "Attack +5, reach 5 ft. or range 20/60ft, one target. Graze: 2 (1d4) keen damage. Hit: 7 (1d4 + 5) keen damage, and Kaiana can spend 1 focus to make the target Slowed until the end of the target's next turn."
+            },
+            {
+                "name": "Distracting Illusion (Costs 1 Investiture)",
+                "description": "Kaiana creates an illusory duplicate of herself or an ally she can sense within 30ft. The llusion appears in that character's space and moves with them. Attacks against that character gain disadvantage and can't graze. The llusion ends after an attack misses that character or the end of the scene."
+            },
+            {
+                "name": "Strike: Raysium Knife",
+                "description": "If Kaiana has the knife, she makes a Knife attack. On a hit, the target also loses 1 investiture."
+            }
+        ],
+        "bi_action": [
+            {
+                "name": "Regrowth (Costs 1 Investiture)",
+                "description": "Kaiana restores (8) 1d6 + 5 health to himself or another she can touch."
+            },
+            {
+                "name": "Disorienting Flash (Costs 1 Investiture)",
+                "description": "Kaiana projects light, making an Illumination test against the Cognitive defense of each character within 5ft of her. Each character she succeeds against becomes Disoriented until the end of their next turn."
+            }
+        ],
+        "free": [
+            {
+                "name": "Regenerate (Costs 1 Investiture)",
+                "description": "Kaiana recovers 4 (1d6+1) health; she can use this free action even while Unconscious or otherwise prevented from using actions."
+            }
+        ],
+        "reaction": [
+            {
+                "name": "Reflexive Growth (Costs 1 Investiture)",
+                "description": "Before Kaiana or an ally she can sense within 20ft of her is hit by a melee attack, she tosses a seed from her pouch and makes a Progression test against the attacker's Physical defense. On a success, a plan rapidly grows around the target; they are Restrained (adding a disadvantage to their test, potentially changing the hit into a miss), and they can't make Reactive Strikes until the end of their next turn."
+            }
+        ]
+    },
+    "tactics": "Kaiana is particularly skilled in Progression and uses it to support her allies: Her Reflexive Growth deters attackers, and when needed, she heals allies with Regrowth. Meanwhile, her Distracting Illusion can protect weaker or injured allies. When she isn't needed to react and protect (or when she runs out of Investiture), she uses her Passionate Ally to give allies an opening, and she uses her Knife to impede enemies",
+    "languages": "Alethi, Reshi"
+}

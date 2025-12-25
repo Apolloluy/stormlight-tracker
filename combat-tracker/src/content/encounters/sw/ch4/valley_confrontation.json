@@ -1,0 +1,44 @@
+{
+    "kind": "encounter",
+    "slug": "valley_confrontation",
+    "scene": [
+        {
+            "name": "Kaiana",
+            "icon": "src/icons/npcs/kaiana.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Ylt",
+            "icon": "src/icons/enemies/ylt.png",
+            "type": "boss",
+            "speed": "slow"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "ylt",
+            "name": "Ylt",
+            "icon": "enemies/ylt.png",
+            "combatant_type": "ylt_tier2_boss_human",
+            "active": true,
+            "counters": {
+                "health": 80,
+                "focus": 5,
+                "investiture": 6
+            }
+        },
+        {
+            "id": "kaiana",
+            "name": "Kaiana",
+            "icon": "npcs/kaiana.png",
+            "combatant_type": "kaiana_tier1_rival_humanoid",
+            "active": true,
+            "counters": {
+                "health": 34,
+                "focus": 4,
+                "investiture": 5
+            }
+        }
+    ]
+}
