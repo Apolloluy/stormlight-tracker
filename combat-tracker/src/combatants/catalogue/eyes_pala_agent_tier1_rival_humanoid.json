@@ -1,0 +1,73 @@
+{
+    "name": "Eyes of Pala Agent",
+    "icon": "src/icons/enemies/pala_agent.png",
+    "speed": "fast",
+    "active": true,
+    "stats": {
+        "physical": {
+            "strength": 2,
+            "speed": 2
+        },
+        "cognitive": {
+            "intelligence": 1,
+            "willpower": 2
+        },
+        "spiritual": {
+            "awareness": 3,
+            "presence": 2
+        }
+    },
+    "counters": {
+        "health": 25,
+        "focus": 4,
+        "investiture": 0
+    },
+    "movement": 25,
+    "senses": {
+        "sight": 20
+    },
+    "skills": {
+        "physical": {
+            "Athletics": 4,
+            "Light Weaponary": 4,
+            "Stealth": 4
+        },
+        "cognitive": {
+            "Discipline": 4
+        },
+        "spiritual": {
+            "Perception": 5,
+            "Insight": 5
+        }
+    },
+    "features": {},
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Sidesword",
+                "description": "Attack +4, reach 5 ft., one target. Graze: 3 (1d6) keen damage. Hit: 7 (1d6 + 4) keen damage. If the target is Prone, they lose 1 focus."
+            },
+            {
+                "name": "Strike: Shortbow",
+                "description": "Attack +4, reach 80/320 ft., one target. Graze: 3 (1d6) keen damage. Hit: 7 (1d6 + 4) keen damage and the agent can spend 1 focus to knock the target Prone."
+            }
+        ],
+        "free":[
+            {
+                "name": "Insightful Defense",
+                "description": "The agent makes an Insight Test against the Spiritual Defense of a character they can sense within 60 ft of them. On a success, the target can't gain advantage on attacks agains the agent for 1 minute or until the agent uses this action on another target."
+            }
+        ],
+        "reaction":[
+            {
+                "name": "Exploit Opening",
+                "description": "After an enemy within 5ft of the agent grazes them with an attack, the agent makes a Reactive Strike (no action required) against the enemy as if they had voluntarily left the agent's reach."
+            },
+            {
+                "name": "Quick Escape",
+                "description": "After an ally within 5ft of the agent hits a target with a melee attack, the agent moves up to half their movement rate without triggering Reactive Strikes."
+            }
+        ]
+    },
+    "tactics": "An Eyes of Pala agent uses their honed intuition to navigate the battlefield. They identify the largest threat and use Insightful Defense on that target to better avoid deadly attacks. By working together, agents who favor the shortbow and those who favor the sidesword can knock down opponents and deplete their focus. If needed, agents coordinate with their allies, using Quick Escape to retreat when a peer gives them an opening."
+}

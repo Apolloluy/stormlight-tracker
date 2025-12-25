@@ -1,0 +1,58 @@
+{
+    "name": "Skyeel",
+    "icon": "src/icons/enemies/skyeel.png",
+    "speed": "fast",
+    "stats": {
+        "physical": {
+            "strength": 2,
+            "speed": 3
+        },
+        "cognitive": {
+            "intelligence": 0,
+            "willpower": 1
+        },
+        "spiritual": {
+            "awareness": 3,
+            "presence": 0
+        }
+    },
+    "counters": {
+        "health": 12,
+        "focus": 3,
+        "investiture": 0
+    },
+    "movement": 10,
+    "senses": {
+        "sight": 20
+    },
+    "skills": {
+        "physical": {
+            "Agility": 4,
+            "Stealth": 4
+        },
+        "spiritual": {
+            "Perception": 5,
+            "Survival": 4
+        }
+    },
+    "features": {
+        "Enhanced Senses": "The skyeel gains an advantage on non-attack tests that rely on sight.",
+        "Minion": "The skyeel's attacks can't critically hit, and they're immediately defeated when they suffer an injury.",
+        "Slippery": "The skyeel doesn't trigger Reactive Strikes while swimming."
+    },
+    "actions": {
+        "action": [
+            {
+                "name": "Strike: Bite",
+                "description": "Attack +4, reach 5 ft., one target. Graze: 2 (1d4) keen damage. Hit: 6 (1d4 + 4) keen damage, and if the target is Medium or smaller, the skyeel can spend 1 focus to wrap their body around the target. If they do, the target becomes Restrained, the skyeel attaches to the target, and the skyeel can't use their Bite against a different target until they release the current on. As (an action), the Restrained target or character within 5 feet of them can make a DC12 Athletics test, forcing the skyeel to release the target on a success."
+            }
+        ],
+        "bi_action": [
+            {
+                "name": "Dive Bomb",
+                "description": "The skyeel flies up to 60 feet toward a target they can sense on the ground, then uses their Bite against the target. This attack gains an advantage. After the skyeel uses this action, they can't fly again until the end of the scene."
+            }
+        ]
+    },
+    "tactics": "A skyeel remains in flight and hidden until they choose a target, then the skyeel uses their Dive Bomb to bite and restrain their prey. In the rate instance where a greater skyeel attacks a larger target, they use Dive Bomb then Constrict their Restrained prey, hoping for an easy meal."
+}

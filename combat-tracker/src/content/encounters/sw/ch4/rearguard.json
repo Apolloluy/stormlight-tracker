@@ -1,0 +1,141 @@
+{
+    "kind": "encounter",
+    "slug": "Rearguard",
+    "scene": [
+        {
+            "name": "Agent 1",
+            "icon": "src/icons/enemies/eyes_pala_agent.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Agent 2",
+            "icon": "src/icons/enemies/eyes_pala_agent.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Agent 3",
+            "icon": "src/icons/enemies/eyes_pala_agent.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Bandit 1",
+            "icon": "src/icons/enemies/bandit_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Bandit 2",
+            "icon": "src/icons/enemies/bandit_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Archer 1",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Archer 2",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "agent_1",
+            "name": "Agent 1",
+            "icon": "enemies/eyes_pala_agent.png",
+            "combatant_type": "eyes_pala_agent_tier1_rival_humanoid",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 25,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "agent_2",
+            "name": "Agent 2",
+            "icon": "enemies/eyes_pala_agent.png",
+            "combatant_type": "eyes_pala_agent_tier1_rival_humanoid",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 30,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "agent_3",
+            "name": "Agent 3",
+            "icon": "enemies/eyes_pala_agent.png",
+            "combatant_type": "eyes_pala_agent_tier1_rival_humanoid",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 20,
+                "focus": 4,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "bandit_a",
+            "name": "Bandit 1",
+            "icon": "enemies/bandit_human.png",
+            "combatant_type": "bandit_tier1_minion_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 2,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "bandit_b",
+            "name": "Bandit 2",
+            "icon": "enemies/bandit_human.png",
+            "combatant_type": "bandit_tier1_minion_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 11,
+                "focus": 2,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_1",
+            "name": "Archer 1",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_2",
+            "name": "Archer 2",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        }
+    ]
+}
