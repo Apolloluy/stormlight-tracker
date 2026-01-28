@@ -1,0 +1,252 @@
+{
+    "kind": "encounter",
+    "slug": "gate_assault",
+    "scene": [
+        {
+            "name": "Emuli Spearman 1",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Emuli Spearman 2",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Emuli Spearman 3",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "ally",
+            "speed": "slow"
+        },
+        {
+            "name": "Emuli Spearman 4",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "ally",
+            "speed": "slow"
+        },
+        {
+            "name": "Tukari Archer 1",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Tukari Archer 2",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Tukari Archer 3",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Tukari Archer 4",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Tukari Archer 5",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Tukari Archer 6",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Tukari Archer 7",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Tukari Archer 8",
+            "icon": "src/icons/enemies/archer_human.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Kaiana",
+            "icon": "src/icons/npcs/kaiana.png",
+            "type": "ally",
+            "speed": "slow"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "spear_1",
+            "name": "Spearman 1",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "spear_2",
+            "name": "Spearman 2",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },{
+            "id": "spear_3",
+            "name": "Spearman 3",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },{
+            "id": "spear_4",
+            "name": "Spearman 4",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_1",
+            "name": "Archer 1",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_2",
+            "name": "Archer 2",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_3",
+            "name": "Archer 3",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_4",
+            "name": "Archer 4",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_5",
+            "name": "Archer 5",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_6",
+            "name": "Archer 6",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_7",
+            "name": "Archer 7",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "fast",
+            "active": true,
+            "counters": {
+                "health": 12,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "archer_8",
+            "name": "Archer 8",
+            "icon": "enemies/archer_human.png",
+            "combatant_type": "archer_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "kaiana",
+            "name": "Kaiana",
+            "icon": "npcs/kaiana.png",
+            "combatant_type": "kaiana_tier1_rival_humanoid",
+            "active": true,
+            "counters": {
+                "health": 34,
+                "focus": 4,
+                "investiture": 5
+            }
+        }
+    ]
+}

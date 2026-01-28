@@ -1,0 +1,175 @@
+{
+    "kind": "encounter",
+    "slug": "keep_assault",
+    "scene": [
+        {
+            "name": "Emuli Spearman 1",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Emuli Spearman 2",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "ally",
+            "speed": "fast"
+        },
+        {
+            "name": "Emuli Spearman 3",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "ally",
+            "speed": "slow"
+        },
+        {
+            "name": "Tukari Spearman 1",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Tukari Spearman 2",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Tukari Spearman 3",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Tukari Spearman 4",
+            "icon": "src/icons/enemies/spear_infantry.png",
+            "type": "enemy",
+            "speed": "slow"
+        },
+        {
+            "name": "Stormform Singer",
+            "icon": "src/icons/enemies/stormform_singer.png",
+            "type": "enemy",
+            "speed": "fast"
+        },
+        {
+            "name": "Kaiana",
+            "icon": "src/icons/npcs/kaiana.png",
+            "type": "ally",
+            "speed": "slow"
+        }
+    ],
+    "combatants": [
+        {
+            "id": "spear_1",
+            "name": "Emuli Spearman 1",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "spear_2",
+            "name": "Emuli Spearman 2",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },{
+            "id": "spear_3",
+            "name": "Emuli Spearman 3",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },{
+            "id": "tukari_spear_1",
+            "name": "Tukari Spearman 1",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "tukari_spear_2",
+            "name": "Tukari Spearman 2",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "tukari_spear_3",
+            "name": "Tukari Spearman 3",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },{
+            "id": "tukari_spear_4",
+            "name": "Tukari Spearman 4",
+            "icon": "enemies/spear_infantry.png",
+            "combatant_type": "spear_infantry_tier1_human",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 15,
+                "focus": 3,
+                "investiture": 0
+            }
+        },
+        {
+            "id": "stormform",
+            "name": "Fariqqa",
+            "icon": "enemies/stormform_singer.png",
+            "combatant_type": "stormform_tier2_rival_humanoid",
+            "speed": "slow",
+            "active": true,
+            "counters": {
+                "health": 40,
+                "focus": 6,
+                "investiture": 5
+            }
+        },
+        {
+            "id": "kaiana",
+            "name": "Kaiana",
+            "icon": "npcs/kaiana.png",
+            "combatant_type": "kaiana_tier1_rival_humanoid",
+            "active": true,
+            "counters": {
+                "health": 34,
+                "focus": 4,
+                "investiture": 5
+            }
+        }
+    ]
+}
