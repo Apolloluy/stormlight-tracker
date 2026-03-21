@@ -1,0 +1,94 @@
+{
+  "name": "Lilinum, the Devastating One (Deflect 2)",
+  "icon": "src/icons/enemies/lilinum.png",
+  "speed": "slow",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 2,
+      "speed": 4
+    },
+    "cognitive": {
+      "intelligence": 6,
+      "willpower": 3
+    },
+    "spiritual": {
+      "awareness": 4,
+      "presence": 1
+    }
+  },
+  "counters": {
+    "health": 44,
+    "focus": 5,
+    "investiture": 6
+  },
+  "defenses": {
+    "deflect": 2
+  },
+  "movement": 30,
+  "senses": {
+    "sight": 20
+  },
+  "skills": {
+    "physical": {
+      "Agility": 7,
+      "Athletics": 5,
+      "Light Weaponry": 7
+    },
+    "cognitive": {
+      "Discipline": 7,
+      "Intimidation": 7
+    },
+    "spiritual": {
+      "Perception": 6,
+      "Survival": 6
+    },
+    "surge": {
+      "Division": 9
+    }
+  },
+  "languages": ["Alethi", "Dawnchant", "Iriali"],
+  "features": {
+    "Instinctive Aggression": "It costs Lilinum no focus to use the Reactive Strike reaction.",
+    "Shroud of Dust": "When an enemy makes a ranged attack or other test against Lilinum from at least 25 feet away, if that test relies on sight or smell, it gains disadvantage."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Claws",
+        "description": "Attack +7, reach 5 ft., one target. Graze: 2 (1d4) keen damage and 3 (1d6) spirit damage. Hit: 9 (1d4 + 7) keen damage and 3 (1d6) spirit damage."
+      },
+      {
+        "name": "Strike: Shardblade",
+        "description": "Attack +7, reach 5 ft., one target. Graze: 8 (2d8) spirit damage. Hit: 15 (2d8 + 7) spirit damage."
+      }
+    ],
+    "bi_action":[
+      {
+        "name": "Devastating Touch",
+        "description": "Attack +9, reach 5 ft., one target. Graze: 10 (3d6) spirit damage. Hit: 19 (3d6 + 9) spirit damage."
+      },
+     {
+        "name": "Surge of Division",
+        "description": "Costs 2 Investiture. Lilinum chooses a Large object within 30 ft that isn't worn/held, destroying it. Effects can include obscuring the area with dust, opening passage, triggering rockslide, or electrifying. Affected characters must make DC 15 Agility or Athletics test. On failure, 13 (3d8) damage; on success, no damage/no effect." 
+      }
+    ],
+    "reaction": [
+      {
+        "name": "Reactive Strike",
+        "description": "Instinctive Aggression makes this cost 0 focus."
+      },
+      {
+        "name": "Demolish Weapon",
+        "description": "After she is hit or grzed by a non-invested weapon, she can turn that weapon to dust."
+      }
+    ],
+    "free":[
+      {
+        "name": "Regenerate",
+        "description": "Costs 1 Investiture. Lilinum recovers 5 (1d6+2) health. Can use even while Unconscious or otherwise prevented from actions."
+      }
+    ]
+  },
+  "tactics": "Lilinum fights with playful recklessness, using Shardblade and Devastating Touch, then Claws. She uses Surge of Division to collapse structures and Regenerate as needed."
+}

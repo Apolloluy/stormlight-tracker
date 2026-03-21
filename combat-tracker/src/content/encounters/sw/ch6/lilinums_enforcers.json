@@ -1,0 +1,103 @@
+{
+  "kind": "encounter",
+  "slug": "lilinums_enforcers",
+  "scene": [
+    {
+      "name": "Direform Singer",
+      "icon": "src/icons/enemies/direform_singer.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Warform Singer 1",
+      "icon": "src/icons/enemies/warform_singer.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Warform Singer 2",
+      "icon": "src/icons/enemies/warform_singer.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Warform Singer 3",
+      "icon": "src/icons/enemies/warform_singer.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Kaiana",
+      "icon": "src/icons/npcs/kaiana.png",
+      "type": "ally",
+      "speed": "slow"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "direform_singer",
+      "name": "Direform Singer",
+      "icon": "enemies/direform_singer.png",
+      "combatant_type": "direform_tier2_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 42,
+        "focus": 5,
+        "investiture": 5
+      }
+    },
+    {
+      "id": "warform_singer_1",
+      "name": "Warform Singer 1",
+      "icon": "enemies/warform_singer.png",
+      "combatant_type": "warform_tier1_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 30,
+        "focus": 5,
+        "investiture": 4
+      }
+    },
+    {
+      "id": "warform_singer_2",
+      "name": "Warform Singer 2",
+      "icon": "enemies/warform_singer.png",
+      "combatant_type": "warform_tier1_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 30,
+        "focus": 5,
+        "investiture": 4
+      }
+    },
+    {
+      "id": "warform_singer_3",
+      "name": "Warform Singer 3",
+      "icon": "enemies/warform_singer.png",
+      "combatant_type": "warform_tier1_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 30,
+        "focus": 5,
+        "investiture": 4
+      }
+    },
+    {
+      "id": "kaiana",
+      "name": "Kaiana",
+      "icon": "npcs/kaiana.png",
+      "combatant_type": "kaiana_tier1_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 34,
+        "focus": 4,
+        "investiture": 5
+      }
+    }
+  ]
+}
