@@ -1,0 +1,46 @@
+{
+  "kind": "encounter",
+  "slug": "protecting_axies",
+  "scene": [
+    {
+      "name": "Stormform Singer",
+      "icon": "src/icons/enemies/stormform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Kaiana",
+      "icon": "src/icons/npcs/kaiana.png",
+      "type": "ally",
+      "speed": "slow"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "stormform_singer",
+      "name": "Stormform Singer",
+      "icon": "enemies/stormform_singer.png",
+      "combatant_type": "stormform_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 40,
+        "focus": 6,
+        "investiture": 5
+      }
+    },
+    {
+      "id": "kaiana",
+      "name": "Kaiana",
+      "icon": "npcs/kaiana.png",
+      "combatant_type": "kaiana_tier1_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 34,
+        "focus": 4,
+        "investiture": 5
+      }
+    }
+  ]
+}
