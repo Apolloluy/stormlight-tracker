@@ -1,0 +1,216 @@
+{
+  "kind": "encounter",
+  "slug": "painspren_swarm",
+  "scene": [
+    {
+      "name": "Painspren 1",
+      "icon": "src/icons/enemies/painspren.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Painspren 2",
+      "icon": "src/icons/enemies/painspren.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Painspren 3",
+      "icon": "src/icons/enemies/painspren.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Painspren 4",
+      "icon": "src/icons/enemies/painspren.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Painspren 5",
+      "icon": "src/icons/enemies/painspren.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Painspren 6",
+      "icon": "src/icons/enemies/painspren.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Painspren 7",
+      "icon": "src/icons/enemies/painspren.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Painspren 8",
+      "icon": "src/icons/enemies/painspren.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Painspren 9",
+      "icon": "src/icons/enemies/painspren.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Painspren 10",
+      "icon": "src/icons/enemies/painspren.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Nineka",
+      "icon": "src/icons/azish_envoy.png",
+      "type": "ally",
+      "speed": "slow"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "painspren_1",
+      "name": "Painspren 1",
+      "icon": "enemies/painspren.png",
+      "combatant_type": "painspren_tier1_minion",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 11,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "painspren_2",
+      "name": "Painspren 2",
+      "icon": "enemies/painspren.png",
+      "combatant_type": "painspren_tier1_minion",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 15,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "painspren_3",
+      "name": "Painspren 3",
+      "icon": "enemies/painspren.png",
+      "combatant_type": "painspren_tier1_minion",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 10,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "painspren_4",
+      "name": "Painspren 4",
+      "icon": "enemies/painspren.png",
+      "combatant_type": "painspren_tier1_minion",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 13,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "painspren_5",
+      "name": "Painspren 5",
+      "icon": "enemies/painspren.png",
+      "combatant_type": "painspren_tier1_minion",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 9,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "painspren_6",
+      "name": "Painspren 6",
+      "icon": "enemies/painspren.png",
+      "combatant_type": "painspren_tier1_minion",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 14,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "painspren_7",
+      "name": "Painspren 7",
+      "icon": "enemies/painspren.png",
+      "combatant_type": "painspren_tier1_minion",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 12,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "painspren_8",
+      "name": "Painspren 8",
+      "icon": "enemies/painspren.png",
+      "combatant_type": "painspren_tier1_minion",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 15,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "painspren_9",
+      "name": "Painspren 9",
+      "icon": "enemies/painspren.png",
+      "combatant_type": "painspren_tier1_minion",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 9,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "painspren_10",
+      "name": "Painspren 10",
+      "icon": "enemies/painspren.png",
+      "combatant_type": "painspren_tier1_minion",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 11,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "nineka",
+      "name": "Nineka",
+      "icon": "azish_envoy.png",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 25,
+        "focus": 4,
+        "investiture": 4
+      }
+    }
+  ]
+}

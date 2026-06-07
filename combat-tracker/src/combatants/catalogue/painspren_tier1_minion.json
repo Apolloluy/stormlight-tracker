@@ -1,0 +1,55 @@
+{
+    "name": "Painspren",
+    "icon": "src/icons/enemies/painspren.png",
+    "speed": "fast",
+    "stats": {
+        "physical": {
+            "strength": 1,
+            "speed": 3
+        },
+        "cognitive": {
+            "intelligence": 0,
+            "willpower": 3
+        },
+        "spiritual": {
+            "awareness": 0,
+            "presence": 0
+        }
+    },
+    "counters": {
+        "health": 12,
+        "focus": 5,
+        "investiture": 0
+    },
+    "movement": 30,
+    "senses": {
+        "sight": 5
+    },
+    "skills": {
+        "physical": {
+            "Agility": 5
+        },
+        "spiritual": {
+            "Perception": 2
+        }
+    },
+    "features": {
+        "Minion": "The painspren's attacks can't critically hit, and they're immediately defeated when they suffer an injury.",
+        "Investiture Hunger": "The painspren can sense the use of Investiture within 5 miles of them."
+    },
+    "actions": {
+        "bi_action": [
+            {
+                "name": "Grip Enemy",
+                "description": "Attack +3, reach 5 ft., one target. Graze: 2 (1d4) impact damage. Hit: 5 (1d4 + 3) impact damage, and the painspren can spend 1 focus to attach to the target, making them Restrained while the painspren remains within 5 feet of them. At the start of this Restrained target's turn, they take 2 (1d4) vital damage from each attached painspren. The Restrained target or a character who can reach them can make a DC 10 Discipline test as an action, freeing the target from one attached painspren on a success. While attached to a target, the painspren can't use their Grip Enemy action."
+            }
+        ],
+        "reaction": [
+            {
+                "name": "Painsense",
+                "description": "After a character within 60 feet of the painspren takes damage, the painspren moves up to 10 feet toward them."
+            }
+        ]
+    },
+    "tactics": "A painspren hunts for creatures using Investiture or that appear to be in pain. They attempt to attach to a target with Grip Enemy and feed on the pain damage, using Painsense to close the distance when targets flee."
+}

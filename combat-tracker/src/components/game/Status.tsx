@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { ScanEye, ShieldPlus, CloudAlert, PlugZap, Battery, DatabaseZap, Link2Off, PersonStanding, MessageSquareOff, PartyPopper } from 'lucide-react'
+import { ScanEye, ShieldPlus, CloudAlert, PlugZap, Battery, DatabaseZap, Link2Off, PersonStanding, MessageSquareOff, PartyPopper, Link2 } from 'lucide-react'
 
 export const DEFAULT_STATUSES = [
     'Afflicted',
@@ -11,6 +11,7 @@ export const DEFAULT_STATUSES = [
     'Invested', 
     'Immobilized', 
     'Prone', 
+    'Restrained',
     'Slowed',
     'Stunned', 
     'Surprised', 
@@ -19,7 +20,7 @@ export const DEFAULT_STATUSES = [
 
 // Define which statuses are positive or negative
 export const POSITIVE_STATUSES = ['Determined', 'Empowered', 'Focused',  'Invested'];
-export const NEGATIVE_STATUSES = ['Afflicted', 'Disoriented', 'Exhausted', 'Immobilized', 'Prone', 'Slowed', 'Stunned', 'Surprised', ];
+export const NEGATIVE_STATUSES = ['Afflicted', 'Disoriented', 'Exhausted', 'Immobilized', 'Prone', 'Restrained', 'Slowed', 'Stunned', 'Surprised', ];
 
 export const DEFAULT_STATUS_ICONS: Record<string, ReactNode> = {
     'Afflicted': <CloudAlert className="mr-1 size-4 text-slate-400"/>,
@@ -31,6 +32,7 @@ export const DEFAULT_STATUS_ICONS: Record<string, ReactNode> = {
     'Invested':  <DatabaseZap className="mr-1 size-4 text-slate-400"/>,
     'Immobilized': <Link2Off className="mr-1 size-4 text-slate-400"/>,
     'Prone':  <PersonStanding className="mr-1 size-4 text-slate-400"/>,
+    'Restrained':  <Link2 className="mr-1 size-4 text-slate-400"/>,
     'Slowed':  <Battery className="mr-1 size-4 text-slate-400"/>,
     'Stunned':  <MessageSquareOff className="mr-1 size-4 text-slate-400"/>,
     'Surprised':  <PartyPopper className="mr-1 size-4 text-slate-400"/>,
