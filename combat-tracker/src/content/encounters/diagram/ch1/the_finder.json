@@ -1,0 +1,27 @@
+{
+  "kind": "encounter",
+  "slug": "the_finder",
+  "scene": [
+    {
+      "name": "The Finder",
+      "icon": "src/icons/enemies/deepest_one_fused.png",
+      "type": "boss",
+      "speed": "slow"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "the_finder",
+      "name": "The Finder",
+      "icon": "enemies/deepest_one_fused.png",
+      "combatant_type": "deepest_one_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 90,
+        "focus": 8,
+        "investiture": 6
+      }
+    }
+  ]
+}
