@@ -1,0 +1,89 @@
+{
+  "name": "Deepest One",
+  "icon": "src/icons/enemies/deepest_one_fused.png",
+  "speed": "slow",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 3,
+      "speed": 5
+    },
+    "cognitive": {
+      "intelligence": 1,
+      "willpower": 6
+    },
+    "spiritual": {
+      "awareness": 4,
+      "presence": 2
+    }
+  },
+  "counters": {
+    "health": 45,
+    "focus": 8,
+    "investiture": 6
+  },
+  "movement": 40,
+  "senses": {
+    "sight": 20,
+    "hearing": 20
+  },
+  "skills": {
+    "physical": {
+      "Agility": 7,
+      "Light Weaponry": 8,
+      "Stealth": 7
+    },
+    "cognitive": {
+      "Discipline": 9
+    },
+    "spiritual": {
+      "Insight": 6,
+      "Perception": 7,
+      "Survival": 6
+    },
+    "surge": {
+      "Cohesion": 9
+    }
+  },
+  "languages": ["Dawnchant"],
+  "features": {
+    "Pure Tones": "The Deepest One ignores the Disoriented condition while standing on or submerged in solid stone.",
+    "Swim Through Stone": "The Deepest One can move through solid surfaces as if moving along the ground, ignoring difficult terrain. While fully submerged, the Deepest One must spend 1 focus each time they use an action other than the Move action or their Regenerate free action. The Deepest One can't use this feature on surfaces made of wood.",
+    "Merging Form": "Before the Deepest One takes impact or keen damage from a non-wooden source, they can increase their deflect value to 6 against that damage (no action required)."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Carapace Nails",
+        "description": "Attack +8, reach 5 ft., one target. Graze: 7 (2d6) keen damage. Hit: 15 (2d6 + 8) keen damage."
+      },
+      {
+        "name": "Strike: Trip Attack",
+        "description": "Attack +8, reach 5 ft., one target. Graze: 3 (1d6) impact damage. Hit: 11 (1d6 + 8) impact damage, and the Deepest One can knock the target Prone."
+      }
+    ],
+    "bi_action": [
+      {
+        "name": "Grasping Hands",
+        "description": "The Deepest One strangles a target they can sense within 5 feet of them. The target must succeed on a DC 17 Agility test or become Restrained while the Deepest One remains within 5 feet of them. If the Restrained target is also Prone, they begin suffocating and are Afflicted [2d10 vital] until they remove either the Restrained or Prone condition. As a free action, the Restrained target can make a DC 17 Agility test, removing the Restrained condition on a success. If the Deepest One takes at least 20 damage on a single turn, the target escapes and is no longer Restrained."
+      },
+      {
+        "name": "Surge of Cohesion",
+        "description": "Costs 1 Investiture. The Deepest One chooses a Large (10-foot) or smaller area or object within 30 feet of them that is made of stone or earth and that isn't being worn or held. That object or area changes shape in a manner they choose, though not violently enough to cause damage. Depending on the nature of the reshaping, this can cause an effect such as creating or removing cover or difficult terrain, or applying the Restrained condition to characters in that area. If the effect would apply a condition, a character can avoid it with a successful DC 15 Agility or Athletics test."
+      }
+    ],
+    "reaction": [
+      {
+        "name": "Entrap",
+        "description": "When an enemy triggers a Reactive Strike from the Deepest One while the Deepest One is submerged, the Deepest One can instead use their Grasping Hands as a reaction, spending focus as if they made a Reactive Strike."
+      }
+    ],
+    "free": [
+      {
+        "name": "Regenerate",
+        "description": "Costs 1 Investiture. The Deepest One recovers 5 (1d6 + 2) health. They can use this free action even while Unconscious or otherwise prevented from using actions."
+      }
+    ]
+  },
+  "tactics": "A Deepest One is an eerie foe, unsettling and ruthless. They freely move within solid surfaces, striking with their Carapace Nails or Trip Attack while maintaining their protection. They can reshape the battlefield with their Surge of Cohesion, hinder foes with Entrap, or drag a single enemy down to suffocate with their Grasping Hands—especially one they already knocked prone with Trip Attack."
+}

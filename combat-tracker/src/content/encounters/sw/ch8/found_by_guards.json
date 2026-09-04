@@ -1,0 +1,103 @@
+{
+  "kind": "encounter",
+  "slug": "found_by_guards",
+  "scene": [
+    {
+      "name": "Direform 1",
+      "icon": "src/icons/enemies/direform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Direform 2",
+      "icon": "src/icons/enemies/direform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Warform 1",
+      "icon": "src/icons/enemies/warform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Warform 2",
+      "icon": "src/icons/enemies/warform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Warform 3",
+      "icon": "src/icons/enemies/warform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "direform_1",
+      "name": "Direform 1",
+      "icon": "enemies/direform_singer.png",
+      "combatant_type": "direform_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 41,
+        "focus": 4,
+        "investiture": 4
+      }
+    },
+    {
+      "id": "direform_2",
+      "name": "Direform 2",
+      "icon": "enemies/direform_singer.png",
+      "combatant_type": "direform_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 39,
+        "focus": 4,
+        "investiture": 4
+      }
+    },
+    {
+      "id": "warform_1",
+      "name": "Warform 1",
+      "icon": "enemies/warform_singer.png",
+      "combatant_type": "warform_tier1_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 23,
+        "focus": 4,
+        "investiture": 3
+      }
+    },
+    {
+      "id": "warform_2",
+      "name": "Warform 2",
+      "icon": "enemies/warform_singer.png",
+      "combatant_type": "warform_tier1_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 21,
+        "focus": 4,
+        "investiture": 3
+      }
+    },
+    {
+      "id": "warform_3",
+      "name": "Warform 3",
+      "icon": "enemies/warform_singer.png",
+      "combatant_type": "warform_tier1_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 20,
+        "focus": 4,
+        "investiture": 3
+      }
+    }
+  ]
+}

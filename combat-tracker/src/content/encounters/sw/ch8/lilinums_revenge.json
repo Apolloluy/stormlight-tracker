@@ -1,0 +1,64 @@
+{
+  "kind": "encounter",
+  "slug": "lilinums_revenge",
+  "scene": [
+    {
+      "name": "Lilinum",
+      "icon": "src/icons/enemies/lilinum.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Direform",
+      "icon": "src/icons/enemies/direform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Nineka",
+      "icon": "src/icons/azish_envoy.png",
+      "type": "ally",
+      "speed": "slow"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "lilinum",
+      "name": "Lilinum",
+      "icon": "enemies/lilinum.png",
+      "combatant_type": "lilinum_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 42,
+        "focus": 5,
+        "investiture": 6
+      }
+    },
+    {
+      "id": "direform",
+      "name": "Direform",
+      "icon": "enemies/direform_singer.png",
+      "combatant_type": "direform_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 40,
+        "focus": 4,
+        "investiture": 4
+      }
+    },
+    {
+      "id": "nineka",
+      "name": "Nineka",
+      "icon": "azish_envoy.png",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 24,
+        "focus": 4,
+        "investiture": 4
+      }
+    }
+  ]
+}
