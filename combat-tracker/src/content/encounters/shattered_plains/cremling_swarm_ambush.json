@@ -1,0 +1,98 @@
+{
+  "kind": "encounter",
+  "slug": "cremling_swarm_ambush",
+  "scene": [
+    {
+      "name": "Cremling 1",
+      "icon": "enemies/cremling_swarm.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Cremling 2",
+      "icon": "enemies/cremling_swarm.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Cremling 3",
+      "icon": "enemies/cremling_swarm.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Cremling 4",
+      "icon": "enemies/cremling_swarm.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Cremling 5",
+      "icon": "enemies/cremling_swarm.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Cremling 6",
+      "icon": "enemies/cremling_swarm.png",
+      "type": "enemy",
+      "speed": "slow"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "cremling_1",
+      "name": "Cremling 1",
+      "icon": "enemies/cremling_swarm.png",
+      "combatant_type": "cremling_tier1_rival_swarm_medium",
+      "speed": "fast",
+      "active": true,
+      "counters": { "health": 22, "focus": 4, "investiture": 0 }
+    },
+    {
+      "id": "cremling_2",
+      "name": "Cremling 2",
+      "icon": "enemies/cremling_swarm.png",
+      "combatant_type": "cremling_tier1_rival_swarm_medium",
+      "speed": "slow",
+      "active": true,
+      "counters": { "health": 21, "focus": 4, "investiture": 0 }
+    },
+    {
+      "id": "cremling_3",
+      "name": "Cremling 3",
+      "icon": "enemies/cremling_swarm.png",
+      "combatant_type": "cremling_tier1_rival_swarm_medium",
+      "speed": "fast",
+      "active": true,
+      "counters": { "health": 27, "focus": 4, "investiture": 0 }
+    },
+    {
+      "id": "cremling_4",
+      "name": "Cremling 4",
+      "icon": "enemies/cremling_swarm.png",
+      "combatant_type": "cremling_tier1_rival_swarm_medium",
+      "speed": "slow",
+      "active": true,
+      "counters": { "health": 20, "focus": 4, "investiture": 0 }
+    },
+    {
+      "id": "cremling_5",
+      "name": "Cremling 5",
+      "icon": "enemies/cremling_swarm.png",
+      "combatant_type": "cremling_tier1_rival_swarm_medium",
+      "speed": "fast",
+      "active": true,
+      "counters": { "health": 24, "focus": 4, "investiture": 0 }
+    },
+    {
+      "id": "cremling_6",
+      "name": "Cremling 6",
+      "icon": "enemies/cremling_swarm.png",
+      "combatant_type": "cremling_tier1_rival_swarm_medium",
+      "speed": "slow",
+      "active": true,
+      "counters": { "health": 23, "focus": 4, "investiture": 0 }
+    }
+  ]
+}

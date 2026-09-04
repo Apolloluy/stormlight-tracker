@@ -1,0 +1,57 @@
+{
+  "name": "Cremling Swarm",
+  "icon": "src/icons/enemies/cremling_swarm.png",
+  "speed": "fast",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 1,
+      "speed": 3
+    },
+    "cognitive": {
+      "intelligence": 1,
+      "willpower": 2
+    },
+    "spiritual": {
+      "awareness": 2,
+      "presence": 1
+    }
+  },
+  "counters": {
+    "health": 22,
+    "focus": 4,
+    "investiture": 0
+  },
+  "movement": 30,
+  "senses": {
+    "sight": 10
+  },
+  "skills": {
+    "physical": {
+      "Agility": 5
+    }
+  },
+  "languages": [],
+  "immunities": [
+    "Immobilized",
+    "Prone",
+    "Restrained",
+    "Stunned"
+  ],
+  "features": {
+    "Swarm": "The swarm is comprised of many tiny creatures, and it can't regain health. It can move through spaces occupied by other characters or through openings with a diameter of 3 inches, as long as it ends its movement fully on the other side of the character or obstacle."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Bite",
+        "description": "Attack +5, reach 5 ft., one target. Graze: 5 (2d4) keen damage, or 2 (1d4) keen damage if the swarm has half its health or less. Hit: 10 (2d4 + 5) keen damage, or 4 (1d4 + 2) keen damage if the swarm has half its health or less."
+      },
+      {
+        "name": "Screech (Costs 2 Focus)",
+        "description": "The swarm emits an ear-piercing cacophony of screeching and clicking. Each character within 10 feet of the swarm must make a DC 14 Discipline test. On a failure, a character must spend 2 focus or become Disoriented until the end of their next turn. Cremlings and characters who can't hear automatically succeed on this test."
+      }
+    ]
+  },
+  "tactics": "A Cremling Swarm overwhelms foes with numbers, moving through small spaces to flank or escape. It uses Bite to damage and Screech to disrupt nearby opponents."
+}
