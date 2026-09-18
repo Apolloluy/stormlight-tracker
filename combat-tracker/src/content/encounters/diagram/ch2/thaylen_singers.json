@@ -1,0 +1,89 @@
+{
+  "kind": "encounter",
+  "slug": "thaylen_singers",
+  "scene": [
+    { "name": "Decayform Regal", "icon": "enemies/decayform_regal.png", "type": "enemy", "speed": "slow" },
+    { "name": "Nightform Regal", "icon": "enemies/nightform_regal.png", "type": "enemy", "speed": "fast" },
+    { "name": "Oceanform 1", "icon": "enemies/oceanform_regal.png", "type": "enemy", "speed": "fast" },
+    { "name": "Oceanform 2", "icon": "enemies/oceanform_regal.png", "type": "enemy", "speed": "fast" },
+    { "name": "Oceanform 3", "icon": "enemies/oceanform_regal.png", "type": "enemy", "speed": "fast" },
+    { "name": "Oceanform 4", "icon": "enemies/oceanform_regal.png", "type": "enemy", "speed": "slow" },
+    { "name": "Oceanform 5", "icon": "enemies/oceanform_regal.png", "type": "enemy", "speed": "slow" },
+    { "name": "Ubo", "icon": "enemies/bandit_human.png", "type": "ally", "speed": "fast" }
+  ],
+  "combatants": [
+    {
+      "id": "decayform_regal",
+      "name": "Decayform Regal",
+      "icon": "enemies/decayform_regal.png",
+      "combatant_type": "decayform_regal_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": { "health": 38, "focus": 5, "investiture": 6 }
+    },
+    {
+      "id": "nightform_regal",
+      "name": "Nightform Regal",
+      "icon": "enemies/nightform_regal.png",
+      "combatant_type": "nightform_regal_tier2_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": { "health": 32, "focus": 4, "investiture": 7 }
+    },
+    {
+      "id": "oceanform_1",
+      "name": "Oceanform 1",
+      "icon": "enemies/oceanform_regal.png",
+      "combatant_type": "oceanform_regal_tier2_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": { "health": 32, "focus": 5, "investiture": 6 }
+    },
+    {
+      "id": "oceanform_2",
+      "name": "Oceanform 2",
+      "icon": "enemies/oceanform_regal.png",
+      "combatant_type": "oceanform_regal_tier2_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": { "health": 34, "focus": 5, "investiture": 6 }
+    },
+    {
+      "id": "oceanform_3",
+      "name": "Oceanform 3",
+      "icon": "enemies/oceanform_regal.png",
+      "combatant_type": "oceanform_regal_tier2_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": { "health": 36, "focus": 5, "investiture": 6 }
+    },
+    {
+      "id": "oceanform_4",
+      "name": "Oceanform 4",
+      "icon": "enemies/oceanform_regal.png",
+      "combatant_type": "oceanform_regal_tier2_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": { "health": 38, "focus": 5, "investiture": 6 }
+    },
+    {
+      "id": "oceanform_5",
+      "name": "Oceanform 5",
+      "icon": "enemies/oceanform_regal.png",
+      "combatant_type": "oceanform_regal_tier2_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": { "health": 40, "focus": 5, "investiture": 6 }
+    }
+    ,
+    {
+      "id": "ubo",
+      "name": "Ubo",
+      "icon": "enemies/bandit_human.png",
+      "combatant_type": "bandit_tier1_minion_human",
+      "speed": "fast",
+      "active": true,
+      "counters": { "health": 15, "focus": 2, "investiture": 0 }
+    }
+  ]
+}

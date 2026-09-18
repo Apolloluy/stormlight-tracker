@@ -1,0 +1,78 @@
+{
+  "name": "Nightform Regal (deflect 1)",
+  "icon": "src/icons/enemies/nightform_regal.png",
+  "speed": "fast",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 1,
+      "speed": 3
+    },
+    "cognitive": {
+      "intelligence": 4,
+      "willpower": 2
+    },
+    "spiritual": {
+      "awareness": 5,
+      "presence": 1
+    }
+  },
+  "defense": {
+    "physical": 14,
+    "cognitive": 16,
+    "spiritual": 16
+  },
+  "counters": {
+    "health": 32,
+    "focus": 4,
+    "investiture": 7
+  },
+  "deflect": 1,
+  "movement": 30,
+  "senses": {
+    "sight": 50
+  },
+  "skills": {
+    "physical": {
+      "Light Weaponry": 6,
+      "Stealth": 6
+    },
+    "cognitive": {
+      "Deduction": 8,
+      "Lore": 8
+    },
+    "spiritual": {
+      "Insight": 7,
+      "Perception": 7
+    }
+  },
+  "languages": ["Defined by culture"],
+  "features": {
+    "Conflict of Fortune": "Characters can't supernaturally view past or future events for which the Regal is present. Additionally, the Regal and each ally within 20 feet of them are immune to any unwanted effect that would force them to reroll or replace the result of their die rolls.",
+    "Glimpses of the Future": "Costs 1 Investiture or more. Once per round, after the Regal rolls the dice for a test, the Regal can spend 1 Investiture or more to reroll that number of dice.",
+    "Unerring Sight": "Darkness doesn't obscure the Regal's sight-based sense."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Sidesword",
+        "description": "Attack +6, reach 5 ft., one target. Graze: 3 (1d6) keen damage. Hit: 9 (1d6 + 6) keen damage."
+      },
+      {
+        "name": "Strike: Shortbow",
+        "description": "Attack +6, range 80/320 ft., one target. Graze: 3 (1d6) keen damage. Hit: 9 (1d6 + 6) keen damage."
+      },
+      {
+        "name": "Predict (Costs 1 Focus)",
+        "description": "The Regal makes a Deduction test against the Cognitive defense of a target they can sense, gaining an advantage if the target has already acted this round. On a success, the Regal and each ally within 20 feet of them gain an advantage on Reactive Strikes against the target until the end of the target's next turn."
+      }
+    ],
+    "reaction":[
+      {
+        "name": "Intervening Premonition (Costs 1 Investiture)",
+        "description": "When a character the Regal can sense makes a test, but before the test is resolved, the Regal can roll a d20, then if they wish, choose one d20 the character rolled for that test and replace it with the number the Regal rolled."
+      }
+    ]
+  },
+  "tactics": "A nightform Regal is a wily and often-unpredictable enemy who can react to events before they happen. They prefer remaining far from their opponents, using their Predict action and their Shortbow to harry their enemies while aiding their allies in doing the same. Meanwhile, they use Intervening Premonition to disrupt enemy maneuvers and tell their allies where and how to attack. When an enemy bears down on them, the nightform uses Glimpses of the Future to deal devastating blows."
+}

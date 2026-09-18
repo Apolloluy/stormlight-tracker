@@ -1,0 +1,72 @@
+{
+  "name": "Decayform Regal",
+  "icon": "src/icons/enemies/decayform_regal.png",
+  "speed": "slow",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 3,
+      "speed": 3
+    },
+    "cognitive": {
+      "intelligence": 2,
+      "willpower": 3
+    },
+    "spiritual": {
+      "awareness": 3,
+      "presence": 2
+    }
+  },
+  "defense": {
+    "physical": 14,
+    "cognitive": 15,
+    "spiritual": 15
+  },
+  "counters": {
+    "health": 38,
+    "focus": 5,
+    "investiture": 6
+  },
+  "deflect": 0,
+  "movement": 30,
+  "senses": {
+    "sight": 20
+  },
+  "skills": {
+    "physical": {
+      "Light Weaponry": 7,
+      "Stealth": 6
+    },
+    "cognitive": {
+      "Deduction": 7,
+      "Lore": 7
+    },
+    "spiritual": {
+      "Insight": 6,
+      "Perception": 6
+    }
+  },
+  "languages": ["Defined by culture"],
+  "features": {
+    "Decay Affinity": "The Decayform Regal channels rot and entropy, weakening creatures it touches and leeching vitality into itself when appropriate."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Sidesword",
+        "description": "Attack +7, reach 5 ft., one target. Graze: 4 (1d8) keen damage. Hit: 11 (1d8 + 7) keen damage."
+      },
+      {
+        "name": "Strike: Mace",
+        "description": "Attack +7, reach 5 ft., one target. Graze: 5 (1d8) impact damage. Hit: 13 (1d8 + 7) impact damage."
+      }
+    ],
+    "reaction": [
+      {
+        "name": "Decaying Touch (Reaction, Costs 1 Focus or 1 Investiture)",
+        "description": "Within 10 ft: Before a character within your reach would recover health or focus, you can spend 1 focus or 1 Investiture to prevent them from doing so. The character does not regain that health or focus, but any actions, Investiture, or other resources they spent to attempt the recovery still remain spent."
+      }
+    ]
+  },
+  "tactics": "The Decayform Regal prefers to harry foes from range or the edges of combat, using its strikes to punish those who approach. It uses Decaying Touch as a reactive control to deny recovery to key opponents, then focuses fire or maneuvers to exploit weakened enemies."
+}

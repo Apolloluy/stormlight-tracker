@@ -1,0 +1,75 @@
+{
+  "name": "Oceanform Regal (Deflect 1)",
+  "icon": "src/icons/enemies/oceanform_regal.png",
+  "speed": "fast",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 3,
+      "speed": 4
+    },
+    "cognitive": {
+      "intelligence": 2,
+      "willpower": 3
+    },
+    "spiritual": {
+      "awareness": 3,
+      "presence": 2
+    }
+  },
+  "defense": {
+    "physical": 14,
+    "cognitive": 14,
+    "spiritual": 15
+  },
+  "counters": {
+    "health": 36,
+    "focus": 5,
+    "investiture": 6
+  },
+  "deflect": 1,
+  "movement": 30,
+  "senses": {
+    "sight": 30
+  },
+  "skills": {
+    "physical": {
+      "Light Weaponry": 6,
+      "Athletics": 7,
+      "Stealth": 5
+    },
+    "cognitive": {
+      "Deduction": 6
+    },
+    "spiritual": {
+      "Perception": 6
+    }
+  },
+  "languages": ["Defined by culture"],
+  "features": {
+    "Carapace": "A thin, eel-like carapace grants minor protection; treat as deflect 1."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Shortspear",
+        "description": "Attack +7, reach 5 ft., one target. Graze: 4 (1d8) keen damage. Hit: 11 (1d8 + 7) keen damage."
+      },
+      {
+        "name": "Strike: Shortbow",
+        "description": "Attack +6, range 80/320 ft., one target. Graze: 3 (1d6) keen damage. Hit: 9 (1d6 + 6) keen damage."
+      },
+      {
+        "name": "Tidal Jet (Costs 1 Investiture)",
+        "description": "If the Regal is standing in or adjacent to water, they blast a 30-foot straight torrent in a direction they choose. Each creature in the path must succeed on a DC 14 Agility test or be pushed 10 ft and knocked Prone; a creature that fails also takes 6 (1d8 + 2) water damage."
+      }
+    ],
+    "reaction": [
+      {
+        "name": "Current Slip",
+        "description": "When an enemy makes a melee attack against the Regal, the Regal can use a reaction to immediately slide up to 10 ft (ignoring opportunity attacks)."
+      }
+    ]
+  },
+  "tactics": "An Oceanform Regal uses riverspren and water to control engagement distances. From the edges of streams or puddles they harry foes with Shortbow and use Tidal Jet when adjacent to water to push and topple grouped enemies, then close with Shortspear to finish off targets."
+}
