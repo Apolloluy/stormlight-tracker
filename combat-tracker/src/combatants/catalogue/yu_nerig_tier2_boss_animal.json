@@ -1,0 +1,74 @@
+{
+  "name": "Yu-Nerig (Deflect 2)",
+  "speed": "fast",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 5,
+      "speed": 3
+    },
+    "cognitive": {
+      "intelligence": 2,
+      "willpower": 3
+    },
+    "spiritual": {
+      "awareness": 4,
+      "presence": 2
+    }
+  },
+  "counters": {
+    "health": 144,
+    "focus": 5,
+    "investiture": 0
+  },
+  "deflect": 2,
+  "movement": 15,
+  "senses": {
+    "sight": 20
+  },
+  "skills": {
+    "physical": {
+      "Agility": 6,
+      "Athletics": 8
+    },
+    "cognitive": {
+      "Intimidation": 6
+    },
+    "spiritual": {
+      "Perception": 5
+    }
+  },
+  "languages": "None",
+  "features": {
+    "Boss": "The yu-nerig can take both a fast turn and a slow turn each round. After an enemy finishes a turn, the yu-nerig can spend 1 focus to immediately use an extra ▶ or ▷. Additionally, they can spend 1 focus on their turn to remove a condition from themself.",
+    "Thick Carapace": "Before the yu-nerig is hit by an attack, they can spend 1 focus to turn the hit into a graze (no action required).",
+    "Carapace": "Deflect 2.",
+    "Movement": "The yu-nerig has a movement rate of 15 ft. and a swim rate of 30 ft.",
+    "Immunities": "Stunned.",
+    "Opportunity": "An enemy can spend an Opportunity to prevent the yu-nerig from using Hurl and Vital Toss (listed as Vital Slam) until the end of the yu-nerig's next turn.",
+    "Complication": "The GM can spend a Complication from an enemy's test to have the yu-nerig use Hammer Claw as the action specified by the complication."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Claw",
+        "description": "Attack +8, reach 5 ft., one target. Graze: 7 (2d6) keen damage. Hit: 15 (2d6 + 8) keen damage, and the target becomes Restrained by one of the yu-nerig's claws while the yu-nerig remains within 5 feet of them. The target or a character who can reach them can use a two-action activity to make a DC 16 Agility or Athletics test, ending the Restrained condition on a success. The yu-nerig has two claws, each of which can restrain one enemy. While restraining an enemy in a claw, that claw can only attack the Restrained enemy."
+      },
+      {
+        "name": "Hurl",
+        "description": "The yu-nerig throws an enemy who is Restrained in their claw to a space they can sense within 30 feet of them. The thrown enemy must make a DC 16 Agility test. On a failure, the thrown enemy takes 1d8 impact damage for every 10 feet they were thrown. On a success, the thrown enemy takes half that much damage. If the enemy is thrown at a space occupied by another character, the thrown enemy lands in the nearest unoccupied space, and the other character must succeed on a DC 16 Agility test or take the same damage as the thrown enemy."
+      }
+    ],
+    "bi_action": [
+      {
+        "name": "Hammer Claw",
+        "description": "Attack +8, reach 5 ft., up to five targets. The yu-nerig can't use this action if both claws are restraining enemies. Graze: 9 (2d8) impact damage. Hit: 17 (2d8 + 8) impact damage."
+      },
+      {
+        "name": "Vital Slam (Costs 1 Focus)",
+        "description": "The yu-nerig flips an enemy who is Restrained in their claw and slams them against the ground. The target must make a DC 16 Athletics test. On a success, the target takes 6 (1d10) impact damage. On a failure, the target takes 16 (3d10) impact damage and is knocked Prone."
+      }
+    ]
+  },
+  "tactics": "The yu-nerig uses its claws to restrain enemies, then hurls them or slams them into the ground. It can strike groups with Hammer Claw, and its boss feature lets it keep pressure on foes between their turns."
+}

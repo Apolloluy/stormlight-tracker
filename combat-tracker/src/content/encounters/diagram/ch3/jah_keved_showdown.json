@@ -1,0 +1,158 @@
+{
+  "kind": "encounter",
+  "slug": "jah_keved_showdown",
+  "scene": [
+    {
+      "name": "Masked One",
+      "icon": "enemies/masked_one.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Fel Talar",
+      "icon": "enemies/dustbringer_fourth_ideal.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "The Devastating One",
+      "icon": "enemies/lilinum.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Deepest One",
+      "icon": "enemies/deepest_one_fused.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Direform Singer 1",
+      "icon": "enemies/direform_singer.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Direform Singer 2",
+      "icon": "enemies/direform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Warform Singer 1",
+      "icon": "enemies/warform_singer.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Warform Singer 2",
+      "icon": "enemies/warform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Nimbleform Singer 1",
+      "icon": "enemies/nimbleform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Nimbleform Singer 2",
+      "icon": "enemies/nimbleform_singer.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Stormform Singer 1",
+      "icon": "enemies/stormform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Stormform Singer 2",
+      "icon": "enemies/stormform_singer.png",
+      "type": "enemy",
+      "speed": "slow"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "masked_one",
+      "name": "Masked One",
+      "icon": "enemies/masked_one.png",
+      "combatant_type": "masked_one_tier2_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 38,
+        "focus": 4,
+        "investiture": 8
+      }
+    },
+    {
+      "id": "fel_talar",
+      "name": "Fel Talar",
+      "icon": "enemies/dustbringer_fourth_ideal.png",
+      "combatant_type": "dustbringer_tier3_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 47,
+        "focus": 5,
+        "investiture": 6
+      }
+    },
+    {
+      "id": "direform_singer_1",
+      "name": "Direform Singer 1",
+      "icon": "enemies/direform_singer.png",
+      "combatant_type": "direform_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 42,
+        "focus": 5,
+        "investiture": 5
+      }
+    },
+    {
+      "id": "warform_singer_1",
+      "name": "Warform Singer 1",
+      "icon": "enemies/warform_singer.png",
+      "combatant_type": "warform_tier1_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 24,
+        "focus": 4,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "nimbleform_singer_1",
+      "name": "Nimbleform Singer 1",
+      "icon": "enemies/nimbleform_singer.png",
+      "combatant_type": "nimbleform_tier1_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 20,
+        "focus": 4,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "stormform_singer_1",
+      "name": "Stormform Singer 1",
+      "icon": "enemies/stormform_singer.png",
+      "combatant_type": "stormform_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 40,
+        "focus": 6,
+        "investiture": 5
+      }
+    }
+  ]
+}

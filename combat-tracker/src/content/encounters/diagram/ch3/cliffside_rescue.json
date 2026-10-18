@@ -1,0 +1,90 @@
+{
+  "kind": "encounter",
+  "slug": "cliffside_rescue",
+  "scene": [
+    {
+      "name": "Kaylor Vosian",
+      "icon": "enemies/skybreaker_fourth_ideal.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Skybreaker of the Fourth Ideal 2",
+      "icon": "enemies/skybreaker_fourth_ideal.png",
+      "type": "enemy",
+      "speed": "slow"
+    },
+    {
+      "name": "Skybreaker of the Second Ideal 1",
+      "icon": "enemies/skybreaker_second_ideal.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Skybreaker of the Second Ideal 2",
+      "icon": "enemies/skybreaker_second_ideal.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Talenai",
+      "icon": "src/icons/female_singer_character.png",
+      "type": "ally",
+      "speed": "slow"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "skybreaker_fourth_ideal_1",
+      "name": "Skybreaker of the Fourth Ideal 1",
+      "icon": "enemies/skybreaker_fourth_ideal.png",
+      "combatant_type": "skybreaker_tier4_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 80,
+        "focus": 6,
+        "investiture": 7
+      }
+    },
+    {
+      "id": "skybreaker_fourth_ideal_2",
+      "name": "Skybreaker of the Fourth Ideal 2",
+      "icon": "enemies/skybreaker_fourth_ideal.png",
+      "combatant_type": "skybreaker_tier4_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 60,
+        "focus": 6,
+        "investiture": 7
+      }
+    },
+    {
+      "id": "skybreaker_second_ideal_1",
+      "name": "Skybreaker of the Second Ideal 1",
+      "icon": "enemies/skybreaker_second_ideal.png",
+      "combatant_type": "skybreaker_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 40,
+        "focus": 5,
+        "investiture": 6
+      }
+    },
+    {
+      "id": "skybreaker_second_ideal_2",
+      "name": "Skybreaker of the Second Ideal 2",
+      "icon": "enemies/skybreaker_second_ideal.png",
+      "combatant_type": "skybreaker_tier2_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 46,
+        "focus": 5,
+        "investiture": 6
+      }
+    }
+  ]
+}

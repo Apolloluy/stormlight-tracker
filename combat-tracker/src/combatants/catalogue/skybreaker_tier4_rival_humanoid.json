@@ -1,0 +1,98 @@
+{
+  "name": "Skybreaker of the Fourth Ideal",
+  "speed": "slow",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 5,
+      "speed": 5
+    },
+    "cognitive": {
+      "intelligence": 5,
+      "willpower": 4
+    },
+    "spiritual": {
+      "awareness": 5,
+      "presence": 3
+    }
+  },
+  "counters": {
+    "health": 65,
+    "focus": 6,
+    "investiture": 7
+  },
+  "deflect": 5,
+  "movement": 40,
+  "senses": {
+    "sight": 50
+  },
+  "skills": {
+    "physical": {
+      "Agility": 10,
+      "Heavy Weaponry": 9,
+      "Light Weaponry": 10
+    },
+    "cognitive": {
+      "Deduction": 9,
+      "Discipline": 8,
+      "Intimidation": 9,
+      "Lore": 8
+    },
+    "spiritual": {
+      "Insight": 9,
+      "Leadership": 8,
+      "Perception": 8
+    },
+    "surge": {
+      "Division": 8,
+      "Gravitation": 9
+    }
+  },
+  "languages": ["Defined by culture"],
+  "features": {
+    "Radiant Shardplate (4 Charges)": "The Skybreaker is equipped with Shardplate. Before they take damage, they can expend a charge (no action required) to increase their deflect value against that damage by 10. While the armor has charges, all Invested tests against the Skybreaker gain a disadvantage, and the armor's deflect value applies to all damage types. After the armor runs out of charges, Strength, Speed, Agility, Heavy Weaponry, and Light Weaponry are reduced by 2, along with their related modifiers; these statistics are marked with an asterisk (*).",
+    "Breakable Armor": "After the Skybreaker is hit by an attack, the attacker can spend the required resource to cause the Skybreaker's Shardplate to lose 1 charge.",
+    "Truthseeker": "The Skybreaker gains an advantage on Deduction and Insight tests made to ascertain truth.",
+    "Movement": "The Skybreaker's movement is 40 ft. (30 ft. without Shardplate).",
+    "Surge Ranks": "Division 3 ranks; Gravitation 4 ranks.",
+    "Opportunity": "An enemy can spend an Opportunity to prevent the Skybreaker from using Offensive Gravitation, Distant Decay (listed as Inescapable Decay), and Regenerate until the end of the Skybreaker's next turn.",
+    "Complication": "The GM can spend a Complication from an enemy's test to have the Skybreaker use Distant Decay (listed as Inescapable Decay) as the action specified by the complication."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Shardblade",
+        "description": "Attack +9*, reach 5 ft., one target. Graze: 11 (2d10) spirit damage. Hit: 20 (2d10 + 9) spirit damage."
+      },
+      {
+        "name": "Lashing Shot (Costs 1 Investiture)",
+        "description": "Attack +9*, range 30 ft., one target. Graze: 13 (2d12) keen or impact damage. Hit: 22 (2d12 + 9*) keen or impact damage."
+      },
+      {
+        "name": "Inescapable Decay (Distant Decay; Costs 1 Investiture)",
+        "description": "Attack +8, range 30 ft., one target who is touching the same solid surface as the Skybreaker. Graze: 18 (4d8) spirit damage. Hit: 26 (4d8 + 8) spirit damage, and the target must succeed on a DC 16 Agility test or their armor rusts and decays, permanently decreasing its deflect value by 1. Armor damaged in this way can be repaired with proper materials as a downtime activity."
+      },
+      {
+        "name": "Gravitational Support (Costs 1 Investiture)",
+        "description": "The Skybreaker gains a flying rate of 40 feet until the start of their next turn. At the start of each of their turns, they can spend 1 Investiture to maintain this effect for an additional round. Alternatively, they can infuse an ally with a flying rate of 40 feet until the end of the ally's next turn. When the Skybreaker does so, they can spend additional Investiture to extend this effect for a number of rounds equal to the Investiture spent."
+      },
+      {
+        "name": "Offensive Gravitation (Costs 1 Investiture)",
+        "description": "The Skybreaker makes a Gravitation test against the Physical defense of a target within reach. On a success, they move the target up to 40 feet in any direction, and the target becomes Restrained until the start of the Skybreaker's next turn. If the target hits an object or surface, they take 13 (2d12) impact damage. If the target passes within reach of an object that they aren't going to hit, they can make a DC 16 Agility test, grabbing the object and stopping this forced movement on a success."
+      }
+    ],
+    "free": [
+      {
+        "name": "Regenerate (Costs 1 Investiture)",
+        "description": "The Skybreaker recovers 7 (1d6 + 4) health. They can use this free action even while Unconscious or otherwise prevented from using actions."
+      }
+    ],
+    "reaction": [
+      {
+        "name": "Menace",
+        "description": "After the Skybreaker is hit with an attack, they make an Intimidation test against the attacker's Cognitive defense. On a success, the attacker loses 1d4 focus."
+      }
+    ]
+  },
+  "tactics": "A Tier 4 Medium Humanoid rival, the Skybreaker uses Shardplate to withstand attacks while pressing foes with its Shardblade and Gravitation. It can grant flight, hurl targets into hazards, and use Inescapable Decay against enemies in contact with its surface."
+}

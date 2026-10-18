@@ -1,0 +1,86 @@
+{
+  "name": "Masked One (Deflect 1)",
+  "speed": "fast",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 1,
+      "speed": 4
+    },
+    "cognitive": {
+      "intelligence": 3,
+      "willpower": 2
+    },
+    "spiritual": {
+      "awareness": 3,
+      "presence": 6
+    }
+  },
+  "counters": {
+    "health": 38,
+    "focus": 4,
+    "investiture": 8
+  },
+  "deflect": 1,
+  "movement": 30,
+  "senses": {
+    "sight": 20
+  },
+  "skills": {
+    "physical": {
+      "Light Weaponry": 7,
+      "Stealth": 7,
+      "Thievery": 6
+    },
+    "cognitive": {
+      "Deduction": 5,
+      "Intimidation": 5
+    },
+    "spiritual": {
+      "Deception": 9,
+      "Perception": 6,
+      "Persuasion": 9
+    },
+    "surge": {
+      "Illumination": 9
+    }
+  },
+  "languages": "Dawnchant, two Rosharan languages",
+  "features": {
+    "Infiltrator": "The Masked One can spend 1 focus to gain an advantage on a Deception, Insight, or Persuasion test.",
+    "Opportunistic": "The Masked One's tests all have an Opportunity range of 18-20.",
+    "Reflexive Illusion": "At the start of a scene, if the Masked One isn't Surprised, they can use Illusory Disguise (no action required).",
+    "Surge Ranks": "Illumination 3 ranks.",
+    "Opportunity": "An enemy can spend an Opportunity either to see through the Masked One's disguise and all their illusions (no test required), or to prevent the Masked One from using Cunning Tongue, Surge of Illumination, and Regenerate until the end of the Masked One's next turn.",
+    "Complication": "The GM can spend a Complication from an enemy's test to have the Masked One use their Staff with advantage on the attack test."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Staff",
+        "description": "Attack +7, reach 5 ft., one target. Graze: 3 (1d6) impact damage. Hit: 10 (1d6 + 7) impact damage, and the Masked One can spend 1 focus to trip the target and knock them Prone."
+      },
+      {
+        "name": "Illusory Disguise (Costs 1 Investiture)",
+        "description": "The Masked One creates an illusion to disguise themself as another character. While disguised, the Masked One has an advantage on attack tests against enemies unaware of their ruse. This disguise continues until they end it as ▷ or use this action to change it."
+      },
+      {
+        "name": "Surge of Illumination (Costs 1 Investiture)",
+        "description": "The Masked One chooses a Large (10-foot) or smaller area or willing character within 30 feet of them, creating an illusion on the target which lasts until the end of the scene or until the Masked One chooses to end it. It's an animated hologram with no sound, and it's revealed to be an illusion if something passes through it. On a character's turn, they can Use a Skill to determine it's an illusion with a successful DC 15 Deduction test. Depending on the nature of the illusion, it can cause an effect such as disguising or duplicating an ally, blocking line of effect, or creating a flash of bright light that applies the Disoriented condition to characters within 10 feet of it. If the effect would apply a condition to a character, they can avoid it with a successful DC 15 Deduction test."
+      }
+    ],
+    "bi_action": [
+      {
+        "name": "Cunning Tongue",
+        "description": "The Masked One weaves manipulative words around an enemy they can influence, making a Deception or Persuasion test opposed by the target's Insight. The Masked One gains an advantage on this test if they know one or more of the target's goals, purpose, or obstacle. If the Masked One succeeds, the target loses 1d4 focus."
+      }
+    ],
+    "free": [
+      {
+        "name": "Regenerate (Costs 1 Investiture)",
+        "description": "The Masked One recovers 5 (1d6 + 2) health. They can use this free action even while Unconscious or otherwise prevented from using actions."
+      }
+    ]
+  },
+  "tactics": "A Masked One uses Illusory Disguise, Infiltrator, and Surge of Illumination to position themself for an assassination. They rattle an enemy with Cunning Tongue, then use their Staff to hamper the target's escape."
+}

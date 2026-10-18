@@ -17,11 +17,6 @@
             "presence": 1
         }
     },
-    "defense": {
-        "physical": 12,
-        "cognitive": 11,
-        "spiritual": 13
-    },
     "counters": {
         "health": 11,
         "focus": 2,

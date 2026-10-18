@@ -1,0 +1,92 @@
+{
+  "name": "Dustbringer of the Third Ideal (Deflect 2)",
+  "speed": "slow",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 2,
+      "speed": 4
+    },
+    "cognitive": {
+      "intelligence": 4,
+      "willpower": 3
+    },
+    "spiritual": {
+      "awareness": 4,
+      "presence": 1
+    }
+  },
+  "counters": {
+    "health": 47,
+    "focus": 5,
+    "investiture": 6
+  },
+  "deflect": 2,
+  "movement": 40,
+  "senses": {
+    "sight": 20
+  },
+  "skills": {
+    "physical": {
+      "Agility": 8,
+      "Light Weaponry": 8,
+      "Stealth": 8
+    },
+    "cognitive": {
+      "Discipline": 6,
+      "Intimidation": 6
+    },
+    "spiritual": {
+      "Leadership": 5,
+      "Perception": 7
+    },
+    "surge": {
+      "Abrasion": 7,
+      "Division": 8
+    }
+  },
+  "languages": ["Defined by culture"],
+  "features": {
+    "Slippery": "While they have 1 Investiture or more, the Dustbringer can't be grazed and Reactive Strikes against them gain a disadvantage.",
+    "Movement": "The Dustbringer's movement is 40 ft. (30 ft. while Investiture is 0).",
+    "Surge Ranks": "Abrasion 3 ranks; Division 4 ranks.",
+    "Opportunity": "An enemy can spend an Opportunity to prevent the Dustbringer from using Burst of Flame and Regenerate until the end of the Dustbringer's next turn.",
+    "Complication": "The GM can spend a Complication from an enemy's test to remove the Investiture cost from Decaying Touch and the Focus cost from Skate until the end of the Dustbringer's next turn.",
+    "Decaying Touch": "Armor damaged by Decaying Touch permanently decreases its deflect value by 1 and can be repaired with proper materials as a downtime activity."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Shardblade",
+        "description": "Attack +8, reach 5 ft., one target. Graze: 11 (2d10) spirit damage. Hit: 19 (2d10 + 8) spirit damage, and the Dustbringer can spend 1 focus to use the Disengage action as a free action."
+      },
+      {
+        "name": "Strike: Shortbow",
+        "description": "Attack +8, range 80/320 ft., one target. Graze: 3 (1d6) keen damage. Hit: 11 (1d6 + 8) keen damage."
+      },
+      {
+        "name": "Decaying Touch (Costs 1 Investiture)",
+        "description": "Attack +8 vs. Spiritual, reach 10 ft., one target. Graze: 16 (3d10) spirit damage. Hit: 24 (3d10 + 8) spirit damage, and the target must succeed on a DC 14 Agility test or their armor rusts and decays, permanently decreasing its deflect value by 1. Armor damaged in this way can be repaired with proper materials as a downtime activity."
+      },
+      {
+        "name": "Burst of Flame (Costs 2 Investiture)",
+        "description": "The Dustbringer emits a burst of fire that deals 6 (1d12) energy damage to each character within 10 feet of them and sets unattended objects in that area ablaze. Additionally, the Dustbringer can spend 1 focus or more to shower sparks onto that number of enemies within 30 feet of them; each target must succeed on a DC 14 Agility test or lose one action on their next turn."
+      },
+      {
+        "name": "Eroding Escape (Costs 1 Investiture)",
+        "description": "The Dustbringer targets themself or an ally in reach, ending one condition on them that is either applying the Immobilized condition, the Restrained condition, or a disadvantage on any physical test."
+      }
+    ],
+    "free": [
+      {
+        "name": "Regenerate (Costs 1 Investiture)",
+        "description": "The Dustbringer recovers 6 (1d6 + 3) health. They can use this free action even while Unconscious or otherwise prevented from using actions."
+      },
+      {
+        "name": "Skate (Costs 1 Focus)",
+        "description": "The Dustbringer moves up to their movement rate."
+      }
+    ]
+  },
+  "tactics": "A Tier 3 Medium Humanoid rival, the Dustbringer uses its speed and Slippery feature to control engagement, then strikes with its Shardblade or Shortbow. It spends Investiture to erode armor, escape restraints, or punish groups with fire, and uses Regenerate to stay in the fight."
+}

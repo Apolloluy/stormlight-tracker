@@ -1,0 +1,46 @@
+{
+  "kind": "encounter",
+  "slug": "boatside_rescue",
+  "scene": [
+    {
+      "name": "Yu-Nerig 1",
+      "icon": "enemies/yu_nerig.png",
+      "type": "boss",
+      "speed": "fast"
+    },
+    {
+      "name": "Yu-Nerig 2",
+      "icon": "enemies/yu_nerig.png",
+      "type": "boss",
+      "speed": "fast"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "yu_nerig_1",
+      "name": "Yu-Nerig 1",
+      "icon": "enemies/yu_nerig.png",
+      "combatant_type": "yu_nerig_tier2_boss_animal",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 144,
+        "focus": 5,
+        "investiture": 0
+      }
+    },
+    {
+      "id": "yu_nerig_2",
+      "name": "Yu-Nerig 2",
+      "icon": "enemies/yu_nerig.png",
+      "combatant_type": "yu_nerig_tier2_boss_animal",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 144,
+        "focus": 5,
+        "investiture": 0
+      }
+    }
+  ]
+}
