@@ -1,0 +1,65 @@
+{
+  "kind": "encounter",
+  "slug": "battle_of_thaylen_field",
+  "scene": [
+    {
+      "name": "Flowing One",
+      "icon": "enemies/flowing_one_fused.png",
+      "type": "enemy",
+      "speed": "fast"
+    },
+    {
+      "name": "Magnified One",
+      "icon": "enemies/magnified_one_fused.png",
+      "type": "boss",
+      "speed": "slow"
+    },
+    {
+      "name": "Heavenly One",
+      "icon": "enemies/heavenly_one_fused.png",
+      "type": "enemy",
+      "speed": "slow"
+    }
+  ],
+  "combatants": [
+    {
+      "id": "flowing_one",
+      "name": "Flowing One",
+      "icon": "enemies/flowing_one_fused.png",
+      "combatant_type": "flowing_one_tier2_rival_humanoid",
+      "speed": "fast",
+      "active": true,
+      "counters": {
+        "health": 45,
+        "focus": 6,
+        "investiture": 5
+      }
+    },
+    {
+      "id": "magnified_one",
+      "name": "Magnified One",
+      "icon": "enemies/magnified_one_fused.png",
+      "combatant_type": "magnified_one_tier3_boss_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 200,
+        "focus": 7,
+        "investiture": 8
+      }
+    },
+    {
+      "id": "heavenly_one",
+      "name": "Heavenly One",
+      "icon": "enemies/heavenly_one_fused.png",
+      "combatant_type": "heavenly_one_tier3_rival_humanoid",
+      "speed": "slow",
+      "active": true,
+      "counters": {
+        "health": 58,
+        "focus": 6,
+        "investiture": 8
+      }
+    }
+  ]
+}
