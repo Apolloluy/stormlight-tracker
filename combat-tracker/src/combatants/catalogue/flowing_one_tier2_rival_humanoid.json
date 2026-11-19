@@ -1,0 +1,98 @@
+{
+  "name": "Flowing One (Deflect 2)",
+  "speed": "fast",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 1,
+      "speed": 6
+    },
+    "cognitive": {
+      "intelligence": 1,
+      "willpower": 4
+    },
+    "spiritual": {
+      "awareness": 3,
+      "presence": 2
+    }
+  },
+  "counters": {
+    "health": 45,
+    "focus": 6,
+    "investiture": 5
+  },
+  "deflect": 2,
+  "movement": 40,
+  "senses": {
+    "sight": 20
+  },
+  "immunities": [
+    "Immobilized",
+    "Restrained",
+    "Stunned"
+  ],
+  "skills": {
+    "physical": {
+      "Agility": 9,
+      "Light Weaponry": 9
+    },
+    "cognitive": {
+      "Discipline": 7
+    },
+    "spiritual": {
+      "Perception": 6,
+      "Survival": 6
+    },
+    "surge": {
+      "Abrasion": 9
+    }
+  },
+  "languages": "Dawnchant",
+  "features": {
+    "Mobile": "When the Flowing One willingly moves on their turn, they can choose to pause moving and use another action before finishing their available movement. They can resume that movement as a slow action any time before the end of their turn.",
+    "Surge Ranks": "Abrasion 3 ranks.",
+    "Opportunity": "An enemy can spend an Opportunity to prevent the Flowing One from using their Mobile feature and their Surge of Abrasion, Regenerate, and Skate actions until the end of the Flowing One's next turn.",
+    "Complication": "The GM can spend a Complication from an enemy's test to remove the Focus costs for the Flowing One's Coarse Grip action and Skate free action until the end of the Flowing One's next turn."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Raysium Dagger",
+        "description": "Attack +9, reach 5 ft., one target. Graze: 2 (1d4) keen damage. Hit: 11 (1d4 + 9) keen damage, and the target loses 1 Investiture."
+      },
+      {
+        "name": "Hair Spike",
+        "description": "Attack +9, reach 5 ft., one target. Graze: 2 (1d4) keen damage. Hit: 11 (1d4 + 9) keen damage."
+      },
+      {
+        "name": "Surge of Abrasion (Costs 1 Investiture)",
+        "description": "The Flowing One chooses a Large (10-foot) area or object within 30 feet of them to alter the friction of. Depending on the nature of the alteration, this can cause an effect in that area such as making the ground into difficult terrain, making the ground slick to knock enemies Prone, or making a foe's non-Invested weapon nearly impossible to hold. If the effect would apply a condition or cause a character to drop something, they can avoid it with a successful DC 15 Agility or Athletics test."
+      },
+      {
+        "name": "Coarse Grip (Costs 1 Investiture)",
+        "description": "The Flowing One strategically increases the friction of some parts of their body. Until the end of their next turn, their Physical tests have an Opportunity range of 18-20, and they can spend an Opportunity on any physical test to knock an enemy within 5 feet Prone."
+      }
+    ],
+    "free": [
+      {
+        "name": "Twin Daggers (Costs 2 Focus)",
+        "description": "The Flowing One makes an additional Raysium Dagger attack (no action required)."
+      },
+      {
+        "name": "Regenerate (Costs 1 Investiture)",
+        "description": "The Flowing One recovers 5 (1d6 + 2) health. They can use this free action even while Unconscious or otherwise prevented from using actions."
+      },
+      {
+        "name": "Skate",
+        "description": "The Flowing One moves up to their movement rate in a straight line. They can spend 1 Focus (no action required) to avoid triggering Reactive Strikes during this movement."
+      }
+    ],
+    "reaction": [
+      {
+        "name": "Deft Dodge (Costs 1 Focus)",
+        "description": "Before an attack hits the Flowing One, they change that hit to a graze, then they can use the Disengage action as a slow action."
+      }
+    ]
+  },
+  "tactics": "A Tier 2 Medium Humanoid rival with 45 health (typically 35-55), the Flowing One manipulates friction to hamper foes while using Mobile to split their movement. They use Coarse Grip to knock enemies Prone, Twin Daggers to make additional attacks, and Skate or Deft Dodge to escape threats."
+}

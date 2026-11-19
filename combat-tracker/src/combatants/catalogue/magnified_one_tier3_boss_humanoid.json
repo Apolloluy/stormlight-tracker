@@ -1,0 +1,91 @@
+{
+  "name": "Magnified One (Deflect 3)",
+  "speed": "slow",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 7,
+      "speed": 1
+    },
+    "cognitive": {
+      "intelligence": 3,
+      "willpower": 3
+    },
+    "spiritual": {
+      "awareness": 6,
+      "presence": 2
+    }
+  },
+  "counters": {
+    "health": 200,
+    "focus": 7,
+    "investiture": 8
+  },
+  "deflect": 3,
+  "movement": 25,
+  "senses": {
+    "sight": 50
+  },
+  "immunities": [
+    "Stunned"
+  ],
+  "skills": {
+    "physical": {
+      "Athletics": 10,
+      "Heavy Weaponry": 11
+    },
+    "cognitive": {
+      "Discipline": 6,
+      "Intimidation": 4
+    },
+    "spiritual": {
+      "Leadership": 5,
+      "Perception": 10
+    },
+    "surge": {
+      "Progression": 10
+    }
+  },
+  "languages": "Dawnchant",
+  "features": {
+    "Boss": "The Magnified One can take both a fast turn and a slow turn each round. After an enemy finishes a turn, the Magnified One can spend 1 Focus to immediately use an extra ▶ or ▷. Additionally, they can spend 1 Focus on their turn to remove a condition from themself.",
+    "External Carapace": "The Magnified One can use their carapace like a shield, allowing them to use the Brace action.",
+    "Shell Binding": "When the Magnified One succeeds on the Grapple action against a target, they can spend 1 Investiture to grow a carapace shell over the target, causing the target to also become Immobilized. Even if the target is no longer in the Magnified One's reach, the target remains Immobilized and Restrained until the target or a character who can reach them succeeds on a DC 18 Athletics test to free them from the carapace.",
+    "Surge Ranks": "Progression 4 ranks.",
+    "Opportunity": "An enemy can spend an Opportunity to prevent the Magnified One from using any actions that cost Investiture until the end of the Magnified One's next turn.",
+    "Complication": "The GM can spend a Complication from an enemy's test to have the Magnified One use Grow Carapace as the action specified by the complication."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Carapace Weapon",
+        "description": "Attack +11, reach 5 ft., one target. Graze: 7 (2d6) impact or keen damage. Hit: 21 (2d6 + 14) impact or keen damage."
+      },
+      {
+        "name": "Strike: Spike Spear (Costs 1 Investiture)",
+        "description": "Attack +11, range 60 ft., one target. Graze: 5 (1d10) keen damage. Hit: 19 (1d10 + 14) keen damage."
+      },
+      {
+        "name": "Grow Carapace (Costs 1 Investiture)",
+        "description": "The Magnified One grows their carapace for additional armor or spikes, gaining the corresponding benefit: Carapace Armor: The Magnified One can't be grazed until the end of their next turn. Carapace Spikes: Until the end of the Magnified One's next turn, the first time each turn that a character either hits the Magnified One with a melee attack or successfully Grapples or Shoves the Magnified One, that character takes 11 (2d10) keen damage."
+      }
+    ],
+    "bi_action": [
+      {
+        "name": "Magnified Charge (Costs 2 Focus)",
+        "description": "The Magnified One moves up to 25 feet in a straight line without triggering Reactive Strikes. The first time the Magnified One comes within 5 feet of each enemy during this move, they can make a Carapace Weapon attack against that enemy as a fast action. On a hit, the enemy is also knocked Prone."
+      },
+      {
+        "name": "Surge of Progression (Costs 2 Investiture)",
+        "description": "The Magnified One chooses a Huge (15-foot) or smaller area within 30 feet, growing their carapace with incredible speed in a way they choose, though not violently enough to cause damage. Depending on the nature of the carapace construction, this can cause an effect such as the creation of cover, difficult terrain, or a structure, or it can cause characters in that area to become Immobilized. If the effect would apply a condition to a character, they can avoid it with a successful DC 16 Agility or Athletics test."
+      }
+    ],
+    "free": [
+      {
+        "name": "Regenerate (Costs 1 Investiture)",
+        "description": "The Magnified One recovers 15 (1d10 + 10) health and recovers from up to one injury of their choice. They can use this free action even while Unconscious or otherwise prevented from using actions."
+      }
+    ]
+  },
+  "tactics": "A Tier 3 Large Humanoid boss with 200 health (typically 160-240), the Magnified One uses its carapace to control the battlefield, restrain enemies, and withstand attacks."
+}

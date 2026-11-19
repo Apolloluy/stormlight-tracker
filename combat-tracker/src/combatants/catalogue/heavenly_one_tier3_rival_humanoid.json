@@ -1,0 +1,83 @@
+{
+  "name": "Heavenly One (Deflect 1)",
+  "speed": "slow",
+  "active": true,
+  "stats": {
+    "physical": {
+      "strength": 3,
+      "speed": 5
+    },
+    "cognitive": {
+      "intelligence": 1,
+      "willpower": 4
+    },
+    "spiritual": {
+      "awareness": 6,
+      "presence": 2
+    }
+  },
+  "counters": {
+    "health": 58,
+    "focus": 6,
+    "investiture": 8
+  },
+  "deflect": 1,
+  "movement": 40,
+  "senses": {
+    "sight": 50
+  },
+  "skills": {
+    "physical": {
+      "Agility": 9,
+      "Heavy Weaponry": 7,
+      "Light Weaponry": 9
+    },
+    "cognitive": {
+      "Discipline": 8,
+      "Intimidation": 8
+    },
+    "spiritual": {
+      "Leadership": 6,
+      "Perception": 10,
+      "Survival": 10
+    },
+    "surge": {
+      "Gravitation": 10
+    }
+  },
+  "languages": "Dawnchant",
+  "features": {
+    "Invariable Flight": "The Heavenly One can only fly using the Move action once per turn.",
+    "Skyborn": "The Heavenly One doesn't trigger Reactive Strikes while flying.",
+    "Harry the Foe": "When the Heavenly One hits with an attack immediately after flying at least 15 feet, the target loses 1 Focus.",
+    "Movement": "The Heavenly One has a movement rate of 40 ft. and a flying rate of 30 ft.",
+    "Surge Ranks": "Gravitation 4 ranks.",
+    "Opportunity": "An enemy can spend an Opportunity to prevent the Heavenly One from using their Harry the Foe and Skyborn features, as well as their Surge of Gravitation and Regenerate actions, until the end of the Heavenly One's next turn.",
+    "Complication": "The GM can spend a Complication from an enemy's test to have the Heavenly One use Surge of Gravitation as the action specified by the complication, without spending Investiture."
+  },
+  "actions": {
+    "action": [
+      {
+        "name": "Strike: Raysium Lance",
+        "description": "Attack +9, reach 10 ft., one target. Graze: 4 (1d8) keen damage. Hit: 16 (1d8 + 12) keen damage, and the target loses 1 Investiture."
+      },
+      {
+        "name": "Surge of Gravitation (Costs 1 Investiture)",
+        "description": "The Heavenly One performs a Basic Lashing on a Huge (15-foot) or smaller character or non-Invested object within their reach that isn't being worn or carried. An object Lashed in this way moves up to 30 feet in any direction. An ally Lashed in this way gains a 30-foot flying rate until the end of the Heavenly One's next turn, but that ally can only fly using the Move action once per turn. To Lash an enemy, the Heavenly One makes a Gravitation test against the enemy's Physical defense. On a success, they move the target up to 30 feet in any direction, and the target becomes Restrained until the start of the Heavenly One's next turn. If the target passes within reach of an object, they can make a DC 16 Agility test, grabbing the object and stopping this forced movement on a success. If a Lashed object collides with a character, or if a Lashed enemy collides with an object or surface during this movement, the character takes 20 (2d10 + 9) damage of a type appropriate to the object or surface, and the Lashed target stops moving. A character can use the Avoid Danger reaction to try to escape damage from an incoming Lashed object."
+      }
+    ],
+    "free": [
+      {
+        "name": "Regenerate (Costs 1 Investiture)",
+        "description": "The Heavenly One recovers 6 (1d6 + 3) health. They can use this free action even while Unconscious or otherwise prevented from using actions."
+      }
+    ],
+    "reaction": [
+      {
+        "name": "Reflexive Strike",
+        "description": "Before an enemy voluntarily moves while within 10 feet of the Heavenly One, the Heavenly One uses their Raysium Lance action against that enemy. This reaction counts as a Reactive Strike but costs no Focus."
+      }
+    ]
+  },
+  "tactics": "A Tier 3 Medium Humanoid rival with 58 health (typically 46-70), the Heavenly One uses flight to harass ground troops and to activate Harry the Foe. They can use their Raysium Lance and Reflexive Strike against nearby enemies, or use Surge of Gravitation to reposition or restrain a greater threat."
+}
